@@ -295,40 +295,66 @@ function SolutionsPreview() {
 function Ecosystem() {
   return (
     <section className="relative bg-background py-24">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
+      <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="Enterprise Fit"
           title={<>Built to fit the <span className="text-gradient">enterprise</span></>}
           intro="Tech Tammina solutions are designed to work across enterprise platforms, business applications, document repositories, identity services, cloud environments, and third-party systems. Integration is treated as part of the operating model — not an afterthought."
         />
+
         <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
-          className="relative"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3"
         >
-          <div className="gradient-border relative rounded-3xl bg-surface/60 p-8 shadow-card backdrop-blur">
-            <div className="grid grid-cols-3 gap-3">
-              {["ERP", "CRM", "ECM", "Identity", "Cloud", "Data", "BPM", "AI/ML", "APIs"].map((chip, i) => (
-                <motion.div
-                  key={chip}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05 }}
-                  className="grid aspect-square place-items-center rounded-xl border border-border bg-card font-display text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {chip}
-                </motion.div>
-              ))}
-            </div>
-            <div className="mt-6 flex items-center gap-3 text-xs text-muted-foreground">
-              <Boxes className="h-4 w-4 text-primary" />
-              Works with your enterprise ecosystem
-            </div>
-          </div>
-          <div className="pointer-events-none absolute -inset-8 -z-10 rounded-[2rem] bg-cyan-violet opacity-30 blur-3xl" />
+          {ENTERPRISE_BLOCKS.map((block, i) => {
+            const Icon = block.icon;
+            return (
+              <motion.div
+                key={block.label}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06, duration: 0.45 }}
+                whileHover={{ y: -5, scale: 1.01 }}
+                className="group relative overflow-hidden rounded-[1.35rem] border border-border/70 bg-card p-6 shadow-sm"
+              >
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(82,122,255,0.16),_transparent_50%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="relative">
+                  <div className="flex items-center justify-between">
+                    <div className="grid h-11 w-11 place-items-center rounded-2xl bg-accent-gradient text-primary-foreground shadow-glow">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <span className="rounded-full border border-primary/15 bg-primary/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-primary">
+                      Connected
+                    </span>
+                  </div>
+                  <h3 className="mt-5 font-display text-lg font-semibold text-foreground">{block.label}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {block.label === "ERP"
+                      ? "Fits into core finance, supply chain, and operational planning environments."
+                      : block.label === "CRM"
+                        ? "Supports customer-facing workflows and relationship-driven processes."
+                        : block.label === "ECM"
+                          ? "Works with document repositories, records, and knowledge-heavy operations."
+                          : block.label === "Identity"
+                            ? "Integrates securely with user directories and access management platforms."
+                            : block.label === "Cloud"
+                              ? "Deploys cleanly across modern cloud estates and hybrid infrastructure."
+                              : block.label === "Data"
+                                ? "Connects with analytics, reporting, and enterprise data sources."
+                                : block.label === "BPM"
+                                  ? "Aligns with workflow orchestration and process automation layers."
+                                  : block.label === "AI/ML"
+                                    ? "Supports intelligent automation, prediction, and decision support."
+                                    : "Exposes reusable APIs for seamless integration across business applications."}
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
@@ -340,6 +366,18 @@ const WHY = [
   { icon: Brain, title: "Practical AI", body: "AI is embedded where it improves reviews, decisions, knowledge access, or execution." },
   { icon: ShieldCheck, title: "Enterprise Delivery", body: "Solutions are designed for governance, integration, scale, and long-term support." },
   { icon: Repeat, title: "From Build to Operate", body: "Transformation, engineering, quality, managed services, and operations work as one delivery story." },
+];
+
+const ENTERPRISE_BLOCKS = [
+  { label: "ERP", icon: LayoutGrid },
+  { label: "CRM", icon: Workflow },
+  { label: "ECM", icon: Boxes },
+  { label: "Identity", icon: ShieldCheck },
+  { label: "Cloud", icon: Cpu },
+  { label: "Data", icon: Network },
+  { label: "BPM", icon: Workflow },
+  { label: "AI/ML", icon: Brain },
+  { label: "APIs", icon: Zap },
 ];
 
 function Why() {

@@ -75,7 +75,7 @@ export function IndustryDetailShared({ slug }: { slug: string }) {
         intro={ind.tagline || ind.body}
       />
       <section className="bg-section py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6">
           <div className="lg:col-span-2 space-y-12">
             {/* Intro */}
             {ind.intro && (
@@ -191,19 +191,6 @@ export function IndustryDetailShared({ slug }: { slug: string }) {
               </div>
             )}
           </div>
-
-          <aside className="gradient-border h-fit rounded-2xl bg-card p-6">
-            <h4 className="font-display text-lg font-semibold text-foreground">Discuss your program</h4>
-            <p className="mt-2 text-sm text-muted-foreground">
-              We'll bring domain and delivery specialists to the conversation.
-            </p>
-            <Link
-              to="/contact"
-              className="mt-5 inline-flex items-center gap-2 rounded-full bg-accent-gradient px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow"
-            >
-              Talk to an Expert <ArrowRight className="h-4 w-4" />
-            </Link>
-          </aside>
         </div>
       </section>
     </>

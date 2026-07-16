@@ -2,17 +2,17 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
 import { c as HeadContent, d as Outlet, f as lazyRouteComponent, g as useRouter, h as Link, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { i as AnimatePresence, r as motion } from "../_libs/framer-motion.mjs";
-import { D as ChevronDown, L as ArrowRight, n as X, p as Menu } from "../_libs/lucide-react.mjs";
+import { E as ChevronDown, F as ArrowRight, n as X, p as Menu } from "../_libs/lucide-react.mjs";
 import { n as Route$22, r as Route$1$1 } from "./capabilities._slug-x97s9Nzq.mjs";
-import { t as Route$23 } from "./contact.index-CG956Yj0.mjs";
-import { n as Route$25, r as Route$1$24 } from "./industries._slug-CRlCyV4g.mjs";
+import { t as Route$23 } from "./contact.index-D01eGAx1.mjs";
+import { n as Route$25, r as Route$1$24 } from "./industries._slug-mBlkcv2C.mjs";
 import { t as Route$24 } from "./resources-DjXwTMHJ.mjs";
-import { n as Route$1$26, t as Route$27 } from "./solutions._slug-Ci3Btua8.mjs";
+import { n as Route$1$26, t as Route$27 } from "./solutions._slug-DsXbcGV0.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-D8w_ymrJ.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-B92khke-.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-C5cDLpH5.css";
+var styles_default = "/assets/styles-CUxRlU0r.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -214,6 +214,16 @@ var SUBTABS = {
 			to: "/about/why-tech-tammina"
 		},
 		{
+			label: "Talk to an Expert",
+			to: "/contact",
+			search: { channel: "expert" }
+		},
+		{
+			label: "Request a Demo",
+			to: "/contact",
+			search: { channel: "demo" }
+		},
+		{
 			label: "Partnerships & Ecosystem",
 			to: "/about/partnerships"
 		},
@@ -226,32 +236,13 @@ var SUBTABS = {
 			to: "/careers"
 		}
 	],
-	Contact: [
-		{
-			label: "Talk to an Expert",
-			to: "/contact"
-		},
-		{
-			label: "Request a Demo",
-			to: "/contact/request-demo"
-		},
-		{
-			label: "Partnerships",
-			to: "/contact/partnerships"
-		},
-		{
-			label: "Support",
-			to: "/support"
-		},
-		{
-			label: "Careers",
-			to: "/careers"
-		},
-		{
-			label: "Office Locations",
-			to: "/contact/locations"
-		}
-	]
+	Contact: [{
+		label: "Contact Form",
+		to: "/contact"
+	}, {
+		label: "Office Locations",
+		to: "/contact/locations"
+	}]
 };
 function SiteNav() {
 	const [open, setOpen] = (0, import_react.useState)(false);
@@ -287,7 +278,7 @@ function SiteNav() {
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 						src: "https://techtammina.com/wp-content/uploads/2026/03/Tech-Tammina-Top-IT-Companies-in-Visakhapatnam.webp",
 						alt: "Tech Tammina Logo",
-						className: "h-10 w-auto object-contain"
+						className: "h-14 w-auto object-contain md:h-16"
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
@@ -415,7 +406,7 @@ function SiteFooter() {
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 						src: "https://techtammina.com/wp-content/uploads/2026/03/Tech-Tammina-Top-IT-Companies-in-Visakhapatnam.webp",
 						alt: "Tech Tammina Logo",
-						className: "h-9 w-auto object-contain"
+						className: "h-12 w-auto object-contain md:h-14"
 					})
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-3 text-sm text-muted-foreground",
@@ -661,7 +652,7 @@ var $$splitComponentImporter$15 = () => import("./capabilities-DbvtkBCB.mjs");
 var Route$15 = createFileRoute("/capabilities")({ component: lazyRouteComponent($$splitComponentImporter$15, "component") });
 var $$splitComponentImporter$14 = () => import("./about-Eq2sxU09.mjs");
 var Route$14 = createFileRoute("/about")({ component: lazyRouteComponent($$splitComponentImporter$14, "component") });
-var $$splitComponentImporter$13 = () => import("./routes-C0spOYJg.mjs");
+var $$splitComponentImporter$13 = () => import("./routes-CHGRgIn2.mjs");
 var Route$13 = createFileRoute("/")({
 	component: lazyRouteComponent($$splitComponentImporter$13, "component"),
 	head: () => ({
@@ -690,7 +681,7 @@ var Route$13 = createFileRoute("/")({
 		}]
 	})
 });
-var $$splitComponentImporter$12 = () => import("./about.index-CExbctN8.mjs");
+var $$splitComponentImporter$12 = () => import("./about.index-BPtE1bW5.mjs");
 var Route$12 = createFileRoute("/about/")({
 	component: lazyRouteComponent($$splitComponentImporter$12, "component"),
 	head: () => ({
@@ -735,7 +726,7 @@ var Route$10 = createFileRoute("/contact/partnerships")({
 		content: "Explore a focused technology or go-to-market relationship. Connect with our partnership and ecosystem team."
 	}] })
 });
-var $$splitComponentImporter$9 = () => import("./contact.locations-xtG3O4aQ.mjs");
+var $$splitComponentImporter$9 = () => import("./contact.locations-BNv54JuX.mjs");
 var Route$9 = createFileRoute("/contact/locations")({
 	component: lazyRouteComponent($$splitComponentImporter$9, "component"),
 	head: () => ({ meta: [{ title: "Office Locations | Tech Tammina Offices" }, {
@@ -767,7 +758,7 @@ var Route$6 = createFileRoute("/about/global-presence")({
 		content: "Learn about Tech Tammina global presence: locations, delivery model, and time-zone collaboration."
 	}] })
 });
-var $$splitComponentImporter$5 = () => import("./about.partnerships.index-BUDWHvFE.mjs");
+var $$splitComponentImporter$5 = () => import("./about.partnerships.index-DMz6HJ7E.mjs");
 var Route$5 = createFileRoute("/about/partnerships/")({
 	component: lazyRouteComponent($$splitComponentImporter$5, "component"),
 	head: () => ({ meta: [{ title: "Partnerships & Ecosystem | Platform Practices" }, {

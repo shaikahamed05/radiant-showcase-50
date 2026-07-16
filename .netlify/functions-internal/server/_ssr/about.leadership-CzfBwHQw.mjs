@@ -1,7 +1,7 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as SectionHeading, t as PageHero } from "./section-heading-hdwy3nex.mjs";
-import { I as Award, L as ArrowRight } from "../_libs/lucide-react.mjs";
+import { F as ArrowRight, P as Award } from "../_libs/lucide-react.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/about.leadership-CzfBwHQw.js
 var import_jsx_runtime = require_jsx_runtime();
 function LeadershipPage() {

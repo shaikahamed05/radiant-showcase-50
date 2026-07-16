@@ -1,7 +1,7 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as SectionHeading, t as PageHero } from "./section-heading-hdwy3nex.mjs";
-import { I as Award, L as ArrowRight, N as Brain, R as Activity, S as Earth, l as Repeat, s as ShieldCheck } from "../_libs/lucide-react.mjs";
+import { F as ArrowRight, I as Activity, P as Award, j as Brain, l as Repeat, s as ShieldCheck, x as Earth } from "../_libs/lucide-react.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/about.why-tech-tammina-D9j5LL0Z.js
 var import_jsx_runtime = require_jsx_runtime();
 var DIFFS = [

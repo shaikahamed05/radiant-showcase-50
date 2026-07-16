@@ -1,8 +1,8 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as SectionHeading, t as PageHero } from "./section-heading-hdwy3nex.mjs";
-import { A as Calendar, I as Award, L as ArrowRight, R as Activity, a as UserCheck, i as Users, m as MapPin, v as Heart } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/about.index-CExbctN8.js
+import { F as ArrowRight, I as Activity, P as Award, a as UserCheck, i as Users, k as Calendar, m as MapPin, v as Heart } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/about.index-BPtE1bW5.js
 var import_jsx_runtime = require_jsx_runtime();
 var BELIEFS = [
 	{
@@ -53,6 +53,18 @@ var SUBPAGES = [
 		label: "Why Tech Tammina",
 		desc: "Understand our combination of business, technology, and quality.",
 		to: "/about/why-tech-tammina"
+	},
+	{
+		label: "Talk to an Expert",
+		desc: "Start a conversation about a process, application, or operating challenge.",
+		to: "/contact",
+		search: { channel: "expert" }
+	},
+	{
+		label: "Request a Demo",
+		desc: "See a tailored solution in action against your workflow.",
+		to: "/contact",
+		search: { channel: "demo" }
 	},
 	{
 		label: "Partnerships & Ecosystem",
@@ -153,6 +165,7 @@ function AboutPage() {
 					className: "mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3",
 					children: SUBPAGES.map((sp) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 						to: sp.to,
+						search: sp.search,
 						className: "group relative block rounded-2xl border border-border bg-card p-6 shadow-sm hover:border-primary/40 transition-all hover:scale-[1.01]",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {

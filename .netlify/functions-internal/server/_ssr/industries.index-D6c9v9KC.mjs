@@ -1,39 +1,67 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { A as notFound, f as lazyRouteComponent, h as Link, p as createFileRoute } from "../_libs/@tanstack/react-router+[...].mjs";
-import { t as PageHero } from "./section-heading-hdwy3nex.mjs";
-import { L as ArrowRight, O as Check } from "../_libs/lucide-react.mjs";
+import { A as notFound, h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
+import { r as motion } from "../_libs/framer-motion.mjs";
+import { i as stagger, r as fadeUp, t as PageHero } from "./section-heading-hdwy3nex.mjs";
+import { D as Check, F as ArrowRight } from "../_libs/lucide-react.mjs";
 import { n as INDUSTRIES, r as SOLUTIONS } from "./site-data-Bv2epvEs.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/industries._slug-CRlCyV4g.js
+//#region node_modules/.nitro/vite/services/ssr/assets/industries.index-D6c9v9KC.js
 var import_jsx_runtime = require_jsx_runtime();
-var $$splitComponentImporter$1 = () => import("./industries.index-DNzT_2I7.mjs");
-var Route$1 = createFileRoute("/industries/")({
-	component: lazyRouteComponent($$splitComponentImporter$1, "component"),
-	head: () => ({
-		meta: [
-			{ title: "Industries — Tech Tammina" },
-			{
-				name: "description",
-				content: "Insurance, Financial Services, Healthcare & Life Sciences, Manufacturing, Education, and Public Sector."
-			},
-			{
-				property: "og:title",
-				content: "Industries — Tech Tammina"
-			},
-			{
-				property: "og:description",
-				content: "Deep focus in regulated, operations-heavy industries."
-			},
-			{
-				property: "og:url",
-				content: "/industries"
-			}
-		],
-		links: [{
-			rel: "canonical",
-			href: "/industries"
-		}]
-	})
-});
+function IndustriesIndex() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageHero, {
+		eyebrow: "Industries",
+		title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+			"Deep focus in ",
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				className: "text-gradient",
+				children: "regulated, operations-heavy"
+			}),
+			" industries"
+		] }),
+		intro: "We combine operational knowledge with engineering to move regulated workflows forward — from underwriting to citizen services."
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "bg-section py-20",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "mx-auto max-w-7xl px-6",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+				variants: stagger,
+				initial: "hidden",
+				whileInView: "show",
+				viewport: {
+					once: true,
+					amount: .1
+				},
+				className: "grid gap-6 md:grid-cols-2 lg:grid-cols-3",
+				children: INDUSTRIES.map((ind) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+					variants: fadeUp,
+					transition: { duration: .5 },
+					whileHover: { y: -6 },
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+						to: "/industries/$slug",
+						params: { slug: ind.slug },
+						className: "group relative block h-full overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-card hover:border-primary/40",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-20 -top-20 h-48 w-48 rounded-full bg-violet-teal opacity-0 blur-3xl transition-opacity group-hover:opacity-40" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "relative",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-xl font-semibold text-foreground",
+									children: ind.name
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-sm leading-relaxed text-muted-foreground",
+									children: ind.body
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-transform group-hover:translate-x-1",
+									children: ["Industry detail ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
+								})
+							]
+						})]
+					})
+				}, ind.slug))
+			})
+		})
+	})] });
+}
 function IndustryDetailShared({ slug }) {
 	const ind = INDUSTRIES.find((i) => i.slug === slug);
 	if (!ind) throw notFound();
@@ -44,9 +72,9 @@ function IndustryDetailShared({ slug }) {
 		intro: ind.tagline || ind.body
 	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		className: "bg-section py-20",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-3",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "mx-auto grid max-w-7xl gap-12 px-6",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "lg:col-span-2 space-y-12",
 				children: [
 					ind.intro && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -144,60 +172,9 @@ function IndustryDetailShared({ slug }) {
 						})]
 					})
 				]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("aside", {
-				className: "gradient-border h-fit rounded-2xl bg-card p-6",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-						className: "font-display text-lg font-semibold text-foreground",
-						children: "Discuss your program"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-2 text-sm text-muted-foreground",
-						children: "We'll bring domain and delivery specialists to the conversation."
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-						to: "/contact",
-						className: "mt-5 inline-flex items-center gap-2 rounded-full bg-accent-gradient px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow",
-						children: ["Talk to an Expert ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
-					})
-				]
-			})]
+			})
 		})
 	})] });
 }
-var $$splitComponentImporter = () => import("./industries._slug-C_3uqfsl.mjs");
-var Route = createFileRoute("/industries/$slug")({
-	component: lazyRouteComponent($$splitComponentImporter, "component"),
-	head: ({ params }) => {
-		const ind = INDUSTRIES.find((i) => i.slug === params.slug);
-		const title = ind ? `${ind.name} — Tech Tammina` : "Industry — Tech Tammina";
-		const desc = ind?.body ?? "Tech Tammina industry focus.";
-		return {
-			meta: [
-				{ title },
-				{
-					name: "description",
-					content: desc
-				},
-				{
-					property: "og:title",
-					content: title
-				},
-				{
-					property: "og:description",
-					content: desc
-				},
-				{
-					property: "og:url",
-					content: `/industries/${params.slug}`
-				}
-			],
-			links: [{
-				rel: "canonical",
-				href: `/industries/${params.slug}`
-			}]
-		};
-	}
-});
 //#endregion
-export { Route as n, Route$1 as r, IndustryDetailShared as t };
+export { IndustryDetailShared, IndustriesIndex as component };

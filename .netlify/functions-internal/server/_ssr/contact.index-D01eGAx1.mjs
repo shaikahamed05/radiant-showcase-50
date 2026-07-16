@@ -1,7 +1,7 @@
 import { f as lazyRouteComponent, p as createFileRoute } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as stringType, t as objectType } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/contact.index-CG956Yj0.js
-var $$splitComponentImporter = () => import("./contact.index-BCiKsbwE.mjs");
+//#region node_modules/.nitro/vite/services/ssr/assets/contact.index-D01eGAx1.js
+var $$splitComponentImporter = () => import("./contact.index-C4EI5pZK.mjs");
 var contactSearchSchema = objectType({ channel: stringType().optional() });
 var Route = createFileRoute("/contact/")({
 	validateSearch: (search) => contactSearchSchema.parse(search),
@@ -11,7 +11,7 @@ var Route = createFileRoute("/contact/")({
 			{ title: "Contact — Tech Tammina" },
 			{
 				name: "description",
-				content: "Talk to an expert, request a demo, or reach partnerships, support, careers, and office locations."
+				content: "Start a conversation with Tech Tammina, explore office locations, and share the work you need help solving."
 			},
 			{
 				property: "og:title",

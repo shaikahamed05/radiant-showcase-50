@@ -3,9 +3,9 @@ import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tan
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as useScroll, r as motion, t as useTransform } from "../_libs/framer-motion.mjs";
 import { i as stagger, n as SectionHeading, r as fadeUp } from "./section-heading-hdwy3nex.mjs";
-import { C as Cpu, L as ArrowRight, N as Brain, P as Boxes, _ as LayoutGrid, f as Network, g as LifeBuoy, k as ChartLine, l as Repeat, o as Sparkles, r as Workflow, s as ShieldCheck, t as Zap } from "../_libs/lucide-react.mjs";
+import { F as ArrowRight, M as Boxes, O as ChartLine, S as Cpu, _ as LayoutGrid, f as Network, g as LifeBuoy, j as Brain, l as Repeat, o as Sparkles, r as Workflow, s as ShieldCheck, t as Zap } from "../_libs/lucide-react.mjs";
 import { n as INDUSTRIES, r as SOLUTIONS, t as CAPABILITIES } from "./site-data-Bv2epvEs.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-C0spOYJg.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CHGRgIn2.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 /**
@@ -824,7 +824,7 @@ function Ecosystem() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		className: "relative bg-background py-24",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center",
+			className: "mx-auto max-w-7xl px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeading, {
 				eyebrow: "Enterprise Fit",
 				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Built to fit the ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -832,54 +832,70 @@ function Ecosystem() {
 					children: "enterprise"
 				})] }),
 				intro: "Tech Tammina solutions are designed to work across enterprise platforms, business applications, document repositories, identity services, cloud environments, and third-party systems. Integration is treated as part of the operating model — not an afterthought."
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
 				initial: {
 					opacity: 0,
-					scale: .96
+					y: 16
 				},
 				whileInView: {
 					opacity: 1,
-					scale: 1
+					y: 0
 				},
 				viewport: {
 					once: true,
-					amount: .3
+					amount: .2
 				},
-				transition: { duration: .7 },
-				className: "relative",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "gradient-border relative rounded-3xl bg-surface/60 p-8 shadow-card backdrop-blur",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "grid grid-cols-3 gap-3",
-						children: [
-							"ERP",
-							"CRM",
-							"ECM",
-							"Identity",
-							"Cloud",
-							"Data",
-							"BPM",
-							"AI/ML",
-							"APIs"
-						].map((chip, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
-							initial: {
-								opacity: 0,
-								y: 10
-							},
-							whileInView: {
-								opacity: 1,
-								y: 0
-							},
-							viewport: { once: true },
-							transition: { delay: i * .05 },
-							className: "grid aspect-square place-items-center rounded-xl border border-border bg-card font-display text-sm text-muted-foreground transition-colors hover:text-foreground",
-							children: chip
-						}, chip))
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "mt-6 flex items-center gap-3 text-xs text-muted-foreground",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Boxes, { className: "h-4 w-4 text-primary" }), "Works with your enterprise ecosystem"]
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute -inset-8 -z-10 rounded-[2rem] bg-cyan-violet opacity-30 blur-3xl" })]
+				transition: {
+					duration: .6,
+					ease: "easeOut"
+				},
+				className: "mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3",
+				children: ENTERPRISE_BLOCKS.map((block, i) => {
+					const Icon = block.icon;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+						initial: {
+							opacity: 0,
+							y: 14
+						},
+						whileInView: {
+							opacity: 1,
+							y: 0
+						},
+						viewport: { once: true },
+						transition: {
+							delay: i * .06,
+							duration: .45
+						},
+						whileHover: {
+							y: -5,
+							scale: 1.01
+						},
+						className: "group relative overflow-hidden rounded-[1.35rem] border border-border/70 bg-card p-6 shadow-sm",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(82,122,255,0.16),_transparent_50%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "relative",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center justify-between",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "grid h-11 w-11 place-items-center rounded-2xl bg-accent-gradient text-primary-foreground shadow-glow",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "h-5 w-5" })
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "rounded-full border border-primary/15 bg-primary/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-primary",
+										children: "Connected"
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "mt-5 font-display text-lg font-semibold text-foreground",
+									children: block.label
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-2 text-sm leading-relaxed text-muted-foreground",
+									children: block.label === "ERP" ? "Fits into core finance, supply chain, and operational planning environments." : block.label === "CRM" ? "Supports customer-facing workflows and relationship-driven processes." : block.label === "ECM" ? "Works with document repositories, records, and knowledge-heavy operations." : block.label === "Identity" ? "Integrates securely with user directories and access management platforms." : block.label === "Cloud" ? "Deploys cleanly across modern cloud estates and hybrid infrastructure." : block.label === "Data" ? "Connects with analytics, reporting, and enterprise data sources." : block.label === "BPM" ? "Aligns with workflow orchestration and process automation layers." : block.label === "AI/ML" ? "Supports intelligent automation, prediction, and decision support." : "Exposes reusable APIs for seamless integration across business applications."
+								})
+							]
+						})]
+					}, block.label);
+				})
 			})]
 		})
 	});
@@ -904,6 +920,44 @@ var WHY = [
 		icon: Repeat,
 		title: "From Build to Operate",
 		body: "Transformation, engineering, quality, managed services, and operations work as one delivery story."
+	}
+];
+var ENTERPRISE_BLOCKS = [
+	{
+		label: "ERP",
+		icon: LayoutGrid
+	},
+	{
+		label: "CRM",
+		icon: Workflow
+	},
+	{
+		label: "ECM",
+		icon: Boxes
+	},
+	{
+		label: "Identity",
+		icon: ShieldCheck
+	},
+	{
+		label: "Cloud",
+		icon: Cpu
+	},
+	{
+		label: "Data",
+		icon: Network
+	},
+	{
+		label: "BPM",
+		icon: Workflow
+	},
+	{
+		label: "AI/ML",
+		icon: Brain
+	},
+	{
+		label: "APIs",
+		icon: Zap
 	}
 ];
 function Why() {

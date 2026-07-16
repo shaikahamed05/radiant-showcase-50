@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import { ArrowRight, Check, Sparkles, LayoutGrid, Heart } from "lucide-react";
 import { PageHero, SectionHeading } from "@/components/section-heading";
 
@@ -126,8 +128,24 @@ function PartnershipsPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="border-t border-border bg-background py-20">
+        <div className="mx-auto max-w-4xl px-6">
+          <SectionHeading
+            center
+            eyebrow="Partnership Interest"
+            title={<>Tell us about your ecosystem or alliance idea</>}
+          />
+          <p className="mt-4 text-center text-sm leading-relaxed text-muted-foreground">
+            Share the platform, region, or joint delivery model you are exploring and we will get back to you.
+          </p>
+          <div className="mt-10">
+            <PartnershipForm />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="border-t border-border bg-section py-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="font-display text-2xl font-semibold text-foreground mb-4">Discuss your practice requirements</h2>
           <p className="text-sm leading-relaxed text-muted-foreground mb-8">
@@ -142,5 +160,136 @@ function PartnershipsPage() {
         </div>
       </section>
     </>
+  );
+}
+
+function PartnershipForm() {
+  const [submitted, setSubmitted] = useState(false);
+
+  return submitted ? (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      className="gradient-border rounded-2xl bg-card p-10 text-center"
+    >
+      <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-accent-gradient text-primary-foreground shadow-glow mb-6">
+        <Check className="h-7 w-7" />
+      </div>
+      <h3 className="font-display text-2xl font-semibold text-foreground mb-4">Partnership Request Received</h3>
+      <p className="text-sm leading-relaxed text-muted-foreground">
+        Thank you for your proposal. Our alliances team will review the details and follow up shortly.
+      </p>
+    </motion.div>
+  ) : (
+    <motion.form
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      onSubmit={(e) => {
+        e.preventDefault();
+        setSubmitted(true);
+      }}
+      className="gradient-border relative rounded-2xl bg-card p-8 sm:p-10 space-y-6"
+    >
+      <div className="grid gap-6 sm:grid-cols-2">
+        <div>
+          <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground block mb-2">
+            Partnership Type *
+          </label>
+          <select
+            required
+            className="w-full rounded-xl border border-border bg-surface/75 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary/60"
+          >
+            <option value="">Select a type...</option>
+            <option value="technology">Technology/ISV Integration</option>
+            <option value="referral">Referral/Agent Alliance</option>
+            <option value="delivery">Co-Delivery / Subcontracting</option>
+            <option value="marketing">Co-Marketing & Events</option>
+          </select>
+        </div>
+        <div>
+          <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground block mb-2">
+            Primary Platform Focus *
+          </label>
+          <input
+            required
+            type="text"
+            placeholder="e.g., Appian, Camunda, Salesforce, Custom Integration"
+            className="w-full rounded-xl border border-border bg-surface/75 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary/60"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground block mb-2">
+          Proposed Collaboration Overview *
+        </label>
+        <textarea
+          required
+          rows={4}
+          placeholder="Tell us how you would like to work together, joint solutions, target markets, or referral models..."
+          className="w-full rounded-xl border border-border bg-surface/75 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary/60"
+        />
+      </div>
+
+      <div className="grid gap-6 sm:grid-cols-2">
+        <div>
+          <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground block mb-2">
+            Target Regions *
+          </label>
+          <input
+            required
+            type="text"
+            placeholder="e.g., North America, EMEA, APAC, Global"
+            className="w-full rounded-xl border border-border bg-surface/75 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary/60"
+          />
+        </div>
+        <div>
+          <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground block mb-2">
+            Work Email *
+          </label>
+          <input
+            required
+            type="email"
+            placeholder="name@company.com"
+            className="w-full rounded-xl border border-border bg-surface/75 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary/60"
+          />
+        </div>
+      </div>
+
+      <div className="grid gap-6 sm:grid-cols-2">
+        <div>
+          <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground block mb-2">
+            Contact Full Name *
+          </label>
+          <input
+            required
+            type="text"
+            placeholder="First and last name"
+            className="w-full rounded-xl border border-border bg-surface/75 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary/60"
+          />
+        </div>
+        <div>
+          <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground block mb-2">
+            Company / Organization *
+          </label>
+          <input
+            required
+            type="text"
+            placeholder="Your organization"
+            className="w-full rounded-xl border border-border bg-surface/75 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary/60"
+          />
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        className="w-full group inline-flex items-center justify-center gap-2 rounded-full bg-accent-gradient px-6 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.01]"
+      >
+        Submit Proposal
+        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+      </button>
+    </motion.form>
   );
 }

@@ -45,6 +45,8 @@ const SNAPSHOT = [
 const SUBPAGES = [
   { label: "Leadership", desc: "Meet the team responsible for strategy and delivery.", to: "/about/leadership" },
   { label: "Why Tech Tammina", desc: "Understand our combination of business, technology, and quality.", to: "/about/why-tech-tammina" },
+  { label: "Talk to an Expert", desc: "Start a conversation about a process, application, or operating challenge.", to: "/contact", search: { channel: "expert" } },
+  { label: "Request a Demo", desc: "See a tailored solution in action against your workflow.", to: "/contact", search: { channel: "demo" } },
   { label: "Partnerships & Ecosystem", desc: "Explore our formal practices, platform alliances, and contributions.", to: "/about/partnerships" },
   { label: "Global Presence", desc: "See how local collaboration and global delivery support clients.", to: "/about/global-presence" },
   { label: "Careers", desc: "Discover culture, values, and open opportunities.", to: "/careers" }
@@ -113,6 +115,7 @@ function AboutPage() {
               <Link
                 key={sp.to}
                 to={sp.to as any}
+                search={sp.search as any}
                 className="group relative block rounded-2xl border border-border bg-card p-6 shadow-sm hover:border-primary/40 transition-all hover:scale-[1.01]"
               >
                 <h3 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors mb-2">

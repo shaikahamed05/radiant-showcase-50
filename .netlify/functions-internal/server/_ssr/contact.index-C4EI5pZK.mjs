@@ -2,61 +2,24 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { r as motion } from "../_libs/framer-motion.mjs";
 import { t as PageHero } from "./section-heading-hdwy3nex.mjs";
-import { L as ArrowRight, g as LifeBuoy, h as Mail, j as Building2, m as MapPin, o as Sparkles, u as Phone, y as Handshake } from "../_libs/lucide-react.mjs";
-import { t as Route } from "./contact.index-CG956Yj0.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/contact.index-BCiKsbwE.js
+import { F as ArrowRight, h as Mail, m as MapPin, u as Phone } from "../_libs/lucide-react.mjs";
+import { t as Route } from "./contact.index-D01eGAx1.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/contact.index-C4EI5pZK.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var CHANNELS = [
-	{
-		slug: "expert",
-		icon: Sparkles,
-		title: "Talk to an Expert",
-		body: "Discuss a process, application, or operational challenge."
-	},
-	{
-		slug: "demo",
-		icon: ArrowRight,
-		title: "Request a Demo",
-		body: "See a Tech Tammina solution against your workflow."
-	},
-	{
-		slug: "partnerships",
-		icon: Handshake,
-		title: "Partnerships",
-		body: "Explore joint delivery, integration, or go-to-market."
-	},
-	{
-		slug: "support",
-		icon: LifeBuoy,
-		title: "Support",
-		body: "Reach managed services and application support teams."
-	},
-	{
-		slug: "careers",
-		icon: Building2,
-		title: "Careers",
-		body: "Join the teams building intelligent operations."
-	},
-	{
-		slug: "locations",
-		icon: MapPin,
-		title: "Office Locations",
-		body: "Global delivery across multiple time zones."
-	}
-];
+var CHANNELS = [{
+	slug: "locations",
+	icon: MapPin,
+	title: "Office Locations",
+	body: "Reach the right regional team across the US, India, Netherlands, and UAE."
+}];
 function ContactPage() {
 	const { channel } = Route.useSearch();
 	const [sent, setSent] = (0, import_react.useState)(false);
 	const [message, setMessage] = (0, import_react.useState)("");
 	(0, import_react.useEffect)(() => {
-		let defaultMessage = "";
-		if (channel === "expert") defaultMessage = "I would like to talk to an operations expert about...";
-		else if (channel === "demo") defaultMessage = "I would like to request a demo for one of Tech Tammina's solutions.";
-		else if (channel === "partnerships") defaultMessage = "I'm interested in exploring partnership opportunities with Tech Tammina.";
-		else if (channel === "support") defaultMessage = "I need application support for...";
-		else if (channel === "careers") defaultMessage = "I'm interested in career opportunities at Tech Tammina.";
-		else if (channel === "locations") defaultMessage = "I would like to connect with one of your office locations.";
+		let defaultMessage = "I would like to start a conversation with Tech Tammina about...";
+		if (channel === "locations") defaultMessage = "I would like to connect with one of your office locations.";
 		setMessage(defaultMessage);
 	}, [channel]);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageHero, {

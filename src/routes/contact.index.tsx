@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { z } from "zod";
-import { ArrowRight, Building2, Handshake, LifeBuoy, Mail, MapPin, Phone, Sparkles } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone, Sparkles } from "lucide-react";
 import { PageHero } from "@/components/section-heading";
 
 const contactSearchSchema = z.object({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/contact/")({
   head: () => ({
     meta: [
       { title: "Contact — Tech Tammina" },
-      { name: "description", content: "Talk to an expert, request a demo, or reach partnerships, support, careers, and office locations." },
+      { name: "description", content: "Start a conversation with Tech Tammina, explore office locations, and share the work you need help solving." },
       { property: "og:title", content: "Contact — Tech Tammina" },
       { property: "og:description", content: "Start a conversation with Tech Tammina." },
       { property: "og:url", content: "/contact" },
@@ -25,12 +25,7 @@ export const Route = createFileRoute("/contact/")({
 });
 
 const CHANNELS = [
-  { slug: "expert", icon: Sparkles, title: "Talk to an Expert", body: "Discuss a process, application, or operational challenge." },
-  { slug: "demo", icon: ArrowRight, title: "Request a Demo", body: "See a Tech Tammina solution against your workflow." },
-  { slug: "partnerships", icon: Handshake, title: "Partnerships", body: "Explore joint delivery, integration, or go-to-market." },
-  { slug: "support", icon: LifeBuoy, title: "Support", body: "Reach managed services and application support teams." },
-  { slug: "careers", icon: Building2, title: "Careers", body: "Join the teams building intelligent operations." },
-  { slug: "locations", icon: MapPin, title: "Office Locations", body: "Global delivery across multiple time zones." },
+  { slug: "locations", icon: MapPin, title: "Office Locations", body: "Reach the right regional team across the US, India, Netherlands, and UAE." },
 ];
 
 function ContactPage() {
@@ -39,18 +34,8 @@ function ContactPage() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    let defaultMessage = "";
-    if (channel === "expert") {
-      defaultMessage = "I would like to talk to an operations expert about...";
-    } else if (channel === "demo") {
-      defaultMessage = "I would like to request a demo for one of Tech Tammina's solutions.";
-    } else if (channel === "partnerships") {
-      defaultMessage = "I'm interested in exploring partnership opportunities with Tech Tammina.";
-    } else if (channel === "support") {
-      defaultMessage = "I need application support for...";
-    } else if (channel === "careers") {
-      defaultMessage = "I'm interested in career opportunities at Tech Tammina.";
-    } else if (channel === "locations") {
+    let defaultMessage = "I would like to start a conversation with Tech Tammina about...";
+    if (channel === "locations") {
       defaultMessage = "I would like to connect with one of your office locations.";
     }
     setMessage(defaultMessage);

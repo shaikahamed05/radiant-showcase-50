@@ -1,7 +1,7 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageHero } from "./section-heading-hdwy3nex.mjs";
-import { I as Award, L as ArrowRight, O as Check, o as Sparkles } from "../_libs/lucide-react.mjs";
+import { D as Check, F as ArrowRight, P as Award, o as Sparkles } from "../_libs/lucide-react.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/about.partnerships.appian-C3yX_4kS.js
 var import_jsx_runtime = require_jsx_runtime();
 var SERVICES = [

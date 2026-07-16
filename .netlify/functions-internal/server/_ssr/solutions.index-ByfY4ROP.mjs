@@ -1,39 +1,66 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { A as notFound, f as lazyRouteComponent, h as Link, p as createFileRoute } from "../_libs/@tanstack/react-router+[...].mjs";
-import { t as PageHero } from "./section-heading-hdwy3nex.mjs";
-import { L as ArrowRight, O as Check } from "../_libs/lucide-react.mjs";
+import { A as notFound, h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
+import { r as motion } from "../_libs/framer-motion.mjs";
+import { i as stagger, r as fadeUp, t as PageHero } from "./section-heading-hdwy3nex.mjs";
+import { D as Check, F as ArrowRight } from "../_libs/lucide-react.mjs";
 import { r as SOLUTIONS } from "./site-data-Bv2epvEs.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/solutions._slug-Ci3Btua8.js
+//#region node_modules/.nitro/vite/services/ssr/assets/solutions.index-ByfY4ROP.js
 var import_jsx_runtime = require_jsx_runtime();
-var $$splitComponentImporter$1 = () => import("./solutions.index-6ps656m8.mjs");
-var Route$1 = createFileRoute("/solutions/")({
-	component: lazyRouteComponent($$splitComponentImporter$1, "component"),
-	head: () => ({
-		meta: [
-			{ title: "Solutions — Tech Tammina" },
-			{
-				name: "description",
-				content: "Eleven purpose-built solutions across insurance, compliance, vendor, fleet, and document-intensive operations."
-			},
-			{
-				property: "og:title",
-				content: "Solutions — Tech Tammina"
-			},
-			{
-				property: "og:description",
-				content: "Solutions engineered for measurable outcomes."
-			},
-			{
-				property: "og:url",
-				content: "/solutions"
-			}
-		],
-		links: [{
-			rel: "canonical",
-			href: "/solutions"
-		}]
-	})
-});
+function SolutionsIndex() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageHero, {
+		eyebrow: "Solutions",
+		title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Solutions engineered for ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			className: "text-gradient",
+			children: "measurable outcomes"
+		})] }),
+		intro: "Purpose-built to accelerate the work that runs the business — from underwriting to vendors."
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "bg-section py-20",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "mx-auto max-w-7xl px-6",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+				variants: stagger,
+				initial: "hidden",
+				whileInView: "show",
+				viewport: {
+					once: true,
+					amount: .05
+				},
+				className: "grid gap-6 md:grid-cols-2 lg:grid-cols-3",
+				children: SOLUTIONS.map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+					variants: fadeUp,
+					transition: { duration: .5 },
+					whileHover: { y: -6 },
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+						to: "/solutions/$slug",
+						params: { slug: s.slug },
+						className: "group relative block h-full overflow-hidden rounded-2xl border border-border bg-card p-7 shadow-card",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center justify-between",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "font-display text-xs font-semibold tracking-widest text-gradient",
+									children: String(i + 1).padStart(2, "0")
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "grid h-8 w-8 place-items-center rounded-full bg-accent-gradient text-primary-foreground shadow-glow transition-transform group-hover:rotate-45",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "mt-6 text-xl font-semibold text-foreground",
+								children: s.title
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-3 text-sm leading-relaxed text-muted-foreground",
+								children: s.body
+							})
+						]
+					})
+				}, s.slug))
+			})
+		})
+	})] });
+}
 function SolutionDetailShared({ slug }) {
 	const sol = SOLUTIONS.find((s) => s.slug === slug);
 	if (!sol) throw notFound();
@@ -43,9 +70,9 @@ function SolutionDetailShared({ slug }) {
 		intro: sol.body
 	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		className: "bg-section py-20",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-3",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "mx-auto grid max-w-7xl gap-12 px-6",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "lg:col-span-2 space-y-12",
 				children: [
 					sol.overview && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
@@ -154,64 +181,9 @@ function SolutionDetailShared({ slug }) {
 						]
 					})
 				]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("aside", {
-				className: "gradient-border h-fit rounded-2xl bg-card p-6",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-						className: "font-display text-lg font-semibold text-foreground",
-						children: "Request a demo"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-						className: "mt-2 text-sm text-muted-foreground",
-						children: [
-							"See ",
-							sol.title,
-							" in action against your workflow."
-						]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-						to: "/contact",
-						className: "mt-5 inline-flex items-center gap-2 rounded-full bg-accent-gradient px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow",
-						children: ["Request a Demo ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
-					})
-				]
-			})]
+			})
 		})
 	})] });
 }
-var $$splitComponentImporter = () => import("./solutions._slug-Cs4Hugd2.mjs");
-var Route = createFileRoute("/solutions/$slug")({
-	component: lazyRouteComponent($$splitComponentImporter, "component"),
-	head: ({ params }) => {
-		const sol = SOLUTIONS.find((s) => s.slug === params.slug);
-		const title = sol ? `${sol.title} — Tech Tammina` : "Solution — Tech Tammina";
-		const desc = sol?.body ?? "Tech Tammina solution.";
-		return {
-			meta: [
-				{ title },
-				{
-					name: "description",
-					content: desc
-				},
-				{
-					property: "og:title",
-					content: title
-				},
-				{
-					property: "og:description",
-					content: desc
-				},
-				{
-					property: "og:url",
-					content: `/solutions/${params.slug}`
-				}
-			],
-			links: [{
-				rel: "canonical",
-				href: `/solutions/${params.slug}`
-			}]
-		};
-	}
-});
 //#endregion
-export { Route$1 as n, SolutionDetailShared as r, Route as t };
+export { SolutionDetailShared, SolutionsIndex as component };

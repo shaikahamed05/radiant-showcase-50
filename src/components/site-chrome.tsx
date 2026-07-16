@@ -53,16 +53,14 @@ const SUBTABS: Record<string, { label: string; to: string; params?: Record<strin
     { label: "Company Overview", to: "/about" },
     { label: "Leadership", to: "/about/leadership" },
     { label: "Why Tech Tammina", to: "/about/why-tech-tammina" },
+    { label: "Talk to an Expert", to: "/contact", search: { channel: "expert" } },
+    { label: "Request a Demo", to: "/contact", search: { channel: "demo" } },
     { label: "Partnerships & Ecosystem", to: "/about/partnerships" },
     { label: "Global Presence", to: "/about/global-presence" },
     { label: "Careers", to: "/careers" },
   ],
   Contact: [
-    { label: "Talk to an Expert", to: "/contact" },
-    { label: "Request a Demo", to: "/contact/request-demo" },
-    { label: "Partnerships", to: "/contact/partnerships" },
-    { label: "Support", to: "/support" },
-    { label: "Careers", to: "/careers" },
+    { label: "Contact Form", to: "/contact" },
     { label: "Office Locations", to: "/contact/locations" },
   ],
 };
@@ -88,7 +86,7 @@ export function SiteNav() {
           <img
             src="https://techtammina.com/wp-content/uploads/2026/03/Tech-Tammina-Top-IT-Companies-in-Visakhapatnam.webp"
             alt="Tech Tammina Logo"
-            className="h-10 w-auto object-contain"
+            className="h-14 w-auto object-contain md:h-16"
           />
         </Link>
 
@@ -241,7 +239,7 @@ export function SiteFooter() {
             <img
               src="https://techtammina.com/wp-content/uploads/2026/03/Tech-Tammina-Top-IT-Companies-in-Visakhapatnam.webp"
               alt="Tech Tammina Logo"
-              className="h-9 w-auto object-contain"
+              className="h-12 w-auto object-contain md:h-14"
             />
           </div>
           <p className="mt-3 text-sm text-muted-foreground">
