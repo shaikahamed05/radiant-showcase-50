@@ -90,7 +90,7 @@ export function CapabilityDetailShared({ slug }: { slug: string }) {
         intro={cap.tagline}
       />
       <section className="bg-section py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6">
           <div className="lg:col-span-2 space-y-12">
             {/* Core Body */}
             <div>
@@ -193,7 +193,7 @@ export function CapabilityDetailShared({ slug }: { slug: string }) {
             </div>
           </div>
 
-          <aside className="gradient-border h-fit rounded-2xl bg-card p-6">
+          {/* <aside className="gradient-border h-fit rounded-2xl bg-card p-6">
             <h4 className="font-display text-lg font-semibold text-foreground">Talk to a specialist</h4>
             <p className="mt-2 text-sm text-muted-foreground">
               Share your challenge and we'll match the right team and approach.
@@ -204,7 +204,7 @@ export function CapabilityDetailShared({ slug }: { slug: string }) {
             >
               Talk to an Expert <ArrowRight className="h-4 w-4" />
             </Link>
-          </aside>
+          </aside> */}
         </div>
       </section>
     </>
