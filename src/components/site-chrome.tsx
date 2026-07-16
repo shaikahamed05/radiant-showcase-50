@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Menu, Sparkles, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export const NAV_LINKS = [
@@ -22,13 +22,12 @@ export function SiteNav() {
       className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl"
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="grid h-8 w-8 place-items-center rounded-md bg-accent-gradient text-primary-foreground shadow-glow">
-            <Sparkles className="h-4 w-4" />
-          </span>
-          <span className="font-display text-lg font-semibold tracking-tight">
-            Tech<span className="text-gradient"> Tammina</span>
-          </span>
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <img
+            src="https://techtammina.com/wp-content/uploads/2025/05/techlogo.png"
+            alt="Tech Tammina Logo"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
@@ -96,13 +95,12 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-background py-12">
       <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="grid h-7 w-7 place-items-center rounded-md bg-accent-gradient text-primary-foreground">
-              <Sparkles className="h-3.5 w-3.5" />
-            </span>
-            <span className="font-display text-base font-semibold">
-              Tech<span className="text-gradient"> Tammina</span>
-            </span>
+          <div className="flex items-center">
+            <img
+              src="https://techtammina.com/wp-content/uploads/2025/05/techlogo.png"
+              alt="Tech Tammina Logo"
+              className="h-9 w-auto object-contain"
+            />
           </div>
           <p className="mt-3 text-sm text-muted-foreground">
             Connecting AI, automation, and expertise to drive business impact.
