@@ -4,15 +4,15 @@ import { c as HeadContent, d as Outlet, f as lazyRouteComponent, g as useRouter,
 import { i as AnimatePresence, r as motion } from "../_libs/framer-motion.mjs";
 import { E as ChevronDown, F as ArrowRight, n as X, p as Menu } from "../_libs/lucide-react.mjs";
 import { n as Route$22, r as Route$1$1 } from "./capabilities._slug-x97s9Nzq.mjs";
-import { t as Route$23 } from "./contact.index-D01eGAx1.mjs";
+import { t as Route$23 } from "./contact.index-B_D2dqKt.mjs";
 import { n as Route$25, r as Route$1$24 } from "./industries._slug-mBlkcv2C.mjs";
 import { t as Route$24 } from "./resources-DjXwTMHJ.mjs";
 import { n as Route$1$26, t as Route$27 } from "./solutions._slug-DsXbcGV0.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-B92khke-.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-DmrH2dB0.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-CUxRlU0r.css";
+var styles_default = "/assets/styles-CR51W58G.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {

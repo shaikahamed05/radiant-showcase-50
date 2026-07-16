@@ -50,7 +50,7 @@ function ContactPage() {
       />
 
       <section className="bg-section py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-5">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 ">
           <motion.form
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -89,43 +89,6 @@ function ContactPage() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </button>
           </motion.form>
-
-          <div className="lg:col-span-2">
-            <div className="gradient-border rounded-2xl bg-card p-6">
-              <h3 className="font-display text-lg font-semibold text-foreground">Direct channels</h3>
-              <ul className="mt-4 space-y-4 text-sm">
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <Mail className="h-4 w-4 text-primary" /> hello@techtammina.com
-                </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <Phone className="h-4 w-4 text-primary" /> +1 (000) 000-0000
-                </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <MapPin className="h-4 w-4 text-primary" /> Global delivery — multiple regions
-                </li>
-              </ul>
-            </div>
-
-            <div className="mt-6 grid grid-cols-2 gap-3">
-              {CHANNELS.map((c) => {
-                const isSelected = channel === c.slug;
-                return (
-                  <div
-                    key={c.title}
-                    className={`gradient-border rounded-xl bg-card p-4 transition-all duration-300 ${
-                      isSelected
-                        ? "scale-[1.03] ring-2 ring-primary border-transparent shadow-glow-cyan"
-                        : "opacity-80"
-                    }`}
-                  >
-                    <c.icon className="h-4 w-4 text-primary" />
-                    <div className="mt-2 text-sm font-semibold text-foreground">{c.title}</div>
-                    <div className="mt-1 text-xs text-muted-foreground">{c.body}</div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
         </div>
       </section>
     </>
