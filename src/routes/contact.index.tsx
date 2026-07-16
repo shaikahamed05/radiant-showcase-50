@@ -1,10 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { z } from "zod";
 import { ArrowRight, Building2, Handshake, LifeBuoy, Mail, MapPin, Phone, Sparkles } from "lucide-react";
 import { PageHero } from "@/components/section-heading";
 
-export const Route = createFileRoute("/contact")({
+const contactSearchSchema = z.object({
+  channel: z.string().optional(),
+});
+
+export const Route = createFileRoute("/contact/")({
+  validateSearch: (search) => contactSearchSchema.parse(search),
   component: ContactPage,
   head: () => ({
     meta: [
@@ -19,16 +25,37 @@ export const Route = createFileRoute("/contact")({
 });
 
 const CHANNELS = [
-  { icon: Sparkles, title: "Talk to an Expert", body: "Discuss a process, application, or operational challenge." },
-  { icon: ArrowRight, title: "Request a Demo", body: "See a Tech Tammina solution against your workflow." },
-  { icon: Handshake, title: "Partnerships", body: "Explore joint delivery, integration, or go-to-market." },
-  { icon: LifeBuoy, title: "Support", body: "Reach managed services and application support teams." },
-  { icon: Building2, title: "Careers", body: "Join the teams building intelligent operations." },
-  { icon: MapPin, title: "Office Locations", body: "Global delivery across multiple time zones." },
+  { slug: "expert", icon: Sparkles, title: "Talk to an Expert", body: "Discuss a process, application, or operational challenge." },
+  { slug: "demo", icon: ArrowRight, title: "Request a Demo", body: "See a Tech Tammina solution against your workflow." },
+  { slug: "partnerships", icon: Handshake, title: "Partnerships", body: "Explore joint delivery, integration, or go-to-market." },
+  { slug: "support", icon: LifeBuoy, title: "Support", body: "Reach managed services and application support teams." },
+  { slug: "careers", icon: Building2, title: "Careers", body: "Join the teams building intelligent operations." },
+  { slug: "locations", icon: MapPin, title: "Office Locations", body: "Global delivery across multiple time zones." },
 ];
 
 function ContactPage() {
+  const { channel } = Route.useSearch();
   const [sent, setSent] = useState(false);
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    let defaultMessage = "";
+    if (channel === "expert") {
+      defaultMessage = "I would like to talk to an operations expert about...";
+    } else if (channel === "demo") {
+      defaultMessage = "I would like to request a demo for one of Tech Tammina's solutions.";
+    } else if (channel === "partnerships") {
+      defaultMessage = "I'm interested in exploring partnership opportunities with Tech Tammina.";
+    } else if (channel === "support") {
+      defaultMessage = "I need application support for...";
+    } else if (channel === "careers") {
+      defaultMessage = "I'm interested in career opportunities at Tech Tammina.";
+    } else if (channel === "locations") {
+      defaultMessage = "I would like to connect with one of your office locations.";
+    }
+    setMessage(defaultMessage);
+  }, [channel]);
+
   return (
     <>
       <PageHero
@@ -63,6 +90,8 @@ function ContactPage() {
               <textarea
                 required
                 rows={5}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="mt-2 w-full rounded-xl border border-border bg-surface/70 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary/60"
                 placeholder="Share the process, application, or operational challenge…"
               />
@@ -93,13 +122,23 @@ function ContactPage() {
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3">
-              {CHANNELS.map((c) => (
-                <div key={c.title} className="gradient-border rounded-xl bg-card p-4">
-                  <c.icon className="h-4 w-4 text-primary" />
-                  <div className="mt-2 text-sm font-semibold text-foreground">{c.title}</div>
-                  <div className="mt-1 text-xs text-muted-foreground">{c.body}</div>
-                </div>
-              ))}
+              {CHANNELS.map((c) => {
+                const isSelected = channel === c.slug;
+                return (
+                  <div
+                    key={c.title}
+                    className={`gradient-border rounded-xl bg-card p-4 transition-all duration-300 ${
+                      isSelected
+                        ? "scale-[1.03] ring-2 ring-primary border-transparent shadow-glow-cyan"
+                        : "opacity-80"
+                    }`}
+                  >
+                    <c.icon className="h-4 w-4 text-primary" />
+                    <div className="mt-2 text-sm font-semibold text-foreground">{c.title}</div>
+                    <div className="mt-1 text-xs text-muted-foreground">{c.body}</div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

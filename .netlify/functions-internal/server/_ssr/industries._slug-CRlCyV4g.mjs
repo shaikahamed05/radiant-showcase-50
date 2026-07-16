@@ -1,0 +1,203 @@
+import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
+import { A as notFound, f as lazyRouteComponent, h as Link, p as createFileRoute } from "../_libs/@tanstack/react-router+[...].mjs";
+import { t as PageHero } from "./section-heading-hdwy3nex.mjs";
+import { L as ArrowRight, O as Check } from "../_libs/lucide-react.mjs";
+import { n as INDUSTRIES, r as SOLUTIONS } from "./site-data-Bv2epvEs.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/industries._slug-CRlCyV4g.js
+var import_jsx_runtime = require_jsx_runtime();
+var $$splitComponentImporter$1 = () => import("./industries.index-DNzT_2I7.mjs");
+var Route$1 = createFileRoute("/industries/")({
+	component: lazyRouteComponent($$splitComponentImporter$1, "component"),
+	head: () => ({
+		meta: [
+			{ title: "Industries — Tech Tammina" },
+			{
+				name: "description",
+				content: "Insurance, Financial Services, Healthcare & Life Sciences, Manufacturing, Education, and Public Sector."
+			},
+			{
+				property: "og:title",
+				content: "Industries — Tech Tammina"
+			},
+			{
+				property: "og:description",
+				content: "Deep focus in regulated, operations-heavy industries."
+			},
+			{
+				property: "og:url",
+				content: "/industries"
+			}
+		],
+		links: [{
+			rel: "canonical",
+			href: "/industries"
+		}]
+	})
+});
+function IndustryDetailShared({ slug }) {
+	const ind = INDUSTRIES.find((i) => i.slug === slug);
+	if (!ind) throw notFound();
+	const relevantSols = SOLUTIONS.filter((s) => ind.solutions?.includes(s.slug));
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageHero, {
+		eyebrow: "Industry Practice",
+		title: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: ind.name }),
+		intro: ind.tagline || ind.body
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "bg-section py-20",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-3",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "lg:col-span-2 space-y-12",
+				children: [
+					ind.intro && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-lg leading-relaxed text-foreground/90 font-medium",
+						children: ind.intro
+					}) }),
+					ind.priorities && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						className: "font-display text-xl font-semibold text-foreground mb-5",
+						children: "Industry Priorities"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "space-y-4",
+						children: ind.priorities.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "rounded-xl border border-border bg-card p-5 shadow-sm",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+								className: "font-display text-base font-semibold text-foreground mb-1",
+								children: p.title
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-sm text-muted-foreground leading-relaxed",
+								children: p.desc
+							})]
+						}, p.title))
+					})] }),
+					ind.howWeHelp && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						className: "font-display text-xl font-semibold text-foreground mb-6",
+						children: "How Tech Tammina Helps"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "grid gap-6 sm:grid-cols-2",
+						children: ind.howWeHelp.map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "gradient-border rounded-xl bg-card p-6 shadow-sm",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: "font-display text-xs font-semibold tracking-widest text-gradient block mb-3",
+									children: ["0", idx + 1]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+									className: "font-display text-base font-semibold text-foreground mb-2",
+									children: item.title
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs leading-relaxed text-muted-foreground",
+									children: item.desc
+								})
+							]
+						}, item.title))
+					})] }),
+					relevantSols.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						className: "font-display text-xl font-semibold text-foreground mb-5",
+						children: "Relevant Solutions"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "grid gap-6 sm:grid-cols-2",
+						children: relevantSols.map((sol) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+							to: "/solutions/$slug",
+							params: { slug: sol.slug },
+							className: "group relative block rounded-xl border border-border bg-card p-6 shadow-sm hover:border-primary/40",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+									className: "font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors mb-2",
+									children: sol.title
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs leading-relaxed text-muted-foreground mb-4",
+									children: sol.body
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: "inline-flex items-center gap-1 text-xs font-semibold text-primary transition-transform group-hover:translate-x-0.5",
+									children: ["View Solution ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-3.5 w-3.5" })]
+								})
+							]
+						}, sol.slug))
+					})] }),
+					ind.outcomes && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						className: "font-display text-xl font-semibold text-foreground mb-5",
+						children: "Outcomes we deliver"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+						className: "grid gap-3 sm:grid-cols-2 mb-8",
+						children: ind.outcomes.map((o) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+							className: "flex items-start gap-3 rounded-xl border border-border bg-card p-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-accent-gradient text-primary-foreground",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "h-3.5 w-3.5" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-sm text-muted-foreground font-medium",
+								children: o
+							})]
+						}, o))
+					})] }),
+					ind.ecosystem && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "rounded-2xl border border-border bg-surface p-8 shadow-sm",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-display text-xl font-semibold text-foreground mb-4",
+							children: "Enterprise Ecosystem & Integration"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+							className: "text-sm leading-relaxed text-muted-foreground",
+							children: [ind.ecosystem, " We configure and deploy all workflows around your core lines of business applications, databases, identity systems, and cloud services to ensure compliance and prevent disruptions."]
+						})]
+					})
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("aside", {
+				className: "gradient-border h-fit rounded-2xl bg-card p-6",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+						className: "font-display text-lg font-semibold text-foreground",
+						children: "Discuss your program"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-2 text-sm text-muted-foreground",
+						children: "We'll bring domain and delivery specialists to the conversation."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+						to: "/contact",
+						className: "mt-5 inline-flex items-center gap-2 rounded-full bg-accent-gradient px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow",
+						children: ["Talk to an Expert ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
+					})
+				]
+			})]
+		})
+	})] });
+}
+var $$splitComponentImporter = () => import("./industries._slug-C_3uqfsl.mjs");
+var Route = createFileRoute("/industries/$slug")({
+	component: lazyRouteComponent($$splitComponentImporter, "component"),
+	head: ({ params }) => {
+		const ind = INDUSTRIES.find((i) => i.slug === params.slug);
+		const title = ind ? `${ind.name} — Tech Tammina` : "Industry — Tech Tammina";
+		const desc = ind?.body ?? "Tech Tammina industry focus.";
+		return {
+			meta: [
+				{ title },
+				{
+					name: "description",
+					content: desc
+				},
+				{
+					property: "og:title",
+					content: title
+				},
+				{
+					property: "og:description",
+					content: desc
+				},
+				{
+					property: "og:url",
+					content: `/industries/${params.slug}`
+				}
+			],
+			links: [{
+				rel: "canonical",
+				href: `/industries/${params.slug}`
+			}]
+		};
+	}
+});
+//#endregion
+export { Route as n, Route$1 as r, IndustryDetailShared as t };

@@ -9,17 +9,41 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SupportRouteImport } from './routes/support'
 import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CareersRouteImport } from './routes/careers'
 import { Route as CapabilitiesRouteImport } from './routes/capabilities'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolutionsIndexRouteImport } from './routes/solutions.index'
+import { Route as IndustriesIndexRouteImport } from './routes/industries.index'
+import { Route as ContactIndexRouteImport } from './routes/contact.index'
+import { Route as CapabilitiesIndexRouteImport } from './routes/capabilities.index'
+import { Route as AboutIndexRouteImport } from './routes/about.index'
 import { Route as SolutionsSlugRouteImport } from './routes/solutions.$slug'
 import { Route as IndustriesSlugRouteImport } from './routes/industries.$slug'
+import { Route as ContactRequestDemoRouteImport } from './routes/contact.request-demo'
+import { Route as ContactPartnershipsRouteImport } from './routes/contact.partnerships'
+import { Route as ContactLocationsRouteImport } from './routes/contact.locations'
 import { Route as CapabilitiesSlugRouteImport } from './routes/capabilities.$slug'
+import { Route as AboutWhyTechTamminaRouteImport } from './routes/about.why-tech-tammina'
+import { Route as AboutLeadershipRouteImport } from './routes/about.leadership'
+import { Route as AboutGlobalPresenceRouteImport } from './routes/about.global-presence'
+import { Route as AboutPartnershipsIndexRouteImport } from './routes/about.partnerships.index'
+import { Route as AboutPartnershipsMicrosoftRouteImport } from './routes/about.partnerships.microsoft'
+import { Route as AboutPartnershipsMendixRouteImport } from './routes/about.partnerships.mendix'
+import { Route as AboutPartnershipsCamundaRouteImport } from './routes/about.partnerships.camunda'
+import { Route as AboutPartnershipsAwsRouteImport } from './routes/about.partnerships.aws'
+import { Route as AboutPartnershipsAppianRouteImport } from './routes/about.partnerships.appian'
 
+const SupportRoute = SupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SolutionsRoute = SolutionsRouteImport.update({
   id: '/solutions',
   path: '/solutions',
@@ -40,6 +64,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CareersRoute = CareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CapabilitiesRoute = CapabilitiesRouteImport.update({
   id: '/capabilities',
   path: '/capabilities',
@@ -55,6 +84,31 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolutionsIndexRoute = SolutionsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => SolutionsRoute,
+} as any)
+const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => IndustriesRoute,
+} as any)
+const ContactIndexRoute = ContactIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ContactRoute,
+} as any)
+const CapabilitiesIndexRoute = CapabilitiesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => CapabilitiesRoute,
+} as any)
+const AboutIndexRoute = AboutIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AboutRoute,
+} as any)
 const SolutionsSlugRoute = SolutionsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -65,48 +119,162 @@ const IndustriesSlugRoute = IndustriesSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => IndustriesRoute,
 } as any)
+const ContactRequestDemoRoute = ContactRequestDemoRouteImport.update({
+  id: '/request-demo',
+  path: '/request-demo',
+  getParentRoute: () => ContactRoute,
+} as any)
+const ContactPartnershipsRoute = ContactPartnershipsRouteImport.update({
+  id: '/partnerships',
+  path: '/partnerships',
+  getParentRoute: () => ContactRoute,
+} as any)
+const ContactLocationsRoute = ContactLocationsRouteImport.update({
+  id: '/locations',
+  path: '/locations',
+  getParentRoute: () => ContactRoute,
+} as any)
 const CapabilitiesSlugRoute = CapabilitiesSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
   getParentRoute: () => CapabilitiesRoute,
 } as any)
+const AboutWhyTechTamminaRoute = AboutWhyTechTamminaRouteImport.update({
+  id: '/why-tech-tammina',
+  path: '/why-tech-tammina',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutLeadershipRoute = AboutLeadershipRouteImport.update({
+  id: '/leadership',
+  path: '/leadership',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutGlobalPresenceRoute = AboutGlobalPresenceRouteImport.update({
+  id: '/global-presence',
+  path: '/global-presence',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutPartnershipsIndexRoute = AboutPartnershipsIndexRouteImport.update({
+  id: '/partnerships/',
+  path: '/partnerships/',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutPartnershipsMicrosoftRoute =
+  AboutPartnershipsMicrosoftRouteImport.update({
+    id: '/partnerships/microsoft',
+    path: '/partnerships/microsoft',
+    getParentRoute: () => AboutRoute,
+  } as any)
+const AboutPartnershipsMendixRoute = AboutPartnershipsMendixRouteImport.update({
+  id: '/partnerships/mendix',
+  path: '/partnerships/mendix',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutPartnershipsCamundaRoute =
+  AboutPartnershipsCamundaRouteImport.update({
+    id: '/partnerships/camunda',
+    path: '/partnerships/camunda',
+    getParentRoute: () => AboutRoute,
+  } as any)
+const AboutPartnershipsAwsRoute = AboutPartnershipsAwsRouteImport.update({
+  id: '/partnerships/aws',
+  path: '/partnerships/aws',
+  getParentRoute: () => AboutRoute,
+} as any)
+const AboutPartnershipsAppianRoute = AboutPartnershipsAppianRouteImport.update({
+  id: '/partnerships/appian',
+  path: '/partnerships/appian',
+  getParentRoute: () => AboutRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/about': typeof AboutRouteWithChildren
   '/capabilities': typeof CapabilitiesRouteWithChildren
-  '/contact': typeof ContactRoute
+  '/careers': typeof CareersRoute
+  '/contact': typeof ContactRouteWithChildren
   '/industries': typeof IndustriesRouteWithChildren
   '/resources': typeof ResourcesRoute
   '/solutions': typeof SolutionsRouteWithChildren
+  '/support': typeof SupportRoute
+  '/about/global-presence': typeof AboutGlobalPresenceRoute
+  '/about/leadership': typeof AboutLeadershipRoute
+  '/about/why-tech-tammina': typeof AboutWhyTechTamminaRoute
   '/capabilities/$slug': typeof CapabilitiesSlugRoute
+  '/contact/locations': typeof ContactLocationsRoute
+  '/contact/partnerships': typeof ContactPartnershipsRoute
+  '/contact/request-demo': typeof ContactRequestDemoRoute
   '/industries/$slug': typeof IndustriesSlugRoute
   '/solutions/$slug': typeof SolutionsSlugRoute
+  '/about/': typeof AboutIndexRoute
+  '/capabilities/': typeof CapabilitiesIndexRoute
+  '/contact/': typeof ContactIndexRoute
+  '/industries/': typeof IndustriesIndexRoute
+  '/solutions/': typeof SolutionsIndexRoute
+  '/about/partnerships/appian': typeof AboutPartnershipsAppianRoute
+  '/about/partnerships/aws': typeof AboutPartnershipsAwsRoute
+  '/about/partnerships/camunda': typeof AboutPartnershipsCamundaRoute
+  '/about/partnerships/mendix': typeof AboutPartnershipsMendixRoute
+  '/about/partnerships/microsoft': typeof AboutPartnershipsMicrosoftRoute
+  '/about/partnerships/': typeof AboutPartnershipsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/capabilities': typeof CapabilitiesRouteWithChildren
-  '/contact': typeof ContactRoute
-  '/industries': typeof IndustriesRouteWithChildren
+  '/careers': typeof CareersRoute
   '/resources': typeof ResourcesRoute
-  '/solutions': typeof SolutionsRouteWithChildren
+  '/support': typeof SupportRoute
+  '/about/global-presence': typeof AboutGlobalPresenceRoute
+  '/about/leadership': typeof AboutLeadershipRoute
+  '/about/why-tech-tammina': typeof AboutWhyTechTamminaRoute
   '/capabilities/$slug': typeof CapabilitiesSlugRoute
+  '/contact/locations': typeof ContactLocationsRoute
+  '/contact/partnerships': typeof ContactPartnershipsRoute
+  '/contact/request-demo': typeof ContactRequestDemoRoute
   '/industries/$slug': typeof IndustriesSlugRoute
   '/solutions/$slug': typeof SolutionsSlugRoute
+  '/about': typeof AboutIndexRoute
+  '/capabilities': typeof CapabilitiesIndexRoute
+  '/contact': typeof ContactIndexRoute
+  '/industries': typeof IndustriesIndexRoute
+  '/solutions': typeof SolutionsIndexRoute
+  '/about/partnerships/appian': typeof AboutPartnershipsAppianRoute
+  '/about/partnerships/aws': typeof AboutPartnershipsAwsRoute
+  '/about/partnerships/camunda': typeof AboutPartnershipsCamundaRoute
+  '/about/partnerships/mendix': typeof AboutPartnershipsMendixRoute
+  '/about/partnerships/microsoft': typeof AboutPartnershipsMicrosoftRoute
+  '/about/partnerships': typeof AboutPartnershipsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/about': typeof AboutRouteWithChildren
   '/capabilities': typeof CapabilitiesRouteWithChildren
-  '/contact': typeof ContactRoute
+  '/careers': typeof CareersRoute
+  '/contact': typeof ContactRouteWithChildren
   '/industries': typeof IndustriesRouteWithChildren
   '/resources': typeof ResourcesRoute
   '/solutions': typeof SolutionsRouteWithChildren
+  '/support': typeof SupportRoute
+  '/about/global-presence': typeof AboutGlobalPresenceRoute
+  '/about/leadership': typeof AboutLeadershipRoute
+  '/about/why-tech-tammina': typeof AboutWhyTechTamminaRoute
   '/capabilities/$slug': typeof CapabilitiesSlugRoute
+  '/contact/locations': typeof ContactLocationsRoute
+  '/contact/partnerships': typeof ContactPartnershipsRoute
+  '/contact/request-demo': typeof ContactRequestDemoRoute
   '/industries/$slug': typeof IndustriesSlugRoute
   '/solutions/$slug': typeof SolutionsSlugRoute
+  '/about/': typeof AboutIndexRoute
+  '/capabilities/': typeof CapabilitiesIndexRoute
+  '/contact/': typeof ContactIndexRoute
+  '/industries/': typeof IndustriesIndexRoute
+  '/solutions/': typeof SolutionsIndexRoute
+  '/about/partnerships/appian': typeof AboutPartnershipsAppianRoute
+  '/about/partnerships/aws': typeof AboutPartnershipsAwsRoute
+  '/about/partnerships/camunda': typeof AboutPartnershipsCamundaRoute
+  '/about/partnerships/mendix': typeof AboutPartnershipsMendixRoute
+  '/about/partnerships/microsoft': typeof AboutPartnershipsMicrosoftRoute
+  '/about/partnerships/': typeof AboutPartnershipsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -114,51 +282,112 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/capabilities'
+    | '/careers'
     | '/contact'
     | '/industries'
     | '/resources'
     | '/solutions'
+    | '/support'
+    | '/about/global-presence'
+    | '/about/leadership'
+    | '/about/why-tech-tammina'
     | '/capabilities/$slug'
+    | '/contact/locations'
+    | '/contact/partnerships'
+    | '/contact/request-demo'
     | '/industries/$slug'
     | '/solutions/$slug'
+    | '/about/'
+    | '/capabilities/'
+    | '/contact/'
+    | '/industries/'
+    | '/solutions/'
+    | '/about/partnerships/appian'
+    | '/about/partnerships/aws'
+    | '/about/partnerships/camunda'
+    | '/about/partnerships/mendix'
+    | '/about/partnerships/microsoft'
+    | '/about/partnerships/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/careers'
+    | '/resources'
+    | '/support'
+    | '/about/global-presence'
+    | '/about/leadership'
+    | '/about/why-tech-tammina'
+    | '/capabilities/$slug'
+    | '/contact/locations'
+    | '/contact/partnerships'
+    | '/contact/request-demo'
+    | '/industries/$slug'
+    | '/solutions/$slug'
     | '/about'
     | '/capabilities'
     | '/contact'
     | '/industries'
-    | '/resources'
     | '/solutions'
-    | '/capabilities/$slug'
-    | '/industries/$slug'
-    | '/solutions/$slug'
+    | '/about/partnerships/appian'
+    | '/about/partnerships/aws'
+    | '/about/partnerships/camunda'
+    | '/about/partnerships/mendix'
+    | '/about/partnerships/microsoft'
+    | '/about/partnerships'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/capabilities'
+    | '/careers'
     | '/contact'
     | '/industries'
     | '/resources'
     | '/solutions'
+    | '/support'
+    | '/about/global-presence'
+    | '/about/leadership'
+    | '/about/why-tech-tammina'
     | '/capabilities/$slug'
+    | '/contact/locations'
+    | '/contact/partnerships'
+    | '/contact/request-demo'
     | '/industries/$slug'
     | '/solutions/$slug'
+    | '/about/'
+    | '/capabilities/'
+    | '/contact/'
+    | '/industries/'
+    | '/solutions/'
+    | '/about/partnerships/appian'
+    | '/about/partnerships/aws'
+    | '/about/partnerships/camunda'
+    | '/about/partnerships/mendix'
+    | '/about/partnerships/microsoft'
+    | '/about/partnerships/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
+  AboutRoute: typeof AboutRouteWithChildren
   CapabilitiesRoute: typeof CapabilitiesRouteWithChildren
-  ContactRoute: typeof ContactRoute
+  CareersRoute: typeof CareersRoute
+  ContactRoute: typeof ContactRouteWithChildren
   IndustriesRoute: typeof IndustriesRouteWithChildren
   ResourcesRoute: typeof ResourcesRoute
   SolutionsRoute: typeof SolutionsRouteWithChildren
+  SupportRoute: typeof SupportRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/support': {
+      id: '/support'
+      path: '/support'
+      fullPath: '/support'
+      preLoaderRoute: typeof SupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/solutions': {
       id: '/solutions'
       path: '/solutions'
@@ -187,6 +416,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/careers': {
+      id: '/careers'
+      path: '/careers'
+      fullPath: '/careers'
+      preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/capabilities': {
       id: '/capabilities'
       path: '/capabilities'
@@ -208,6 +444,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solutions/': {
+      id: '/solutions/'
+      path: '/'
+      fullPath: '/solutions/'
+      preLoaderRoute: typeof SolutionsIndexRouteImport
+      parentRoute: typeof SolutionsRoute
+    }
+    '/industries/': {
+      id: '/industries/'
+      path: '/'
+      fullPath: '/industries/'
+      preLoaderRoute: typeof IndustriesIndexRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/contact/': {
+      id: '/contact/'
+      path: '/'
+      fullPath: '/contact/'
+      preLoaderRoute: typeof ContactIndexRouteImport
+      parentRoute: typeof ContactRoute
+    }
+    '/capabilities/': {
+      id: '/capabilities/'
+      path: '/'
+      fullPath: '/capabilities/'
+      preLoaderRoute: typeof CapabilitiesIndexRouteImport
+      parentRoute: typeof CapabilitiesRoute
+    }
+    '/about/': {
+      id: '/about/'
+      path: '/'
+      fullPath: '/about/'
+      preLoaderRoute: typeof AboutIndexRouteImport
+      parentRoute: typeof AboutRoute
+    }
     '/solutions/$slug': {
       id: '/solutions/$slug'
       path: '/$slug'
@@ -222,6 +493,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesSlugRouteImport
       parentRoute: typeof IndustriesRoute
     }
+    '/contact/request-demo': {
+      id: '/contact/request-demo'
+      path: '/request-demo'
+      fullPath: '/contact/request-demo'
+      preLoaderRoute: typeof ContactRequestDemoRouteImport
+      parentRoute: typeof ContactRoute
+    }
+    '/contact/partnerships': {
+      id: '/contact/partnerships'
+      path: '/partnerships'
+      fullPath: '/contact/partnerships'
+      preLoaderRoute: typeof ContactPartnershipsRouteImport
+      parentRoute: typeof ContactRoute
+    }
+    '/contact/locations': {
+      id: '/contact/locations'
+      path: '/locations'
+      fullPath: '/contact/locations'
+      preLoaderRoute: typeof ContactLocationsRouteImport
+      parentRoute: typeof ContactRoute
+    }
     '/capabilities/$slug': {
       id: '/capabilities/$slug'
       path: '/$slug'
@@ -229,27 +521,139 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CapabilitiesSlugRouteImport
       parentRoute: typeof CapabilitiesRoute
     }
+    '/about/why-tech-tammina': {
+      id: '/about/why-tech-tammina'
+      path: '/why-tech-tammina'
+      fullPath: '/about/why-tech-tammina'
+      preLoaderRoute: typeof AboutWhyTechTamminaRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/leadership': {
+      id: '/about/leadership'
+      path: '/leadership'
+      fullPath: '/about/leadership'
+      preLoaderRoute: typeof AboutLeadershipRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/global-presence': {
+      id: '/about/global-presence'
+      path: '/global-presence'
+      fullPath: '/about/global-presence'
+      preLoaderRoute: typeof AboutGlobalPresenceRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/partnerships/': {
+      id: '/about/partnerships/'
+      path: '/partnerships'
+      fullPath: '/about/partnerships/'
+      preLoaderRoute: typeof AboutPartnershipsIndexRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/partnerships/microsoft': {
+      id: '/about/partnerships/microsoft'
+      path: '/partnerships/microsoft'
+      fullPath: '/about/partnerships/microsoft'
+      preLoaderRoute: typeof AboutPartnershipsMicrosoftRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/partnerships/mendix': {
+      id: '/about/partnerships/mendix'
+      path: '/partnerships/mendix'
+      fullPath: '/about/partnerships/mendix'
+      preLoaderRoute: typeof AboutPartnershipsMendixRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/partnerships/camunda': {
+      id: '/about/partnerships/camunda'
+      path: '/partnerships/camunda'
+      fullPath: '/about/partnerships/camunda'
+      preLoaderRoute: typeof AboutPartnershipsCamundaRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/partnerships/aws': {
+      id: '/about/partnerships/aws'
+      path: '/partnerships/aws'
+      fullPath: '/about/partnerships/aws'
+      preLoaderRoute: typeof AboutPartnershipsAwsRouteImport
+      parentRoute: typeof AboutRoute
+    }
+    '/about/partnerships/appian': {
+      id: '/about/partnerships/appian'
+      path: '/partnerships/appian'
+      fullPath: '/about/partnerships/appian'
+      preLoaderRoute: typeof AboutPartnershipsAppianRouteImport
+      parentRoute: typeof AboutRoute
+    }
   }
 }
 
+interface AboutRouteChildren {
+  AboutGlobalPresenceRoute: typeof AboutGlobalPresenceRoute
+  AboutLeadershipRoute: typeof AboutLeadershipRoute
+  AboutWhyTechTamminaRoute: typeof AboutWhyTechTamminaRoute
+  AboutIndexRoute: typeof AboutIndexRoute
+  AboutPartnershipsAppianRoute: typeof AboutPartnershipsAppianRoute
+  AboutPartnershipsAwsRoute: typeof AboutPartnershipsAwsRoute
+  AboutPartnershipsCamundaRoute: typeof AboutPartnershipsCamundaRoute
+  AboutPartnershipsMendixRoute: typeof AboutPartnershipsMendixRoute
+  AboutPartnershipsMicrosoftRoute: typeof AboutPartnershipsMicrosoftRoute
+  AboutPartnershipsIndexRoute: typeof AboutPartnershipsIndexRoute
+}
+
+const AboutRouteChildren: AboutRouteChildren = {
+  AboutGlobalPresenceRoute: AboutGlobalPresenceRoute,
+  AboutLeadershipRoute: AboutLeadershipRoute,
+  AboutWhyTechTamminaRoute: AboutWhyTechTamminaRoute,
+  AboutIndexRoute: AboutIndexRoute,
+  AboutPartnershipsAppianRoute: AboutPartnershipsAppianRoute,
+  AboutPartnershipsAwsRoute: AboutPartnershipsAwsRoute,
+  AboutPartnershipsCamundaRoute: AboutPartnershipsCamundaRoute,
+  AboutPartnershipsMendixRoute: AboutPartnershipsMendixRoute,
+  AboutPartnershipsMicrosoftRoute: AboutPartnershipsMicrosoftRoute,
+  AboutPartnershipsIndexRoute: AboutPartnershipsIndexRoute,
+}
+
+const AboutRouteWithChildren = AboutRoute._addFileChildren(AboutRouteChildren)
+
 interface CapabilitiesRouteChildren {
   CapabilitiesSlugRoute: typeof CapabilitiesSlugRoute
+  CapabilitiesIndexRoute: typeof CapabilitiesIndexRoute
 }
 
 const CapabilitiesRouteChildren: CapabilitiesRouteChildren = {
   CapabilitiesSlugRoute: CapabilitiesSlugRoute,
+  CapabilitiesIndexRoute: CapabilitiesIndexRoute,
 }
 
 const CapabilitiesRouteWithChildren = CapabilitiesRoute._addFileChildren(
   CapabilitiesRouteChildren,
 )
 
+interface ContactRouteChildren {
+  ContactLocationsRoute: typeof ContactLocationsRoute
+  ContactPartnershipsRoute: typeof ContactPartnershipsRoute
+  ContactRequestDemoRoute: typeof ContactRequestDemoRoute
+  ContactIndexRoute: typeof ContactIndexRoute
+}
+
+const ContactRouteChildren: ContactRouteChildren = {
+  ContactLocationsRoute: ContactLocationsRoute,
+  ContactPartnershipsRoute: ContactPartnershipsRoute,
+  ContactRequestDemoRoute: ContactRequestDemoRoute,
+  ContactIndexRoute: ContactIndexRoute,
+}
+
+const ContactRouteWithChildren =
+  ContactRoute._addFileChildren(ContactRouteChildren)
+
 interface IndustriesRouteChildren {
   IndustriesSlugRoute: typeof IndustriesSlugRoute
+  IndustriesIndexRoute: typeof IndustriesIndexRoute
 }
 
 const IndustriesRouteChildren: IndustriesRouteChildren = {
   IndustriesSlugRoute: IndustriesSlugRoute,
+  IndustriesIndexRoute: IndustriesIndexRoute,
 }
 
 const IndustriesRouteWithChildren = IndustriesRoute._addFileChildren(
@@ -258,10 +662,12 @@ const IndustriesRouteWithChildren = IndustriesRoute._addFileChildren(
 
 interface SolutionsRouteChildren {
   SolutionsSlugRoute: typeof SolutionsSlugRoute
+  SolutionsIndexRoute: typeof SolutionsIndexRoute
 }
 
 const SolutionsRouteChildren: SolutionsRouteChildren = {
   SolutionsSlugRoute: SolutionsSlugRoute,
+  SolutionsIndexRoute: SolutionsIndexRoute,
 }
 
 const SolutionsRouteWithChildren = SolutionsRoute._addFileChildren(
@@ -270,12 +676,14 @@ const SolutionsRouteWithChildren = SolutionsRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
+  AboutRoute: AboutRouteWithChildren,
   CapabilitiesRoute: CapabilitiesRouteWithChildren,
-  ContactRoute: ContactRoute,
+  CareersRoute: CareersRoute,
+  ContactRoute: ContactRouteWithChildren,
   IndustriesRoute: IndustriesRouteWithChildren,
   ResourcesRoute: ResourcesRoute,
   SolutionsRoute: SolutionsRouteWithChildren,
+  SupportRoute: SupportRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -4,7 +4,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { fadeUp, PageHero, SectionHeading, stagger } from "@/components/section-heading";
 import { CAPABILITIES } from "@/lib/site-data";
 
-export const Route = createFileRoute("/capabilities")({
+export const Route = createFileRoute("/capabilities/")({
   component: CapabilitiesIndex,
   head: () => ({
     meta: [
@@ -85,17 +85,79 @@ export function CapabilityDetailShared({ slug }: { slug: string }) {
   return (
     <>
       <PageHero
-        eyebrow="Capability"
+        eyebrow="Capability Practice"
         title={<span>{cap.title}</span>}
         intro={cap.tagline}
       />
       <section className="bg-section py-20">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-3">
-          <div className="lg:col-span-2">
-            <p className="text-lg leading-relaxed text-foreground">{cap.body}</p>
-            <div className="mt-10">
-              <h3 className="font-display text-xl font-semibold text-foreground">Outcomes we deliver</h3>
-              <ul className="mt-5 space-y-3">
+          <div className="lg:col-span-2 space-y-12">
+            {/* Core Body */}
+            <div>
+              <p className="text-lg leading-relaxed text-foreground/90 font-medium">
+                {cap.body}
+              </p>
+            </div>
+
+            {/* Business Challenge */}
+            {cap.challenge && (
+              <div className="gradient-border rounded-2xl bg-card p-8 shadow-card">
+                <h3 className="font-display text-xl font-semibold text-foreground mb-4">
+                  The Business Challenge
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {cap.challenge}
+                </p>
+              </div>
+            )}
+
+            {/* How We Help */}
+            {cap.howWeHelp && (
+              <div>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-6">
+                  How Tech Tammina Helps
+                </h3>
+                <div className="grid gap-6 sm:grid-cols-2">
+                  {cap.howWeHelp.map((item, idx) => (
+                    <div key={item.title} className="gradient-border rounded-xl bg-card p-6 shadow-sm">
+                      <span className="font-display text-xs font-semibold tracking-widest text-gradient block mb-3">
+                        0{idx + 1}
+                      </span>
+                      <h4 className="font-display text-base font-semibold text-foreground mb-2">
+                        {item.title}
+                      </h4>
+                      <p className="text-xs leading-relaxed text-muted-foreground">
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Common Scenarios */}
+            {cap.scenarios && (
+              <div>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-5">
+                  Common Application Scenarios
+                </h3>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {cap.scenarios.map((s) => (
+                    <div key={s} className="flex items-center gap-3 rounded-xl border border-border bg-card/60 p-4">
+                      <span className="grid h-2 w-2 shrink-0 rounded-full bg-accent" />
+                      <span className="text-sm text-foreground/85 font-medium">{s}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Outcomes */}
+            <div>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-5">
+                Measurable Business Outcomes
+              </h3>
+              <ul className="grid gap-3 sm:grid-cols-2 mb-8">
                 {cap.outcomes.map((o) => (
                   <li key={o} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
                     <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-accent-gradient text-primary-foreground">
@@ -106,7 +168,31 @@ export function CapabilityDetailShared({ slug }: { slug: string }) {
                 ))}
               </ul>
             </div>
+
+            {/* Built to Fit Your Enterprise Ecosystem */}
+            <div className="rounded-2xl border border-border bg-surface p-8 shadow-sm">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-4">
+                Built to Fit Your Enterprise Ecosystem
+              </h3>
+              <p className="text-sm leading-relaxed text-muted-foreground mb-6">
+                Our practices and deliverables are designed to integrate seamlessly with your existing technology landscape. We configure and deploy solutions around your enterprise applications, identity providers, and cloud architecture without requiring you to replace core systems.
+              </p>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                {[
+                  { label: "Applications", val: "ERP, CRM, Core Systems" },
+                  { label: "Identity & SSO", val: "OAuth, SAML, Active Directory" },
+                  { label: "Cloud Services", val: "AWS, Azure, Private Cloud" },
+                  { label: "Data & Storage", val: "Document Repos, SQL, APIs" }
+                ].map((eco) => (
+                  <div key={eco.label} className="rounded-xl border border-border bg-card p-4">
+                    <span className="block text-xs font-semibold text-gradient mb-1">{eco.label}</span>
+                    <span className="block text-xs text-muted-foreground font-medium">{eco.val}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
+
           <aside className="gradient-border h-fit rounded-2xl bg-card p-6">
             <h4 className="font-display text-lg font-semibold text-foreground">Talk to a specialist</h4>
             <p className="mt-2 text-sm text-muted-foreground">

@@ -1,4 +1,4 @@
-import { r as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
+import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { r as motion } from "../_libs/framer-motion.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/section-heading-hdwy3nex.js
 var import_jsx_runtime = require_jsx_runtime();

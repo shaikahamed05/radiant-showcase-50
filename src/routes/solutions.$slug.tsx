@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SOLUTIONS } from "@/lib/site-data";
-import { SolutionDetailShared } from "./solutions";
+import { SolutionDetailShared } from "./solutions.index";
 
 export const Route = createFileRoute("/solutions/$slug")({
   component: SolutionDetail,

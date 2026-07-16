@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CAPABILITIES } from "@/lib/site-data";
-import { CapabilityDetailShared } from "./capabilities";
+import { CapabilityDetailShared } from "./capabilities.index";
 
 export const Route = createFileRoute("/capabilities/$slug")({
   component: CapabilityDetail,

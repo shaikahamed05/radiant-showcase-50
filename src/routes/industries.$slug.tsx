@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { INDUSTRIES } from "@/lib/site-data";
-import { IndustryDetailShared } from "./industries";
+import { IndustryDetailShared } from "./industries.index";
 
 export const Route = createFileRoute("/industries/$slug")({
   component: IndustryDetail,

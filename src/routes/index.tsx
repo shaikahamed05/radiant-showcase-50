@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { fadeUp, SectionHeading, stagger } from "@/components/section-heading";
 import { CAPABILITIES, INDUSTRIES, SOLUTIONS } from "@/lib/site-data";
+import { InteractiveTorus } from "@/components/interactive-torus";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -50,72 +51,90 @@ function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-60" />
       <motion.div
         aria-hidden
-        animate={{ scale: [1, 1.1, 1], opacity: [0.35, 0.55, 0.35] }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute -top-40 left-1/2 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-cyan-violet blur-[130px]"
+        animate={{
+          x: ["-50%", "-30%", "-70%", "-50%"],
+          y: [-60, 40, -100, -60],
+          scale: [1, 1.25, 0.85, 1],
+          rotate: [0, 120, 240, 360],
+          opacity: [0.35, 0.65, 0.25, 0.35]
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute -top-40 left-1/2 h-[600px] w-[900px] rounded-full bg-cyan-violet blur-[130px]"
       />
       <motion.div
         aria-hidden
-        animate={{ scale: [1.1, 1, 1.1], opacity: [0.2, 0.4, 0.2] }}
-        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        animate={{
+          x: [0, -80, 80, 0],
+          y: [0, 100, -80, 0],
+          scale: [1.1, 0.8, 1.3, 1.1],
+          rotate: [0, -120, -240, -360],
+          opacity: [0.2, 0.45, 0.15, 0.2]
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         className="pointer-events-none absolute bottom-0 right-0 h-[500px] w-[700px] rounded-full bg-teal-cyan blur-[130px]"
       />
 
       <motion.div
         style={{ y, opacity }}
-        className="relative mx-auto flex min-h-[86vh] max-w-7xl flex-col items-start justify-center px-6 pb-24 pt-24"
+        className="relative mx-auto grid min-h-[86vh] max-w-7xl gap-12 px-6 pb-24 pt-24 lg:grid-cols-12 lg:items-center"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="gradient-border inline-flex items-center gap-2 rounded-full bg-surface/60 px-3 py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground backdrop-blur"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-accent-gradient" />
-          Intelligent Operations Platform & Services
-        </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="mt-6 max-w-4xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl"
-        >
-          We Build <span className="text-gradient">Intelligent Operations</span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.25 }}
-          className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
-        >
-          Connecting AI, automation, and expertise to drive business impact — across
-          transformation, engineering, quality, managed services, and operations.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-10 flex flex-wrap items-center gap-4"
-        >
-          <Link
-            to="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-accent-gradient px-6 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+        <div className="lg:col-span-7 flex flex-col items-start justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="gradient-border inline-flex items-center gap-2 rounded-full bg-surface/60 px-3 py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground backdrop-blur"
           >
-            Talk to an Expert
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-          <Link
-            to="/solutions"
-            className="gradient-border inline-flex items-center gap-2 rounded-full bg-surface/60 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-surface-elevated"
-          >
-            Explore Solutions
-          </Link>
-        </motion.div>
+            <span className="h-1.5 w-1.5 rounded-full bg-accent-gradient" />
+            Intelligent Operations Platform & Services
+          </motion.div>
 
-        <div className="mt-20 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="mt-6 max-w-4xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl"
+          >
+            We Build <span className="text-gradient">Intelligent Operations</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
+          >
+            Connecting AI, automation, and expertise to drive business impact — across
+            transformation, engineering, quality, managed services, and operations.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-10 flex flex-wrap items-center gap-4"
+          >
+            <Link
+              to="/contact"
+              className="group inline-flex items-center gap-2 rounded-full bg-accent-gradient px-6 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+            >
+              Talk to an Expert
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link
+              to="/solutions"
+              className="gradient-border inline-flex items-center gap-2 rounded-full bg-surface/60 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-surface-elevated"
+            >
+              Explore Solutions
+            </Link>
+          </motion.div>
+        </div>
+
+        <div className="lg:col-span-5 flex items-center justify-center w-full">
+          <InteractiveTorus />
+        </div>
+
+        <div className="lg:col-span-12 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
           {[
             { icon: Workflow, label: "Connected Workflows" },
             { icon: Brain, label: "Practical AI" },

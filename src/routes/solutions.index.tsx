@@ -4,7 +4,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { fadeUp, PageHero, stagger } from "@/components/section-heading";
 import { SOLUTIONS } from "@/lib/site-data";
 
-export const Route = createFileRoute("/solutions")({
+export const Route = createFileRoute("/solutions/")({
   component: SolutionsIndex,
   head: () => ({
     meta: [
@@ -65,31 +65,118 @@ function SolutionsIndex() {
 export function SolutionDetailShared({ slug }: { slug: string }) {
   const sol = SOLUTIONS.find((s) => s.slug === slug);
   if (!sol) throw notFound();
-  const features = [
-    "Ingest and classify inbound documents automatically",
-    "Extract structured data with confidence scoring",
-    "Route work to the right reviewer, team, or system",
-    "Track exceptions, deficiencies, and audit history",
-    "Integrate with your enterprise systems of record",
-  ];
+
   return (
     <>
-      <PageHero eyebrow="Solution" title={<span>{sol.title}</span>} intro={sol.body} />
+      <PageHero eyebrow="Enterprise Solution" title={<span>{sol.title}</span>} intro={sol.body} />
       <section className="bg-section py-20">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-3">
-          <div className="lg:col-span-2">
-            <h3 className="font-display text-xl font-semibold text-foreground">What it does</h3>
-            <ul className="mt-5 space-y-3">
-              {features.map((f) => (
-                <li key={f} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-accent-gradient text-primary-foreground">
-                    <Check className="h-3.5 w-3.5" />
-                  </span>
-                  <span className="text-sm text-muted-foreground">{f}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="lg:col-span-2 space-y-12">
+            {/* Solution Overview */}
+            {sol.overview && (
+              <div>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-4">
+                  Solution Overview
+                </h3>
+                <p className="text-base leading-relaxed text-foreground/90 font-medium">
+                  {sol.overview}
+                </p>
+              </div>
+            )}
+
+            {/* Business Challenge */}
+            {sol.challenge && (
+              <div className="gradient-border rounded-2xl bg-card p-8 shadow-card">
+                <h3 className="font-display text-xl font-semibold text-foreground mb-4">
+                  The Business Challenge
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground font-medium">
+                  {sol.challenge}
+                </p>
+              </div>
+            )}
+
+            {/* Key Capabilities */}
+            {sol.capabilities && (
+              <div>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-5">
+                  Key Capabilities
+                </h3>
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {sol.capabilities.map((cap) => (
+                    <li key={cap} className="flex items-center gap-3 rounded-xl border border-border bg-card p-4">
+                      <span className="grid h-2 w-2 shrink-0 rounded-full bg-accent" />
+                      <span className="text-sm text-foreground/85 font-medium">{cap}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* How It Works */}
+            {sol.howItWorks && (
+              <div>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-6">
+                  How It Works
+                </h3>
+                <div className="space-y-4">
+                  {sol.howItWorks.map((step, idx) => (
+                    <div key={step} className="flex gap-4 rounded-xl border border-border/80 bg-card/60 p-5">
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-gradient text-xs font-semibold text-primary-foreground">
+                        {idx + 1}
+                      </span>
+                      <p className="text-sm text-muted-foreground font-medium leading-relaxed self-center">
+                        {step}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Business Outcomes */}
+            {sol.outcomes && (
+              <div>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-5">
+                  Business Outcomes
+                </h3>
+                <ul className="grid gap-3 sm:grid-cols-2 mb-8">
+                  {sol.outcomes.map((o) => (
+                    <li key={o} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
+                      <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-accent-gradient text-primary-foreground">
+                        <Check className="h-3.5 w-3.5" />
+                      </span>
+                      <span className="text-sm text-muted-foreground font-medium">{o}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Built to Fit Your Enterprise Ecosystem */}
+            <div className="rounded-2xl border border-border bg-surface p-8 shadow-sm">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-4">
+                Built to Fit Your Enterprise Ecosystem
+              </h3>
+              <p className="text-sm leading-relaxed text-muted-foreground mb-6">
+                This solution can be configured around your existing enterprise applications, workflow platforms, identity management, document repositories, cloud services, reporting tools, and third-party APIs.
+              </p>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                {[
+                  { label: "Workflow Platforms", val: "Appian, Mendix, Camunda" },
+                  { label: "Enterprise Apps", val: "Salesforce, SAP, Custom APIs" },
+                  { label: "Cloud Platforms", val: "AWS, Microsoft Azure" },
+                  { label: "Identity & Security", val: "Okta, Active Directory, SSO" }
+                ].map((eco) => (
+                  <div key={eco.label} className="rounded-xl border border-border bg-card p-4">
+                    <span className="block text-xs font-semibold text-gradient mb-1">{eco.label}</span>
+                    <span className="block text-xs text-muted-foreground font-medium">{eco.val}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
+
           <aside className="gradient-border h-fit rounded-2xl bg-card p-6">
             <h4 className="font-display text-lg font-semibold text-foreground">Request a demo</h4>
             <p className="mt-2 text-sm text-muted-foreground">
