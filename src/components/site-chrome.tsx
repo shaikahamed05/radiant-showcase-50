@@ -9,59 +9,53 @@ export const NAV_LINKS = [
   { label: "Solutions", to: "/solutions" as const },
   { label: "Resources", to: "/resources" as const },
   { label: "About", to: "/about" as const },
-  { label: "Contact", to: "/contact" as const },
 ];
 
-const SUBTABS: Record<string, { label: string; to: string; params?: Record<string, string>; search?: Record<string, string>; hash?: string }[]> = {
+const SUBTABS: Record<string, { label: string; to: string; hash?: string }[]> = {
   Capabilities: [
-    { label: "Enterprise Transformation", to: "/capabilities/$slug", params: { slug: "enterprise-transformation" } },
-    { label: "Digital Engineering", to: "/capabilities/$slug", params: { slug: "digital-engineering" } },
-    { label: "Quality Engineering", to: "/capabilities/$slug", params: { slug: "quality-engineering" } },
-    { label: "Managed Services", to: "/capabilities/$slug", params: { slug: "managed-services" } },
-    { label: "Business Operations", to: "/capabilities/$slug", params: { slug: "business-operations" } },
+    { label: "Enterprise AI & Intelligent Automation", to: "/capabilities/enterprise-transformation" },
+    { label: "Intelligent Applications", to: "/capabilities/intelligent-applications" },
+    { label: "Digital Engineering", to: "/capabilities/digital-engineering" },
+    { label: "Quality Engineering", to: "/capabilities/quality-engineering" },
+    { label: "Managed Services", to: "/capabilities/managed-services" },
+    { label: "Business Operations", to: "/capabilities/business-operations" },
   ],
   Industries: [
-    { label: "Insurance", to: "/industries/$slug", params: { slug: "insurance" } },
-    { label: "Financial Services", to: "/industries/$slug", params: { slug: "financial-services" } },
-    { label: "Healthcare & Life Sciences", to: "/industries/$slug", params: { slug: "healthcare-life-sciences" } },
-    { label: "Manufacturing", to: "/industries/$slug", params: { slug: "manufacturing" } },
-    { label: "Education", to: "/industries/$slug", params: { slug: "education" } },
-    { label: "Public Sector", to: "/industries/$slug", params: { slug: "public-sector" } },
+    { label: "Insurance", to: "/industries/insurance" },
+    { label: "Financial Services", to: "/industries/financial-services" },
+    { label: "Healthcare & Life Sciences", to: "/industries/healthcare-life-sciences" },
+    { label: "Manufacturing", to: "/industries/manufacturing" },
+    { label: "Education", to: "/industries/education" },
+    { label: "Public Sector", to: "/industries/public-sector" },
   ],
   Solutions: [
-    { label: "Policy Checking Automation", to: "/solutions/$slug", params: { slug: "policy-checking-automation" } },
-    { label: "COI Compliance Management", to: "/solutions/$slug", params: { slug: "coi-compliance-management" } },
-    { label: "Claims Operations", to: "/solutions/$slug", params: { slug: "claims-automation" } },
-    { label: "Proposal Automation", to: "/solutions/$slug", params: { slug: "renewal-intelligence" } },
-    { label: "Document Intelligence", to: "/solutions/$slug", params: { slug: "fleet-management" } },
-    { label: "Vendor & Compliance Management", to: "/solutions/$slug", params: { slug: "vendor-management" } },
-    { label: "Order Management", to: "/solutions/$slug", params: { slug: "order-management" } },
-    { label: "Compliance Management", to: "/solutions/$slug", params: { slug: "compliance-management" } },
-    { label: "HRMS & Employee Hub", to: "/solutions/$slug", params: { slug: "hrms-and-employee-hub" } },
-    { label: "University Admissions Management", to: "/solutions/$slug", params: { slug: "university-admissions-management" } },
-    { label: "Complaint & Service Request Management", to: "/solutions/$slug", params: { slug: "complaint-and-service-request-management" } },
+    { label: "Policy Checking Automation", to: "/solutions/policy-checking-automation" },
+    { label: "COI Compliance Management", to: "/solutions/coi-compliance-management" },
+    { label: "Claims Operations", to: "/solutions/claims-automation" },
+    { label: "Proposal Automation", to: "/solutions/renewal-intelligence" },
+    { label: "Document Intelligence", to: "/solutions/fleet-management" },
+    { label: "Vendor & Compliance Management", to: "/solutions/vendor-management" },
+    { label: "Order Management", to: "/solutions/order-management" },
+    { label: "Compliance Management", to: "/solutions/compliance-management" },
+    { label: "HRMS & Employee Hub", to: "/solutions/hrms-and-employee-hub" },
+    { label: "University Admissions Management", to: "/solutions/university-admissions-management" },
+    { label: "Complaint & Service Request Management", to: "/solutions/complaint-and-service-request-management" },
   ],
   Resources: [
-    { label: "Insights", to: "/resources", search: { type: "insight" } },
-    { label: "Case Studies", to: "/resources", search: { type: "case-study" } },
-    { label: "White Papers & Research", to: "/resources", search: { type: "white-paper" } },
-    { label: "Events & Webinars", to: "/resources", search: { type: "webinar" } },
-    { label: "News", to: "/resources", search: { type: "news" } },
-    { label: "Videos & Downloads", to: "/resources", search: { type: "video" } },
+    { label: "Insights", to: "/resources?type=insight" },
+    { label: "Case Studies", to: "/resources?type=case-study" },
+    { label: "White Papers & Research", to: "/resources?type=white-paper" },
+    { label: "Events & Webinars", to: "/resources?type=webinar" },
+    { label: "News", to: "/resources?type=news" },
+    { label: "Videos & Downloads", to: "/resources?type=video" },
   ],
   About: [
     { label: "Company Overview", to: "/about" },
     { label: "Leadership", to: "/about/leadership" },
     { label: "Why Tech Tammina", to: "/about/why-tech-tammina" },
-    { label: "Talk to an Expert", to: "/contact", search: { channel: "expert" } },
-    { label: "Request a Demo", to: "/contact", search: { channel: "demo" } },
-    { label: "Partnerships & Ecosystem", to: "/about/partnerships" },
-    { label: "Global Presence", to: "/about/global-presence" },
-    { label: "Careers", to: "/careers" },
-  ],
-  Contact: [
-    { label: "Contact Form", to: "/contact" },
     { label: "Office Locations", to: "/contact/locations" },
+    { label: "Partnerships & Ecosystem", to: "/about/partnerships" },
+    { label: "Careers", to: "/careers" },
   ],
 };
 
@@ -126,9 +120,7 @@ export function SiteNav() {
                       {SUBTABS[n.label].map((sub) => (
                         <Link
                           key={sub.label}
-                          to={sub.to as any}
-                          params={sub.params}
-                          search={sub.search}
+                          to={sub.to}
                           hash={sub.hash}
                           className="rounded-xl px-4 py-2.5 text-sm text-muted-foreground hover:bg-surface hover:text-foreground transition-colors text-left font-medium block"
                           onClick={() => setActiveMenu(null)}
@@ -146,10 +138,10 @@ export function SiteNav() {
 
         <div className="hidden md:block">
           <Link
-            to="/contact"
+            to="/about"
             className="group inline-flex items-center gap-2 rounded-full bg-accent-gradient px-4 py-2 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
           >
-            Talk to an Expert
+            Explore Our Work
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
@@ -198,9 +190,7 @@ export function SiteNav() {
                       {SUBTABS[n.label].map((sub) => (
                         <Link
                           key={sub.label}
-                          to={sub.to as any}
-                          params={sub.params}
-                          search={sub.search}
+                          to={sub.to}
                           hash={sub.hash}
                           onClick={() => {
                             setOpen(false);
@@ -217,11 +207,11 @@ export function SiteNav() {
               );
             })}
             <Link
-              to="/contact"
+              to="/about"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-accent-gradient px-4 py-2 text-sm font-semibold text-primary-foreground shadow-glow"
             >
-              Talk to an Expert <ArrowRight className="h-4 w-4" />
+              Explore Our Work <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -260,7 +250,6 @@ export function SiteFooter() {
           links={[
             { label: "About", to: "/about" },
             { label: "Resources", to: "/resources" },
-            { label: "Contact", to: "/contact" },
           ]}
         />
         <div>
@@ -268,10 +257,10 @@ export function SiteFooter() {
             Ready to talk?
           </div>
           <Link
-            to="/contact"
+            to="/about"
             className="mt-3 inline-flex items-center gap-2 rounded-full bg-accent-gradient px-4 py-2 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
           >
-            Talk to an Expert <ArrowRight className="h-4 w-4" />
+            Explore Our Work <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

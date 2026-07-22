@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { z } from "zod";
-import { ArrowRight, Mail, MapPin, Phone, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/section-heading";
 
 const contactSearchSchema = z.object({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/contact/")({
   head: () => ({
     meta: [
       { title: "Contact — Tech Tammina" },
-      { name: "description", content: "Start a conversation with Tech Tammina, explore office locations, and share the work you need help solving." },
+      { name: "description", content: "Start a conversation with Tech Tammina and share the work you need help solving." },
       { property: "og:title", content: "Contact — Tech Tammina" },
       { property: "og:description", content: "Start a conversation with Tech Tammina." },
       { property: "og:url", content: "/contact" },
@@ -24,10 +24,6 @@ export const Route = createFileRoute("/contact/")({
   }),
 });
 
-const CHANNELS = [
-  { slug: "locations", icon: MapPin, title: "Office Locations", body: "Reach the right regional team across the US, India, Netherlands, and UAE." },
-];
-
 function ContactPage() {
   const { channel } = Route.useSearch();
   const [sent, setSent] = useState(false);
@@ -35,8 +31,10 @@ function ContactPage() {
 
   useEffect(() => {
     let defaultMessage = "I would like to start a conversation with Tech Tammina about...";
-    if (channel === "locations") {
-      defaultMessage = "I would like to connect with one of your office locations.";
+    if (channel === "expert") {
+      defaultMessage = "I would like to speak with an expert about a process, application, or operating challenge.";
+    } else if (channel === "demo") {
+      defaultMessage = "I would like to arrange a tailored demo for our team.";
     }
     setMessage(defaultMessage);
   }, [channel]);

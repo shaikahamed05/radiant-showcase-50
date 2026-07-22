@@ -1,9 +1,9 @@
 export const CAPABILITIES = [
   {
     slug: "enterprise-transformation",
-    title: "Enterprise Transformation",
+    title: "Enterprise AI & Intelligent Automation",
     tagline: "Modernize the way work moves across your organization.",
-    body: "Connect workflows, automate document-intensive work, and embed AI into governed business operations.",
+    body: "Identify high-value use cases and embed AI into applications, workflows, document-intensive processes, and operational decisions. We design for governance, human oversight, security, and measurable outcomes from the beginning.",
     challenge: "Business-critical work is often spread across systems, teams, documents, and manual controls. The result is slower execution, limited visibility, duplicated effort, and higher operational risk. Tech Tammina focuses on the operating problem first, then brings together the right process, engineering, quality, support, and delivery model.",
     howWeHelp: [
       {
@@ -34,6 +34,41 @@ export const CAPABILITIES = [
       "Consistent decisions",
       "Stronger governance and auditability",
       "Scalable operations"
+    ]
+  },
+  {
+    slug: "intelligent-applications",
+    title: "Intelligent Applications",
+    tagline: "Design process-centric, case-based, and AI-enabled applications.",
+    body: "Design and build process-centric, case-based, and AI-enabled applications using platforms such as Appian, Mendix, Camunda, Pega, and modern engineering technologies.",
+    challenge: "Many organizations need applications that can coordinate work, handle complex cases, capture context, and support AI-assisted decisions without becoming rigid or difficult to evolve.",
+    howWeHelp: [
+      {
+        title: "Platform-Based Application Design",
+        desc: "Shape applications around business processes, roles, events, approvals, and user journeys using modern low-code and enterprise platforms."
+      },
+      {
+        title: "Case and Workflow Modeling",
+        desc: "Create structured case management, workflow orchestration, exception handling, and operational visibility for complex business scenarios."
+      },
+      {
+        title: "AI-Enabled Experiences",
+        desc: "Embed intelligent recommendations, document understanding, summaries, and guided actions into applications without compromising governance."
+      }
+    ],
+    scenarios: [
+      "Case-based operations and service portals",
+      "Process-centric enterprise applications",
+      "AI-assisted underwriting and claims experiences",
+      "Low-code and hybrid application modernization",
+      "Cross-platform application delivery"
+    ],
+    outcomes: [
+      "Faster application delivery",
+      "Better process visibility",
+      "More adaptable business applications",
+      "Stronger user adoption",
+      "A stronger foundation for AI and automation"
     ]
   },
   {
@@ -228,7 +263,7 @@ export const INDUSTRIES = [
       { title: "Improve Distribution and Service", desc: "Connect policyholders, producers, brokers, partners, and operations teams." }
     ],
     howWeHelp: [
-      { title: "Enterprise Transformation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
+      { title: "Enterprise AI & Intelligent Automation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
       { title: "Digital Engineering", desc: "Build connected applications, portals, integrations, and operational platforms." },
       { title: "Quality Engineering", desc: "Improve reliability, release confidence, and end-to-end process quality." },
       { title: "Managed Services", desc: "Support and optimize business-critical applications after launch." },
@@ -265,7 +300,7 @@ export const INDUSTRIES = [
       { title: "Connect Enterprise Work", desc: "Integrate business applications, documents, decisions, and operational data." }
     ],
     howWeHelp: [
-      { title: "Enterprise Transformation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
+      { title: "Enterprise AI & Intelligent Automation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
       { title: "Digital Engineering", desc: "Build connected applications, portals, integrations, and operational platforms." },
       { title: "Quality Engineering", desc: "Improve reliability, release confidence, and end-to-end process quality." },
       { title: "Managed Services", desc: "Support and optimize business-critical applications after launch." },
@@ -300,7 +335,7 @@ export const INDUSTRIES = [
       { title: "Support Continuous Improvement", desc: "Use visibility, metrics, and managed services to improve performance after launch." }
     ],
     howWeHelp: [
-      { title: "Enterprise Transformation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
+      { title: "Enterprise AI & Intelligent Automation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
       { title: "Digital Engineering", desc: "Build connected applications, portals, integrations, and operational platforms." },
       { title: "Quality Engineering", desc: "Improve reliability, release confidence, and end-to-end process quality." },
       { title: "Managed Services", desc: "Support and optimize business-critical applications after launch." },
@@ -335,7 +370,7 @@ export const INDUSTRIES = [
       { title: "Connect Operational Systems", desc: "Integrate enterprise applications and data to reduce manual movement." }
     ],
     howWeHelp: [
-      { title: "Enterprise Transformation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
+      { title: "Enterprise AI & Intelligent Automation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
       { title: "Digital Engineering", desc: "Build connected applications, portals, integrations, and operational platforms." },
       { title: "Quality Engineering", desc: "Improve reliability, release confidence, and end-to-end process quality." },
       { title: "Managed Services", desc: "Support and optimize business-critical applications after launch." },
@@ -372,7 +407,7 @@ export const INDUSTRIES = [
       { title: "Support Campus Integration", desc: "Connect student information systems, document repos, and APIs." }
     ],
     howWeHelp: [
-      { title: "Enterprise Transformation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
+      { title: "Enterprise AI & Intelligent Automation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
       { title: "Digital Engineering", desc: "Build connected applications, portals, integrations, and operational platforms." },
       { title: "Quality Engineering", desc: "Improve reliability, release confidence, and end-to-end process quality." },
       { title: "Managed Services", desc: "Support and optimize business-critical applications after launch." },
@@ -408,7 +443,7 @@ export const INDUSTRIES = [
       { title: "Support Mission Systems", desc: "Build, test, operate, and continuously improve business-critical applications." }
     ],
     howWeHelp: [
-      { title: "Enterprise Transformation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
+      { title: "Enterprise AI & Intelligent Automation", desc: "Modernize workflows, documents, decisions, and case-based operations." },
       { title: "Digital Engineering", desc: "Build connected applications, portals, integrations, and operational platforms." },
       { title: "Quality Engineering", desc: "Improve reliability, release confidence, and end-to-end process quality." },
       { title: "Managed Services", desc: "Support and optimize business-critical applications after launch." },

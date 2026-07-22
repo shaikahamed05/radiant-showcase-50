@@ -16,11 +16,13 @@ export function SectionHeading({
   title,
   intro,
   center,
+  wide,
 }: {
   eyebrow: string;
   title: ReactNode;
   intro?: string;
   center?: boolean;
+  wide?: boolean;
 }) {
   return (
     <motion.div
@@ -28,7 +30,7 @@ export function SectionHeading({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.4 }}
-      className={center ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}
+      className={center ? "mx-auto max-w-3xl text-center" : wide ? "mx-auto max-w-7xl" : "max-w-3xl"}
     >
       <motion.div
         variants={fadeUp}
@@ -49,7 +51,7 @@ export function SectionHeading({
         <motion.p
           variants={fadeUp}
           transition={{ duration: 0.6 }}
-          className={`mt-4 text-lg leading-relaxed text-muted-foreground ${center ? "mx-auto" : ""}`}
+          className={`mt-4 text-lg leading-relaxed text-muted-foreground ${center || wide ? "mx-auto" : ""}`}
         >
           {intro}
         </motion.p>

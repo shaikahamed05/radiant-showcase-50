@@ -25,6 +25,11 @@ export const Route = createFileRoute("/resources")({
 
 const RESOURCES = [
   { icon: Sparkles, tag: "Insight", title: "The Case for Intelligent Operations", body: "Why isolated tools stall — and how connected workflows change the outcome." },
+  { icon: Sparkles, tag: "Insight", title: "Enterprise AI with Appian", body: "Explore how Appian's AI agents, intelligent document processing, process intelligence, and AI-assisted development are being used in governed enterprise workflows." },
+  { icon: BookOpen, tag: "Insight", title: "Accelerating Enterprise Application Delivery with Mendix", body: "Learn how Mendix helps organizations move from business idea to scalable application faster while balancing architecture, integration, security, and maintainability." },
+  { icon: FileText, tag: "Insight", title: "Enterprise Document Intelligence", body: "Discover how organizations can turn policies, contracts, certificates, submissions, invoices, and other unstructured content into trusted business data." },
+  { icon: Sparkles, tag: "Insight", title: "Knowing What Changed", body: "See how intelligent comparison identifies material changes across policies, proposals, contracts, schedules, requirements, and other complex documents." },
+  { icon: FileText, tag: "Insight", title: "From AI Experiments to Governed Enterprise Workflows", body: "Explore how AI can be combined with workflow, business rules, human review, auditability, and performance measurement to create reliable enterprise use cases." },
   { icon: FileText, tag: "Case Study", title: "COI Compliance at Scale", body: "How a national insurer automated certificate intake and deficiency tracking." },
   { icon: BookOpen, tag: "White Paper", title: "Practical AI in Regulated Workflows", body: "A framework for embedding AI where it improves reviews and decisions." },
   { icon: Calendar, tag: "Webinar", title: "Modernizing Underwriting Reviews", body: "Live session on document intelligence and structured decision support." },

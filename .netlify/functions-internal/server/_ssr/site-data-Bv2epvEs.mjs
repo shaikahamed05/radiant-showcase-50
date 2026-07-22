@@ -4,7 +4,7 @@ var CAPABILITIES = [
 		slug: "enterprise-transformation",
 		title: "Enterprise Transformation",
 		tagline: "Modernize the way work moves across your organization.",
-		body: "Connect workflows, automate document-intensive work, and embed AI into governed business operations.",
+		body: "Identify high-value use cases and embed AI into applications, workflows, document-intensive processes, and operational decisions. We design for governance, human oversight, security, and measurable outcomes from the beginning.",
 		challenge: "Business-critical work is often spread across systems, teams, documents, and manual controls. The result is slower execution, limited visibility, duplicated effort, and higher operational risk. Tech Tammina focuses on the operating problem first, then brings together the right process, engineering, quality, support, and delivery model.",
 		howWeHelp: [
 			{

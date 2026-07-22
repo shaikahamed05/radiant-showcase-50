@@ -45,10 +45,8 @@ const SNAPSHOT = [
 const SUBPAGES = [
   { label: "Leadership", desc: "Meet the team responsible for strategy and delivery.", to: "/about/leadership" },
   { label: "Why Tech Tammina", desc: "Understand our combination of business, technology, and quality.", to: "/about/why-tech-tammina" },
-  { label: "Talk to an Expert", desc: "Start a conversation about a process, application, or operating challenge.", to: "/contact", search: { channel: "expert" } },
-  { label: "Request a Demo", desc: "See a tailored solution in action against your workflow.", to: "/contact", search: { channel: "demo" } },
+  { label: "Office Locations", desc: "Explore our regional teams and delivery locations across the US, India, Netherlands, and UAE.", to: "/contact/locations" },
   { label: "Partnerships & Ecosystem", desc: "Explore our formal practices, platform alliances, and contributions.", to: "/about/partnerships" },
-  { label: "Global Presence", desc: "See how local collaboration and global delivery support clients.", to: "/about/global-presence" },
   { label: "Careers", desc: "Discover culture, values, and open opportunities.", to: "/careers" }
 ];
 
@@ -68,7 +66,7 @@ function AboutPage() {
             <div className="lg:col-span-2 space-y-6">
               <h2 className="font-display text-2xl font-semibold text-foreground">Who We Are</h2>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Tech Tammina is a technology consulting and business solutions company focused on improving how organizations operate. We combine enterprise transformation, digital engineering, quality engineering, managed services, and business operations to solve complex, practical challenges across regulated and operationally intensive industries.
+                Tech Tammina is a technology consulting and business solutions company focused on improving how organizations operate. We combine enterprise AI & intelligent automation, digital engineering, quality engineering, managed services, and business operations to solve complex, practical challenges across regulated and operationally intensive industries.
               </p>
               <div className="pt-4 grid gap-6 sm:grid-cols-2">
                 {BELIEFS.map((b) => (
