@@ -29,7 +29,7 @@ const RESOURCES = [
   { icon: BookOpen, tag: "White Paper", title: "Practical AI in Regulated Workflows", body: "A framework for embedding AI where it improves reviews and decisions." },
   { icon: Calendar, tag: "Webinar", title: "Modernizing Underwriting Reviews", body: "Live session on document intelligence and structured decision support." },
   { icon: Newspaper, tag: "News", title: "Expanded Managed Services Practice", body: "New capabilities for 24/7 support and continuous improvement." },
-  { icon: PlayCircle, tag: "Video", title: "Inside Claims Automation", body: "A short walkthrough of intake, assignments, decisions, and visibility." },
+  { icon: PlayCircle, tag: "Video", title: "Inside Claims Operations", body: "A short walkthrough of intake, assignments, decisions, and visibility." },
 ];
 
 const FILTER_TABS = [

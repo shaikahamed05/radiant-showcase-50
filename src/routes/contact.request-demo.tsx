@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact/request-demo")({
   head: () => ({
     meta: [
       { title: "Request a Demo | Tech Tammina" },
-      { name: "description", content: "Schedule a purpose-built demonstration for Policy Checking, COI Compliance, Claims Automation, or other enterprise solutions." },
+      { name: "description", content: "Schedule a purpose-built demonstration for Policy Checking, COI Compliance, Claims Operations, or other enterprise solutions." },
     ],
   }),
 });

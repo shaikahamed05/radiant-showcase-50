@@ -40,7 +40,7 @@ export const CAPABILITIES = [
     slug: "digital-engineering",
     title: "Digital Engineering",
     tagline: "Build and modernize the applications the business runs on.",
-    body: "Build and modernize enterprise applications, digital experiences, integrations, and cloud-ready platforms.",
+    body: "Modernize, integrate, and extend enterprise systems through cloud, APIs, data services, DevOps, and custom application development.",
     challenge: "Business-critical work is often spread across systems, teams, documents, and manual controls. The result is slower execution, limited visibility, duplicated effort, and higher operational risk. Tech Tammina focuses on the operating problem first, then brings together the right process, engineering, quality, support, and delivery model.",
     howWeHelp: [
       {
@@ -84,7 +84,7 @@ export const CAPABILITIES = [
     slug: "quality-engineering",
     title: "Quality Engineering",
     tagline: "Release with confidence at enterprise scale.",
-    body: "Improve software reliability, test coverage, release speed, and production confidence.",
+    body: "Improve release confidence and application reliability through functional testing, automation, API testing, performance engineering, regression assurance, and quality practices integrated across delivery.",
     challenge: "Business-critical work is often spread across systems, teams, documents, and manual controls. The result is slower execution, limited visibility, duplicated effort, and higher operational risk. Tech Tammina focuses on the operating problem first, then brings together the right process, engineering, quality, support, and delivery model.",
     howWeHelp: [
       {
@@ -129,7 +129,7 @@ export const CAPABILITIES = [
     slug: "managed-services",
     title: "Managed Services",
     tagline: "Keep business-critical work stable and improving.",
-    body: "Keep business-critical applications stable, supported, monitored, and continuously improved.",
+    body: "Operate, support, monitor, maintain, and continuously improve enterprise applications and platforms while protecting the value of technology investments.",
     challenge: "Business-critical work is often spread across systems, teams, documents, and manual controls. The result is slower execution, limited visibility, duplicated effort, and higher operational risk. Tech Tammina focuses on the operating problem first, then brings together the right process, engineering, quality, support, and delivery model.",
     howWeHelp: [
       {
@@ -174,7 +174,7 @@ export const CAPABILITIES = [
     slug: "business-operations",
     title: "Business Operations",
     tagline: "Extend operational capacity where it matters.",
-    body: "Extend operational capacity through insurance services, finance and accounting support, BPO, and global delivery.",
+    body: "Extend operational capacity through insurance services, employee benefits support, document-intensive processing, administrative operations, recruiting, and flexible delivery teams.",
     challenge: "Business-critical work is often spread across systems, teams, documents, and manual controls. The result is slower execution, limited visibility, duplicated effort, and higher operational risk. Tech Tammina focuses on the operating problem first, then brings together the right process, engineering, quality, support, and delivery model.",
     howWeHelp: [
       {
@@ -217,7 +217,7 @@ export const INDUSTRIES = [
   {
     slug: "insurance",
     name: "Insurance",
-    body: "Modernize underwriting, claims, policy administration, compliance, and insurance operations.",
+    body: "Modernize policy servicing, document comparison, certificate compliance, renewals, proposals, claims support, submissions, and other insurance operations for agencies, brokers, MGAs, carriers, programs, and service organizations.",
     tagline: "Build Intelligent Insurance Operations",
     intro: "Carriers, brokers, MGAs, TPAs, and agencies can modernize critical work without losing control, context, or compliance.",
     priorities: [
@@ -254,7 +254,7 @@ export const INDUSTRIES = [
   {
     slug: "financial-services",
     name: "Financial Services",
-    body: "Improve onboarding, lending operations, compliance, case management, and customer service.",
+    body: "Improve onboarding, document processing, case management, compliance activity, customer and employee workflows, application modernization, and operational control.",
     tagline: "Modernize Financial Operations",
     intro: "Improve the speed, control, and customer experience of regulated, document-intensive financial processes.",
     priorities: [
@@ -289,7 +289,7 @@ export const INDUSTRIES = [
   {
     slug: "healthcare-life-sciences",
     name: "Healthcare & Life Sciences",
-    body: "Streamline regulated workflows, documentation, quality, and enterprise operations.",
+    body: "Support regulated operations, compliance workflows, inspection readiness, evidence management, quality processes, case management, and enterprise application delivery.",
     tagline: "Modernize Regulated Operations",
     intro: "Streamline enterprise and regulated workflows while protecting quality, traceability, and control.",
     priorities: [
@@ -324,7 +324,7 @@ export const INDUSTRIES = [
   {
     slug: "manufacturing",
     name: "Manufacturing",
-    body: "Connect vendor, order, quality, compliance, service, and operational workflows.",
+    body: "Connect suppliers, documents, service requests, quality activities, assets, operational processes, and enterprise systems to improve visibility and execution.",
     tagline: "Connect Manufacturing Operations",
     intro: "Modernize the business workflows around suppliers, orders, quality, compliance, service, and fleet operations.",
     priorities: [
@@ -361,7 +361,7 @@ export const INDUSTRIES = [
   {
     slug: "education",
     name: "Education",
-    body: "Modernize admissions, student services, employee operations, and institutional workflows.",
+    body: "Modernize admissions, student and faculty services, document management, communications, case workflows, and administrative operations.",
     tagline: "Modernize Institutional Operations",
     intro: "Create connected experiences for applicants, students, faculty, staff, and administrators.",
     priorities: [
@@ -397,7 +397,7 @@ export const INDUSTRIES = [
   {
     slug: "public-sector",
     name: "Public Sector",
-    body: "Improve case management, citizen services, compliance, and digital government operations.",
+    body: "Modernize case management, constituent services, compliance processes, document workflows, and mission-support applications while maintaining governance and accountability.",
     tagline: "Modernize Public Services",
     intro: "Build secure, transparent, and efficient operations for agencies and the people they serve.",
     priorities: [
@@ -435,7 +435,7 @@ export const SOLUTIONS = [
   {
     slug: "policy-checking-automation",
     title: "Policy Checking Automation",
-    body: "Compare policies and identify changes, gaps, and exceptions faster.",
+    body: "Compare policies, quotes, binders, proposals, applications, schedules, and endorsements to identify missing information, coverage changes, inconsistencies, and items requiring review.",
     challenge: "Manual policy checking is slow, difficult to standardize, and vulnerable to missed changes or discrepancies.",
     overview: "The solution extracts and compares relevant information across policy documents, proposals, binders, endorsements, and prior-term records. It highlights changes and exceptions, routes work for review, and preserves a clear audit trail.",
     capabilities: [
@@ -467,7 +467,7 @@ export const SOLUTIONS = [
   {
     slug: "coi-compliance-management",
     title: "COI Compliance Management",
-    body: "Automate certificate intake, extraction, compliance review, and deficiency tracking.",
+    body: "Manage certificate intake, extraction, coverage and limit validation, deficiency identification, remediation, renewals, communications, and audit history through a structured compliance workflow.",
     challenge: "COI reviews often depend on email, spreadsheets, manual extraction, and inconsistent follow-up, making deficiencies difficult to manage at scale.",
     overview: "The solution centralizes certificate intake, extracts coverage information, evaluates requirements, identifies deficiencies, routes analyst work, supports notes and follow-up, and provides portfolio-level visibility.",
     capabilities: [
@@ -498,8 +498,8 @@ export const SOLUTIONS = [
   },
   {
     slug: "claims-automation",
-    title: "Claims Automation",
-    body: "Coordinate claims work from intake through resolution.",
+    title: "Claims Operations",
+    body: "Support claims intake, document handling, task orchestration, review, status tracking, correspondence, and operational reporting through connected case-management workflows.",
     challenge: "Claims teams manage documents, assignments, decisions, communications, and exceptions across multiple systems and stakeholders.",
     overview: "The solution creates a governed claims workflow that organizes intake, documents, tasks, routing, decisions, SLAs, and operational reporting.",
     capabilities: [
@@ -530,8 +530,8 @@ export const SOLUTIONS = [
   },
   {
     slug: "renewal-intelligence",
-    title: "Renewal Intelligence",
-    body: "Identify renewal changes and exceptions to support faster, more consistent reviews.",
+    title: "Proposal Automation",
+    body: "Generate consistent new-business and renewal proposals by extracting information, organizing coverage data, applying templates, supporting review, and producing client-ready outputs with stronger operational control.",
     challenge: "Renewal reviews require teams to compare current and prior documents, identify changes, validate details, and prepare recommendations under tight deadlines.",
     overview: "The solution extracts and compares renewal information, surfaces material changes and exceptions, supports review, and prepares structured outputs for account and underwriting teams.",
     capabilities: [
@@ -562,8 +562,8 @@ export const SOLUTIONS = [
   },
   {
     slug: "fleet-management",
-    title: "Fleet Management",
-    body: "Centralize fleet records, documents, valuations, compliance, and operational workflows.",
+    title: "Document Intelligence",
+    body: "Capture, classify, extract, validate, compare, summarize, and route information from complex business documents while retaining human review and auditability where accuracy and accountability matter.",
     challenge: "Fleet operations are often fragmented across spreadsheets, documents, external data sources, and manual follow-up.",
     overview: "The solution centralizes vehicles, records, documents, valuations, compliance activity, requests, and operational status with AI-assisted document processing and governed workflows.",
     capabilities: [
@@ -594,10 +594,10 @@ export const SOLUTIONS = [
   },
   {
     slug: "vendor-management",
-    title: "Vendor Management",
-    body: "Manage onboarding, approvals, compliance, documents, and vendor lifecycle activity.",
+    title: "Vendor & Compliance Management",
+    body: "Create a connected view of vendors, requirements, documents, approvals, exceptions, communications, compliance activity, and ongoing monitoring across the vendor lifecycle.",
     challenge: "Vendor information, approvals, documents, risks, and performance are often managed across disconnected systems and teams.",
-    overview: "The solution standardizes onboarding, due diligence, approvals, documents, compliance, changes, and ongoing vendor management.",
+    overview: "The solution standardizes onboarding, due diligence, approvals, documents, compliance, changes, and ongoing Vendor & Compliance Management.",
     capabilities: [
       "Vendor onboarding",
       "Due diligence and approvals",

@@ -40,7 +40,7 @@ var RESOURCES = [
 	{
 		icon: CirclePlay,
 		tag: "Video",
-		title: "Inside Claims Automation",
+		title: "Inside Claims Operations",
 		body: "A short walkthrough of intake, assignments, decisions, and visibility."
 	}
 ];

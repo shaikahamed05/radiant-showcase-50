@@ -95,7 +95,7 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="mt-6 max-w-4xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl"
           >
-            We Build <span className="text-gradient">Intelligent Operations</span>
+            AI That Moves <span className="text-gradient">Business Forward</span>
           </motion.h1>
 
           <motion.p
@@ -104,8 +104,7 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
           >
-            Connecting AI, automation, and expertise to drive business impact — across
-            transformation, engineering, quality, managed services, and operations.
+          Tech Tammina helps organizations turn AI into measurable business value by modernizing applications, transforming operations, and building intelligent solutions around real industry needs.
           </motion.p>
 
           <motion.div
@@ -166,7 +165,7 @@ function CapabilitiesPreview() {
         <SectionHeading
           eyebrow="Capabilities"
           title={<>End-to-end capabilities for <span className="text-gradient">intelligent operations</span></>}
-          intro="Five practices that work as one delivery story — from strategy through steady-state operations."
+          intro="We connect strategy, technology, operations, and long-term support to help organizations apply AI, modernize critical work, and build sustainable enterprise capability."
         />
         <motion.div
           variants={stagger}
@@ -211,8 +210,8 @@ function IndustriesPreview() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="Industries"
-          title={<>Deep focus in regulated, operations-heavy industries</>}
-          intro="We combine operational knowledge with engineering to move regulated workflows forward."
+          title={<>Industry Knowledge That Shapes Better Solutions</>}
+          intro="Technology delivers stronger results when it reflects the industry in which it is used. Our teams bring domain understanding to the design, delivery, and operation of solutions across regulated, process-intensive, and service-driven sectors."
         />
         <motion.div
           variants={stagger}
@@ -248,8 +247,8 @@ function SolutionsPreview() {
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <SectionHeading
             eyebrow="Featured Solutions"
-            title={<>Solutions engineered for measurable outcomes</>}
-            intro="Purpose-built to accelerate the work that runs the business."
+            title={<>Solutions Built Around Real Operational Work</>}
+            intro="Our solutions address document-heavy, decision-intensive, and operationally complex processes. Each can be configured around an organization's requirements and integrated with the systems already used by its teams."
           />
           <Link
             to="/solutions"
@@ -298,8 +297,11 @@ function Ecosystem() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="Enterprise Fit"
-          title={<>Built to fit the <span className="text-gradient">enterprise</span></>}
-          intro="Tech Tammina solutions are designed to work across enterprise platforms, business applications, document repositories, identity services, cloud environments, and third-party systems. Integration is treated as part of the operating model — not an afterthought."
+          title={<>Built for Your <span className="text-gradient">Enterprise Ecosystem</span></>}
+          intro="Modernization does not begin with a blank technology landscape. Organizations already depend on business applications, cloud services, databases, document repositories, identity platforms, integration tools, and industry-specific systems.
+Tech Tammina designs solutions to work within that environment. We use Appian, Mendix, Camunda, Pega, UiPath, AWS, Microsoft Azure, and modern engineering technologies where they fit the business need. We also integrate with CRM, ERP, policy-management, agency-management, content-management, and other enterprise systems through secure APIs and data services.
+The goal is not to replace every existing investment. It is to connect what matters, modernize what limits performance, and create a practical path for continued improvement.
+"
         />
 
         <motion.div
@@ -435,11 +437,10 @@ function CTA() {
           <Zap className="h-5 w-5" />
         </span>
         <h2 className="mt-6 text-4xl font-semibold leading-tight md:text-6xl">
-          Move from disconnected work to <span className="text-gradient">intelligent operations</span>
+          Move from AI Opportunity to <span className="text-gradient">Business Outcome</span>
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-          Start with a process, application, operational challenge, or solution demonstration.
-          Tech Tammina will help define a practical path forward.
+          Whether you are modernizing a critical process, building an intelligent application, applying AI to document-intensive work, improving software quality, or expanding operational capacity, Tech Tammina can help turn the opportunity into a practical delivery plan.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link

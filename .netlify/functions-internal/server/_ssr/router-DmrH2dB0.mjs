@@ -123,22 +123,22 @@ var SUBTABS = {
 			params: { slug: "coi-compliance-management" }
 		},
 		{
-			label: "Claims Automation",
+			label: "Claims Operations",
 			to: "/solutions/$slug",
 			params: { slug: "claims-automation" }
 		},
 		{
-			label: "Renewal Intelligence",
+			label: "Proposal Automation",
 			to: "/solutions/$slug",
 			params: { slug: "renewal-intelligence" }
 		},
 		{
-			label: "Fleet Management",
+			label: "Document Intelligence",
 			to: "/solutions/$slug",
 			params: { slug: "fleet-management" }
 		},
 		{
-			label: "Vendor Management",
+			label: "Vendor & Compliance Management",
 			to: "/solutions/$slug",
 			params: { slug: "vendor-management" }
 		},
@@ -554,14 +554,14 @@ var Route$21 = createRootRouteWithContext()({
 				name: "viewport",
 				content: "width=device-width, initial-scale=1"
 			},
-			{ title: "Tech Tammina — We Build Intelligent Operations" },
+			{ title: "Tech Tammina — AI That Moves Business Forward" },
 			{
 				name: "description",
 				content: "Tech Tammina builds intelligent operations through AI, automation, digital engineering, managed services, and business expertise."
 			},
 			{
 				property: "og:title",
-				content: "Tech Tammina — We Build Intelligent Operations"
+				content: "Tech Tammina — AI That Moves Business Forward"
 			},
 			{
 				property: "og:description",
@@ -715,7 +715,7 @@ var Route$11 = createFileRoute("/contact/request-demo")({
 	component: lazyRouteComponent($$splitComponentImporter$11, "component"),
 	head: () => ({ meta: [{ title: "Request a Demo | Tech Tammina" }, {
 		name: "description",
-		content: "Schedule a purpose-built demonstration for Policy Checking, COI Compliance, Claims Automation, or other enterprise solutions."
+		content: "Schedule a purpose-built demonstration for Policy Checking, COI Compliance, Claims Operations, or other enterprise solutions."
 	}] })
 });
 var $$splitComponentImporter$10 = () => import("./contact.partnerships-CywParKN.mjs");

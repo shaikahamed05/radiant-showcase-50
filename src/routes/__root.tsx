@@ -78,13 +78,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Tech Tammina — We Build Intelligent Operations" },
+      { title: "Tech Tammina — AI That Moves Business Forward" },
       {
         name: "description",
         content:
           "Tech Tammina builds intelligent operations through AI, automation, digital engineering, managed services, and business expertise.",
       },
-      { property: "og:title", content: "Tech Tammina — We Build Intelligent Operations" },
+      { property: "og:title", content: "Tech Tammina — AI That Moves Business Forward" },
       {
         property: "og:description",
         content:
