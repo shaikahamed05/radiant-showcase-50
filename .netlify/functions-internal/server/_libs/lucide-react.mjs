@@ -321,6 +321,19 @@ var Calendar = createLucideIcon("calendar", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var ChartLine = createLucideIcon("chart-line", [["path", {
+	d: "M3 3v16a2 2 0 0 0 2 2h16",
+	key: "c24i48"
+}], ["path", {
+	d: "m19 9-5 5-4-4-3 3",
+	key: "2osh9i"
+}]]);
+/**
+* @license lucide-react v1.24.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Check = createLucideIcon("check", [["path", {
 	d: "M20 6 9 17l-5-5",
 	key: "1gmf2c"
@@ -943,4 +956,4 @@ var Zap = createLucideIcon("zap", [["path", {
 	key: "1xq2db"
 }]]);
 //#endregion
-export { Calendar as A, Clock as C, ChevronDown as D, ChevronRight as E, Award as F, ArrowRight as I, Activity as L, Brain as M, Boxes as N, ChevronLeft as O, BookOpen as P, Cpu as S, CircleCheckBig as T, LayoutGrid as _, UserCheck as a, ExternalLink as b, ShieldAlert as c, Newspaper as d, Network as f, LifeBuoy as g, Mail as h, Users as i, Briefcase as j, Check as k, Repeat as l, MapPin as m, X as n, Sparkles as o, Menu as p, Workflow as r, ShieldCheck as s, Zap as t, Phone as u, Heart as v, CirclePlay as w, Earth as x, FileText as y };
+export { ChartLine as A, Clock as C, ChevronDown as D, ChevronRight as E, BookOpen as F, Award as I, ArrowRight as L, Briefcase as M, Brain as N, ChevronLeft as O, Boxes as P, Activity as R, Cpu as S, CircleCheckBig as T, LayoutGrid as _, UserCheck as a, ExternalLink as b, ShieldAlert as c, Newspaper as d, Network as f, LifeBuoy as g, Mail as h, Users as i, Calendar as j, Check as k, Repeat as l, MapPin as m, X as n, Sparkles as o, Menu as p, Workflow as r, ShieldCheck as s, Zap as t, Phone as u, Heart as v, CirclePlay as w, Earth as x, FileText as y };

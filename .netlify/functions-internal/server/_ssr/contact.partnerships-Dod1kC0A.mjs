@@ -3,7 +3,7 @@ import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tan
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { r as motion } from "../_libs/framer-motion.mjs";
 import { t as PageHero } from "./section-heading-BdIj2xOd.mjs";
-import { I as ArrowRight, T as CircleCheckBig } from "../_libs/lucide-react.mjs";
+import { L as ArrowRight, T as CircleCheckBig } from "../_libs/lucide-react.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/contact.partnerships-Dod1kC0A.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();

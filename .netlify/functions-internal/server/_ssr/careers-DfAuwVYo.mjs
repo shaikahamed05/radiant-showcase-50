@@ -1,7 +1,7 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as SectionHeading, t as PageHero } from "./section-heading-BdIj2xOd.mjs";
-import { F as Award, I as ArrowRight, h as Mail, j as Briefcase, v as Heart } from "../_libs/lucide-react.mjs";
+import { I as Award, L as ArrowRight, M as Briefcase, h as Mail, v as Heart } from "../_libs/lucide-react.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/careers-DfAuwVYo.js
 var import_jsx_runtime = require_jsx_runtime();
 var BENEFITS = [

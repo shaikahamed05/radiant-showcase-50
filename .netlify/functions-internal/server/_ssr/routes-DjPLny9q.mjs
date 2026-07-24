@@ -3,9 +3,9 @@ import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tan
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { i as AnimatePresence, n as useScroll, r as motion, t as useTransform } from "../_libs/framer-motion.mjs";
 import { i as stagger, n as SectionHeading, r as fadeUp } from "./section-heading-BdIj2xOd.mjs";
-import { E as ChevronRight, I as ArrowRight, M as Brain, N as Boxes, O as ChevronLeft, S as Cpu, _ as LayoutGrid, f as Network, g as LifeBuoy, j as Briefcase, l as Repeat, r as Workflow, s as ShieldCheck, t as Zap } from "../_libs/lucide-react.mjs";
+import { A as ChartLine, E as ChevronRight, L as ArrowRight, M as Briefcase, N as Brain, O as ChevronLeft, P as Boxes, S as Cpu, _ as LayoutGrid, f as Network, g as LifeBuoy, l as Repeat, r as Workflow, s as ShieldCheck, t as Zap } from "../_libs/lucide-react.mjs";
 import { n as INDUSTRIES, r as SOLUTIONS, t as CAPABILITIES } from "./site-data-C1WZvCci.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-D9X9kjwn.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DjPLny9q.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 /**
@@ -1502,7 +1502,7 @@ var FEATURED_CARDS = [
 		title: "Accelerating Enterprise Application Delivery with Mendix",
 		body: "Mendix helps organizations move from business idea to scalable application faster through closer collaboration between business and technology teams. Explore how it supports modernization while balancing speed, architecture, integration, security, and long-term maintainability.",
 		position: "left",
-		image: "/images/mendix.svg"
+		image: "/images/mendix.jpg"
 	},
 	{
 		id: "appian",
@@ -1510,7 +1510,7 @@ var FEATURED_CARDS = [
 		title: "Enterprise AI with Appian",
 		body: "Appian is bringing AI agents, intelligent document processing, process intelligence, and AI-assisted development into governed enterprise workflows. Explore how Tech Tammina uses Appian's evolving AI capabilities to build intelligent applications, modernize complex operations, and deliver secure, scalable outcomes for mission-critical work.",
 		position: "center",
-		image: "/images/appian.svg"
+		image: "/images/appian.jpg"
 	},
 	{
 		id: "doc-ai",
@@ -1518,7 +1518,7 @@ var FEATURED_CARDS = [
 		title: "Enterprise Document Intelligence",
 		body: "Business documents contain the information that drives critical decisions. Discover how organizations can transform policies, contracts, certificates, submissions, invoices, and other unstructured content into trusted business data through extraction, validation, comparison, and workflow integration.",
 		position: "right",
-		image: "/images/aws.svg"
+		image: "/images/aws.jpg"
 	}
 ];
 function FeaturedInsightsSection() {
@@ -1559,8 +1559,8 @@ function FeaturedInsightsSection() {
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 							layout: true,
 							className: `
-                    group relative flex flex-col h-full overflow-hidden rounded-3xl border bg-card transition-all duration-500 ease-out shadow-card
-                    ${isActive ? "border-primary/40 shadow-glow-cyan ring-1 ring-primary/25 bg-card/95" : "border-border hover:border-primary/30 hover:shadow-card"}
+                    group relative flex flex-col h-full overflow-hidden rounded-3xl border bg-card transition-all duration-500 ease-out shadow-xl shadow-black/15
+                    ${isActive ? "border-primary/40 shadow-glow-cyan ring-1 ring-primary/25 bg-card/95" : "border-border/80 hover:border-primary/30 hover:shadow-2xl"}
                   `,
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "relative w-full aspect-[16/10] overflow-hidden bg-muted/40 border-b border-border/60 shrink-0",
@@ -1621,10 +1621,447 @@ function FeaturedInsightsSection() {
 		})]
 	});
 }
+function AIActionWorkflow() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "relative w-full h-32 rounded-2xl bg-surface/60 border border-border/70 p-3 flex items-center justify-center overflow-hidden",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute inset-0 bg-grid opacity-30" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			className: "w-full h-full",
+			viewBox: "0 0 320 100",
+			fill: "none",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M 45 50 H 125",
+					stroke: "currentColor",
+					strokeWidth: "2",
+					className: "text-border"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M 195 50 H 275",
+					stroke: "currentColor",
+					strokeWidth: "2",
+					className: "text-border"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M 160 20 V 80",
+					stroke: "currentColor",
+					strokeWidth: "2",
+					className: "text-border"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.circle, {
+					r: "4",
+					fill: "#3B82F6",
+					animate: {
+						cx: [45, 125],
+						opacity: [
+							0,
+							1,
+							0
+						]
+					},
+					transition: {
+						duration: 2.2,
+						repeat: Infinity,
+						ease: "easeInOut"
+					},
+					cy: "50"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.circle, {
+					r: "4",
+					fill: "#8B5CF6",
+					animate: {
+						cx: [195, 275],
+						opacity: [
+							0,
+							1,
+							0
+						]
+					},
+					transition: {
+						duration: 2.2,
+						repeat: Infinity,
+						ease: "easeInOut",
+						delay: .7
+					},
+					cy: "50"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.circle, {
+					r: "4",
+					fill: "#06B6D4",
+					animate: {
+						cy: [20, 80],
+						opacity: [
+							0,
+							1,
+							0
+						]
+					},
+					transition: {
+						duration: 2.2,
+						repeat: Infinity,
+						ease: "easeInOut",
+						delay: 1.1
+					},
+					cx: "160"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					transform: "translate(45, 50)",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						r: "18",
+						className: "fill-card stroke-primary/40",
+						strokeWidth: "2"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Workflow, { className: "h-5 w-5 text-primary -translate-x-2.5 -translate-y-2.5" })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					transform: "translate(160, 50)",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						r: "22",
+						className: "fill-primary/20 stroke-primary shadow-glow",
+						strokeWidth: "2"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Brain, { className: "h-6 w-6 text-primary -translate-x-3 -translate-y-3" })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					transform: "translate(275, 50)",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						r: "18",
+						className: "fill-card stroke-primary/40",
+						strokeWidth: "2"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "h-5 w-5 text-primary -translate-x-2.5 -translate-y-2.5" })]
+				})
+			]
+		})]
+	});
+}
+function EngineeringDepthWorkflow() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "relative w-full h-32 rounded-2xl bg-surface/60 border border-border/70 p-3 flex items-center justify-center overflow-hidden",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute inset-0 bg-grid opacity-30" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			className: "w-full h-full",
+			viewBox: "0 0 320 100",
+			fill: "none",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M 40 30 H 280",
+					stroke: "currentColor",
+					strokeWidth: "2",
+					className: "text-border",
+					strokeDasharray: "4 4"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M 40 70 H 280",
+					stroke: "currentColor",
+					strokeWidth: "2",
+					className: "text-border",
+					strokeDasharray: "4 4"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M 80 30 V 70",
+					stroke: "currentColor",
+					strokeWidth: "2",
+					className: "text-primary/30"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M 160 30 V 70",
+					stroke: "currentColor",
+					strokeWidth: "2",
+					className: "text-primary/30"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M 240 30 V 70",
+					stroke: "currentColor",
+					strokeWidth: "2",
+					className: "text-primary/30"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.circle, {
+					r: "4",
+					fill: "#3B82F6",
+					animate: {
+						cy: [30, 70],
+						opacity: [
+							0,
+							1,
+							0
+						]
+					},
+					transition: {
+						duration: 1.8,
+						repeat: Infinity,
+						ease: "linear"
+					},
+					cx: "80"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.circle, {
+					r: "4",
+					fill: "#8B5CF6",
+					animate: {
+						cy: [70, 30],
+						opacity: [
+							0,
+							1,
+							0
+						]
+					},
+					transition: {
+						duration: 1.8,
+						repeat: Infinity,
+						ease: "linear",
+						delay: .6
+					},
+					cx: "160"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.circle, {
+					r: "4",
+					fill: "#06B6D4",
+					animate: {
+						cy: [30, 70],
+						opacity: [
+							0,
+							1,
+							0
+						]
+					},
+					transition: {
+						duration: 1.8,
+						repeat: Infinity,
+						ease: "linear",
+						delay: 1.2
+					},
+					cx: "240"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					transform: "translate(80, 30)",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						r: "14",
+						className: "fill-card stroke-primary/50",
+						strokeWidth: "2"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Boxes, { className: "h-4 w-4 text-primary -translate-x-2 -translate-y-2" })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					transform: "translate(160, 30)",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						r: "14",
+						className: "fill-card stroke-primary/50",
+						strokeWidth: "2"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cpu, { className: "h-4 w-4 text-primary -translate-x-2 -translate-y-2" })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					transform: "translate(240, 30)",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						r: "14",
+						className: "fill-card stroke-primary/50",
+						strokeWidth: "2"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Zap, { className: "h-4 w-4 text-primary -translate-x-2 -translate-y-2" })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					transform: "translate(80, 70)",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						r: "14",
+						className: "fill-card stroke-primary/50",
+						strokeWidth: "2"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Network, { className: "h-4 w-4 text-primary -translate-x-2 -translate-y-2" })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					transform: "translate(160, 70)",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						r: "14",
+						className: "fill-card stroke-primary/50",
+						strokeWidth: "2"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutGrid, { className: "h-4 w-4 text-primary -translate-x-2 -translate-y-2" })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					transform: "translate(240, 70)",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						r: "14",
+						className: "fill-card stroke-primary/50",
+						strokeWidth: "2"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChartLine, { className: "h-4 w-4 text-primary -translate-x-2 -translate-y-2" })]
+				})
+			]
+		})]
+	});
+}
+function IndustryExecutionWorkflow() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "relative w-full h-32 rounded-2xl bg-surface/60 border border-border/70 p-3 flex items-center justify-center overflow-hidden",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute inset-0 bg-grid opacity-30" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			className: "w-full h-full",
+			viewBox: "0 0 320 100",
+			fill: "none",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ellipse", {
+					cx: "160",
+					cy: "50",
+					rx: "100",
+					ry: "32",
+					stroke: "currentColor",
+					strokeWidth: "2",
+					className: "text-primary/20",
+					strokeDasharray: "6 6"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.g, {
+					animate: { rotate: 360 },
+					transition: {
+						duration: 8,
+						repeat: Infinity,
+						ease: "linear"
+					},
+					style: { transformOrigin: "160px 50px" },
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						cx: "260",
+						cy: "50",
+						r: "5",
+						fill: "#3B82F6",
+						className: "shadow-glow"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						cx: "60",
+						cy: "50",
+						r: "5",
+						fill: "#8B5CF6",
+						className: "shadow-glow"
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					transform: "translate(160, 50)",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						r: "22",
+						className: "fill-primary/20 stroke-primary shadow-glow",
+						strokeWidth: "2"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Briefcase, { className: "h-6 w-6 text-primary -translate-x-3 -translate-y-3" })]
+				})
+			]
+		})]
+	});
+}
+function DeliveryLifecycleWorkflow() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "relative w-full h-32 rounded-2xl bg-surface/60 border border-border/70 p-3 flex items-center justify-center overflow-hidden",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute inset-0 bg-grid opacity-30" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			className: "w-full h-full",
+			viewBox: "0 0 320 100",
+			fill: "none",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M 110 50 C 70 20, 50 80, 110 50 C 170 20, 210 80, 250 50 C 210 20, 170 80, 110 50 Z",
+					stroke: "currentColor",
+					strokeWidth: "2.5",
+					className: "text-primary/30"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.path, {
+					d: "M 110 50 C 70 20, 50 80, 110 50 C 170 20, 210 80, 250 50 C 210 20, 170 80, 110 50 Z",
+					stroke: "#06B6D4",
+					strokeWidth: "3.5",
+					strokeDasharray: "40 200",
+					animate: { strokeDashoffset: [-240, 0] },
+					transition: {
+						duration: 4,
+						repeat: Infinity,
+						ease: "linear"
+					}
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					transform: "translate(160, 50)",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						r: "20",
+						className: "fill-card stroke-primary shadow-glow",
+						strokeWidth: "2"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Repeat, { className: "h-5 w-5 text-primary -translate-x-2.5 -translate-y-2.5" })]
+				})
+			]
+		})]
+	});
+}
+var REAL_RESULTS_CARDS = [
+	{
+		title: "Enterprise AI in Action",
+		body: "Apply AI within workflows, applications, documents, and decisions - with human oversight, auditability, and governance built in.",
+		workflow: AIActionWorkflow
+	},
+	{
+		title: "Platform and Engineering Depth",
+		body: "Deliver across low-code, process automation, cloud, integration, data, DevOps, quality engineering, and custom development.",
+		workflow: EngineeringDepthWorkflow
+	},
+	{
+		title: "Industry-Led Execution",
+		body: "Design around real operating models, regulatory requirements, document types, roles, exceptions, and service expectations.",
+		workflow: IndustryExecutionWorkflow
+	},
+	{
+		title: "Delivery Beyond Go-Live",
+		body: "Support advisory, implementation, managed services, business operations, and continuous improvement through one partner.",
+		workflow: DeliveryLifecycleWorkflow
+	}
+];
+function RealResultsSection() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		className: "relative border-t border-border bg-section py-24 overflow-hidden",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute top-10 left-10 h-[400px] w-[400px] rounded-full bg-cyan-violet opacity-[0.04] blur-[120px]" }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute bottom-10 right-10 h-[400px] w-[400px] rounded-full bg-violet-teal opacity-[0.04] blur-[120px]" }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mx-auto max-w-7xl px-6",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeading, {
+					eyebrow: "Enterprise Impact",
+					title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Built to Turn Enterprise AI into ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-gradient",
+						children: "Real Results"
+					})] }),
+					intro: "AI creates value when it becomes part of how work is performed, decisions are made, and customers are served. Tech Tammina brings together enterprise platforms, digital engineering, industry expertise, and operational delivery to move organizations from isolated experiments to governed, scalable solutions.",
+					wide: true
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+					variants: stagger,
+					initial: "hidden",
+					whileInView: "show",
+					viewport: {
+						once: true,
+						amount: .15
+					},
+					className: "mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4",
+					children: REAL_RESULTS_CARDS.map((card, i) => {
+						const WorkflowVisual = card.workflow;
+						return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+							variants: fadeUp,
+							transition: {
+								duration: .5,
+								delay: i * .08
+							},
+							whileHover: {
+								y: -6,
+								scale: 1.02
+							},
+							className: "group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-border/80 bg-card/95 p-6 shadow-xl shadow-black/15 md:shadow-2xl backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-glow-cyan hover:shadow-cyan-500/20 cursor-pointer",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-x-0 top-0 h-1 bg-accent-gradient opacity-60 transition-opacity duration-300 group-hover:opacity-100" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "mb-6",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(WorkflowVisual, {})
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										className: "font-semibold text-lg text-foreground group-hover:text-primary transition-colors duration-300",
+										children: card.title
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "mt-3 text-sm leading-relaxed text-muted-foreground",
+										children: card.body
+									})
+								] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "mt-6 pt-4 border-t border-border/40 flex items-center justify-between text-xs font-semibold text-primary transition-all duration-300 group-hover:translate-x-1",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Connected Workflow" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" })]
+								})
+							]
+						}, card.title);
+					})
+				})]
+			})
+		]
+	});
+}
 function HomePage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Hero, {}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FeaturedInsightsSection, {}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(RealResultsSection, {}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CapabilitiesPreview, {}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(IndustriesPreview, {}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SolutionsPreview, {}),

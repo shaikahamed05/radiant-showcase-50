@@ -3,7 +3,7 @@ import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tan
 import { A as notFound, h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { i as AnimatePresence, r as motion } from "../_libs/framer-motion.mjs";
 import { n as SectionHeading, t as PageHero } from "./section-heading-BdIj2xOd.mjs";
-import { E as ChevronRight, I as ArrowRight, O as ChevronLeft, S as Cpu, f as Network, g as LifeBuoy, j as Briefcase, k as Check, r as Workflow, s as ShieldCheck } from "../_libs/lucide-react.mjs";
+import { E as ChevronRight, L as ArrowRight, M as Briefcase, O as ChevronLeft, S as Cpu, f as Network, g as LifeBuoy, k as Check, r as Workflow, s as ShieldCheck } from "../_libs/lucide-react.mjs";
 import { t as CAPABILITIES } from "./site-data-C1WZvCci.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/capabilities.index-CHlZdEBf.js
 var import_react = /* @__PURE__ */ __toESM(require_react());

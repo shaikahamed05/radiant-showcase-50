@@ -2,7 +2,7 @@ import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.m
 import { A as notFound, h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { r as motion } from "../_libs/framer-motion.mjs";
 import { i as stagger, r as fadeUp, t as PageHero } from "./section-heading-BdIj2xOd.mjs";
-import { I as ArrowRight, k as Check } from "../_libs/lucide-react.mjs";
+import { L as ArrowRight, k as Check } from "../_libs/lucide-react.mjs";
 import { n as INDUSTRIES, r as SOLUTIONS } from "./site-data-C1WZvCci.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/industries.index-lwLPVhzK.js
 var import_jsx_runtime = require_jsx_runtime();

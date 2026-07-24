@@ -944,10 +944,10 @@ function FeaturedInsightsSection() {
                 <motion.div
                   layout
                   className={`
-                    group relative flex flex-col h-full overflow-hidden rounded-3xl border bg-card transition-all duration-500 ease-out shadow-card
+                    group relative flex flex-col h-full overflow-hidden rounded-3xl border bg-card transition-all duration-500 ease-out shadow-xl shadow-black/15
                     ${isActive
                       ? "border-primary/40 shadow-glow-cyan ring-1 ring-primary/25 bg-card/95"
-                      : "border-border hover:border-primary/30 hover:shadow-card"
+                      : "border-border/80 hover:border-primary/30 hover:shadow-2xl"
                     }
                   `}
                 >
@@ -1015,11 +1015,280 @@ function FeaturedInsightsSection() {
   );
 }
 
+function AIActionWorkflow() {
+  return (
+    <div className="relative w-full h-32 rounded-2xl bg-surface/60 border border-border/70 p-3 flex items-center justify-center overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
+      <svg className="w-full h-full" viewBox="0 0 320 100" fill="none">
+        {/* Connection Paths */}
+        <path d="M 45 50 H 125" stroke="currentColor" strokeWidth="2" className="text-border" />
+        <path d="M 195 50 H 275" stroke="currentColor" strokeWidth="2" className="text-border" />
+        <path d="M 160 20 V 80" stroke="currentColor" strokeWidth="2" className="text-border" />
+
+        {/* Animated Pulses */}
+        <motion.circle
+          r="4"
+          fill="#3B82F6"
+          animate={{ cx: [45, 125], opacity: [0, 1, 0] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+          cy="50"
+        />
+        <motion.circle
+          r="4"
+          fill="#8B5CF6"
+          animate={{ cx: [195, 275], opacity: [0, 1, 0] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
+          cy="50"
+        />
+        <motion.circle
+          r="4"
+          fill="#06B6D4"
+          animate={{ cy: [20, 80], opacity: [0, 1, 0] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 1.1 }}
+          cx="160"
+        />
+
+        {/* Workflow Node */}
+        <g transform="translate(45, 50)">
+          <circle r="18" className="fill-card stroke-primary/40" strokeWidth="2" />
+          <Workflow className="h-5 w-5 text-primary -translate-x-2.5 -translate-y-2.5" />
+        </g>
+
+        {/* Central AI Brain Node */}
+        <g transform="translate(160, 50)">
+          <circle r="22" className="fill-primary/20 stroke-primary shadow-glow" strokeWidth="2" />
+          <Brain className="h-6 w-6 text-primary -translate-x-3 -translate-y-3" />
+        </g>
+
+        {/* Governance Shield Node */}
+        <g transform="translate(275, 50)">
+          <circle r="18" className="fill-card stroke-primary/40" strokeWidth="2" />
+          <ShieldCheck className="h-5 w-5 text-primary -translate-x-2.5 -translate-y-2.5" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function EngineeringDepthWorkflow() {
+  return (
+    <div className="relative w-full h-32 rounded-2xl bg-surface/60 border border-border/70 p-3 flex items-center justify-center overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
+      <svg className="w-full h-full" viewBox="0 0 320 100" fill="none">
+        {/* Tier lines */}
+        <path d="M 40 30 H 280" stroke="currentColor" strokeWidth="2" className="text-border" strokeDasharray="4 4" />
+        <path d="M 40 70 H 280" stroke="currentColor" strokeWidth="2" className="text-border" strokeDasharray="4 4" />
+
+        {/* Vertical connectors */}
+        <path d="M 80 30 V 70" stroke="currentColor" strokeWidth="2" className="text-primary/30" />
+        <path d="M 160 30 V 70" stroke="currentColor" strokeWidth="2" className="text-primary/30" />
+        <path d="M 240 30 V 70" stroke="currentColor" strokeWidth="2" className="text-primary/30" />
+
+        {/* Moving data packets */}
+        <motion.circle
+          r="4"
+          fill="#3B82F6"
+          animate={{ cy: [30, 70], opacity: [0, 1, 0] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: "linear" }}
+          cx="80"
+        />
+        <motion.circle
+          r="4"
+          fill="#8B5CF6"
+          animate={{ cy: [70, 30], opacity: [0, 1, 0] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: "linear", delay: 0.6 }}
+          cx="160"
+        />
+        <motion.circle
+          r="4"
+          fill="#06B6D4"
+          animate={{ cy: [30, 70], opacity: [0, 1, 0] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: "linear", delay: 1.2 }}
+          cx="240"
+        />
+
+        {/* Stack Nodes */}
+        <g transform="translate(80, 30)">
+          <circle r="14" className="fill-card stroke-primary/50" strokeWidth="2" />
+          <Boxes className="h-4 w-4 text-primary -translate-x-2 -translate-y-2" />
+        </g>
+        <g transform="translate(160, 30)">
+          <circle r="14" className="fill-card stroke-primary/50" strokeWidth="2" />
+          <Cpu className="h-4 w-4 text-primary -translate-x-2 -translate-y-2" />
+        </g>
+        <g transform="translate(240, 30)">
+          <circle r="14" className="fill-card stroke-primary/50" strokeWidth="2" />
+          <Zap className="h-4 w-4 text-primary -translate-x-2 -translate-y-2" />
+        </g>
+        <g transform="translate(80, 70)">
+          <circle r="14" className="fill-card stroke-primary/50" strokeWidth="2" />
+          <Network className="h-4 w-4 text-primary -translate-x-2 -translate-y-2" />
+        </g>
+        <g transform="translate(160, 70)">
+          <circle r="14" className="fill-card stroke-primary/50" strokeWidth="2" />
+          <LayoutGrid className="h-4 w-4 text-primary -translate-x-2 -translate-y-2" />
+        </g>
+        <g transform="translate(240, 70)">
+          <circle r="14" className="fill-card stroke-primary/50" strokeWidth="2" />
+          <LineChart className="h-4 w-4 text-primary -translate-x-2 -translate-y-2" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function IndustryExecutionWorkflow() {
+  return (
+    <div className="relative w-full h-32 rounded-2xl bg-surface/60 border border-border/70 p-3 flex items-center justify-center overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
+      <svg className="w-full h-full" viewBox="0 0 320 100" fill="none">
+        {/* Orbital Ring */}
+        <ellipse cx="160" cy="50" rx="100" ry="32" stroke="currentColor" strokeWidth="2" className="text-primary/20" strokeDasharray="6 6" />
+
+        {/* Orbiting element */}
+        <motion.g
+          animate={{ rotate: 360 }}
+          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          style={{ transformOrigin: "160px 50px" }}
+        >
+          <circle cx="260" cy="50" r="5" fill="#3B82F6" className="shadow-glow" />
+          <circle cx="60" cy="50" r="5" fill="#8B5CF6" className="shadow-glow" />
+        </motion.g>
+
+        {/* Central Industry Domain Node */}
+        <g transform="translate(160, 50)">
+          <circle r="22" className="fill-primary/20 stroke-primary shadow-glow" strokeWidth="2" />
+          <Briefcase className="h-6 w-6 text-primary -translate-x-3 -translate-y-3" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function DeliveryLifecycleWorkflow() {
+  return (
+    <div className="relative w-full h-32 rounded-2xl bg-surface/60 border border-border/70 p-3 flex items-center justify-center overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
+      <svg className="w-full h-full" viewBox="0 0 320 100" fill="none">
+        {/* Infinite Loop Path */}
+        <path
+          d="M 110 50 C 70 20, 50 80, 110 50 C 170 20, 210 80, 250 50 C 210 20, 170 80, 110 50 Z"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          className="text-primary/30"
+        />
+
+        {/* Traveling Light Pulse */}
+        <motion.path
+          d="M 110 50 C 70 20, 50 80, 110 50 C 170 20, 210 80, 250 50 C 210 20, 170 80, 110 50 Z"
+          stroke="#06B6D4"
+          strokeWidth="3.5"
+          strokeDasharray="40 200"
+          animate={{ strokeDashoffset: [-240, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+        />
+
+        {/* Center Repeat Icon Node */}
+        <g transform="translate(160, 50)">
+          <circle r="20" className="fill-card stroke-primary shadow-glow" strokeWidth="2" />
+          <Repeat className="h-5 w-5 text-primary -translate-x-2.5 -translate-y-2.5" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+const REAL_RESULTS_CARDS = [
+  {
+    title: "Enterprise AI in Action",
+    body: "Apply AI within workflows, applications, documents, and decisions - with human oversight, auditability, and governance built in.",
+    workflow: AIActionWorkflow,
+  },
+  {
+    title: "Platform and Engineering Depth",
+    body: "Deliver across low-code, process automation, cloud, integration, data, DevOps, quality engineering, and custom development.",
+    workflow: EngineeringDepthWorkflow,
+  },
+  {
+    title: "Industry-Led Execution",
+    body: "Design around real operating models, regulatory requirements, document types, roles, exceptions, and service expectations.",
+    workflow: IndustryExecutionWorkflow,
+  },
+  {
+    title: "Delivery Beyond Go-Live",
+    body: "Support advisory, implementation, managed services, business operations, and continuous improvement through one partner.",
+    workflow: DeliveryLifecycleWorkflow,
+  },
+];
+
+function RealResultsSection() {
+  return (
+    <section className="relative border-t border-border bg-section py-24 overflow-hidden">
+      {/* Background ambient orbs */}
+      <div className="pointer-events-none absolute top-10 left-10 h-[400px] w-[400px] rounded-full bg-cyan-violet opacity-[0.04] blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-10 right-10 h-[400px] w-[400px] rounded-full bg-violet-teal opacity-[0.04] blur-[120px]" />
+
+      <div className="mx-auto max-w-7xl px-6">
+        <SectionHeading
+          eyebrow="Enterprise Impact"
+          title={<>Built to Turn Enterprise AI into <span className="text-gradient">Real Results</span></>}
+          intro="AI creates value when it becomes part of how work is performed, decisions are made, and customers are served. Tech Tammina brings together enterprise platforms, digital engineering, industry expertise, and operational delivery to move organizations from isolated experiments to governed, scalable solutions."
+          wide
+        />
+
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+          className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+        >
+          {REAL_RESULTS_CARDS.map((card, i) => {
+            const WorkflowVisual = card.workflow;
+            return (
+              <motion.div
+                key={card.title}
+                variants={fadeUp}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-border/80 bg-card/95 p-6 shadow-xl shadow-black/15 md:shadow-2xl backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-glow-cyan hover:shadow-cyan-500/20 cursor-pointer"
+              >
+                {/* Top Accent Stripe */}
+                <div className="absolute inset-x-0 top-0 h-1 bg-accent-gradient opacity-60 transition-opacity duration-300 group-hover:opacity-100" />
+
+                <div>
+                  {/* Workflow Animation Visual */}
+                  <div className="mb-6">
+                    <WorkflowVisual />
+                  </div>
+
+                  <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors duration-300">
+                    {card.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {card.body}
+                  </p>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-border/40 flex items-center justify-between text-xs font-semibold text-primary transition-all duration-300 group-hover:translate-x-1">
+                  <span>Connected Workflow</span>
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 function HomePage() {
   return (
     <>
       <Hero />
       <FeaturedInsightsSection />
+      <RealResultsSection />
       <CapabilitiesPreview />
       <IndustriesPreview />
       <SolutionsPreview />
