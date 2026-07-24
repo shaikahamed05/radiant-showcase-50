@@ -15,7 +15,6 @@ import {
   Network,
   Repeat,
   ShieldCheck,
-  Sparkles,
   Workflow,
   Zap,
 } from "lucide-react";
@@ -45,204 +44,7 @@ const CAP_ICONS = [Network, Cpu, Workflow, ShieldCheck, LifeBuoy, Briefcase];
 const CAP_TOTAL = CAPABILITIES.length;
 const CAP_AUTO_PLAY = 3500;
 
-const INSIGHTS = [
-  {
-    title: "Featured Insights",
-    body: "Explore practical perspectives on enterprise AI, intelligent automation, low-code platforms, document intelligence, and the technologies reshaping modern operations.",
-  },
-  {
-    title: "Enterprise AI in the Real World",
-    body: "How organizations are turning AI pilots into operational systems with measurable business impact and governance built into the workflow.",
-  },
-  {
-    title: "Intelligent Automation for Operations",
-    body: "Discover the value of automating connected processes across systems, documents, and teams to reduce risk and accelerate outcomes.",
-  },
-  {
-    title: "Document Intelligence at Scale",
-    body: "See why smart document processing, extraction, and decision support are central to improving regulated and document-intensive work.",
-  },
-];
 
-function InsightCard({ insight, index, scrollYProgress, totalCards }: {
-  insight: typeof INSIGHTS[number];
-  index: number;
-  scrollYProgress: ReturnType<typeof useScroll>["scrollYProgress"];
-  totalCards: number;
-}) {
-  // Heading takes 0→0.15, cards share 0.15→1.0
-  const cardsRange = 0.85;
-  const cardsStart = 0.15;
-  const cardScrollRange = cardsRange / totalCards;
-  const cardStart = cardsStart + index * cardScrollRange;
-  const cardVisible = cardStart + cardScrollRange * 0.25;
-  const cardHold = cardStart + cardScrollRange * 0.65;
-  const cardEnd = cardStart + cardScrollRange;
-
-  // Alternate direction: first card from left, second from right, etc.
-  const fromLeft = index % 2 === 0;
-  const slideDistance = 600;
-
-  const x = useTransform(
-    scrollYProgress,
-    [cardStart, cardVisible, cardHold, cardEnd],
-    [fromLeft ? -slideDistance : slideDistance, 0, 0, fromLeft ? slideDistance : -slideDistance]
-  );
-  const opacity = useTransform(
-    scrollYProgress,
-    [cardStart, cardVisible, cardHold, cardEnd],
-    [0, 1, 1, 0]
-  );
-  const scale = useTransform(
-    scrollYProgress,
-    [cardStart, cardVisible, cardHold, cardEnd],
-    [0.85, 1, 1, 0.85]
-  );
-  const rotate = useTransform(
-    scrollYProgress,
-    [cardStart, cardVisible, cardHold, cardEnd],
-    [fromLeft ? -6 : 6, 0, 0, fromLeft ? 4 : -4]
-  );
-
-  // Gradient accent colors for each card
-  const accentColors = [
-    "from-[oklch(0.55_0.18_250)] to-[oklch(0.55_0.22_320)]",
-    "from-[oklch(0.52_0.19_165)] to-[oklch(0.55_0.18_250)]",
-    "from-[oklch(0.55_0.22_320)] to-[oklch(0.52_0.19_165)]",
-    "from-[oklch(0.55_0.18_250)] to-[oklch(0.52_0.19_165)]",
-  ];
-
-  return (
-    <motion.div
-      style={{ x, opacity, scale, rotate }}
-      className="absolute inset-0 flex items-center justify-center px-4 sm:px-8 md:px-12"
-    >
-      <div className="relative w-full max-w-4xl overflow-hidden rounded-[2rem] border border-border/60 bg-card shadow-2xl">
-        {/* Top accent bar */}
-        <div className={`h-1.5 w-full bg-gradient-to-r ${accentColors[index % accentColors.length]}`} />
-
-        {/* Decorative background elements */}
-        <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-cyan-violet opacity-[0.06] blur-[80px]" />
-        <div className="pointer-events-none absolute -left-16 -bottom-16 h-48 w-48 rounded-full bg-violet-teal opacity-[0.05] blur-[60px]" />
-
-        <div className="relative p-8 sm:p-12 md:p-16">
-          {/* Card number badge */}
-          <div className="mb-6 flex items-center gap-4">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-accent-gradient text-sm font-bold text-primary-foreground shadow-glow">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Insight {index + 1} of {totalCards}
-            </span>
-          </div>
-
-          {/* Card content */}
-          <h3 className="font-display text-2xl font-semibold leading-tight text-foreground sm:text-3xl md:text-4xl">
-            {insight.title}
-          </h3>
-          <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl md:leading-8">
-            {insight.body}
-          </p>
-
-          {/* Decorative bottom element */}
-          <div className="mt-8 flex items-center gap-3">
-            <div className="h-0.5 w-12 rounded-full bg-accent-gradient" />
-            <div className="h-0.5 w-6 rounded-full bg-border" />
-            <div className="h-0.5 w-3 rounded-full bg-border/50" />
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
-function FeaturedInsights() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end end"],
-  });
-
-  const totalCards = INSIGHTS.length;
-
-  // Heading is visible at the start (scroll 0), fades UP and out during 0→0.15
-  const headingOpacity = useTransform(scrollYProgress, [0, 0.05, 0.12, 0.15], [0, 1, 1, 0]);
-  const headingY = useTransform(scrollYProgress, [0, 0.05, 0.12, 0.15], [40, 0, 0, -80]);
-  const headingScale = useTransform(scrollYProgress, [0, 0.05, 0.12, 0.15], [0.95, 1, 1, 0.9]);
-
-  // Progress bar tracks card portion (0.15→1.0)
-  const progressWidth = useTransform(scrollYProgress, [0.15, 1], [0, 100]);
-
-  return (
-    <section
-      ref={sectionRef}
-      className="relative bg-background"
-      style={{ height: `${(totalCards + 1.5) * 100}vh` }}
-    >
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-center overflow-hidden">
-        {/* Subtle background grid */}
-        <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
-
-        {/* Ambient glow */}
-        <div className="pointer-events-none absolute left-1/4 top-1/4 h-[500px] w-[500px] rounded-full bg-cyan-violet opacity-[0.03] blur-[120px]" />
-        <div className="pointer-events-none absolute bottom-1/4 right-1/4 h-[400px] w-[400px] rounded-full bg-violet-teal opacity-[0.03] blur-[100px]" />
-
-        {/* Section heading — visible FIRST, fades up on scroll */}
-        <motion.div
-          style={{ opacity: headingOpacity, y: headingY, scale: headingScale }}
-          className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6"
-        >
-          <div className="mx-auto max-w-4xl text-center">
-            <motion.span
-              className="inline-flex items-center gap-2 rounded-full bg-accent-gradient px-4 py-1.5 text-xs font-bold uppercase tracking-[0.3em] text-primary-foreground shadow-glow"
-            >
-              <Sparkles className="h-3.5 w-3.5" />
-              Featured Insights
-            </motion.span>
-            <h2 className="mt-6 font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl md:text-5xl">
-              Explore practical perspectives on enterprise AI, intelligent automation, low-code platforms, document intelligence, and the{" "}
-              <span className="text-gradient">technologies reshaping modern operations.</span>
-            </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Scroll down to explore each insight
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Cards — appear AFTER heading fades out */}
-        <div className="relative h-full w-full max-w-7xl px-6">
-          <div className="relative flex h-full items-center justify-center">
-            {INSIGHTS.map((insight, index) => (
-              <InsightCard
-                key={insight.title}
-                insight={insight}
-                index={index}
-                scrollYProgress={scrollYProgress}
-                totalCards={totalCards}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Scroll progress indicator */}
-        <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3">
-          <div className="h-1 w-48 overflow-hidden rounded-full bg-border/40">
-            <motion.div
-              className="h-full rounded-full bg-accent-gradient"
-              style={{ width: useTransform(progressWidth, (v) => `${v}%`) }}
-            />
-          </div>
-          <motion.span
-            className="text-xs font-medium text-muted-foreground"
-            style={{ opacity: useTransform(scrollYProgress, [0.12, 0.18, 0.9, 0.95], [0, 1, 1, 0]) }}
-          >
-            Scroll to explore insights
-          </motion.span>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -308,7 +110,7 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
           >
-          Tech Tammina helps organizations turn AI into measurable business value by modernizing applications, transforming operations, and building intelligent solutions around real industry needs.
+            Tech Tammina helps organizations turn AI into measurable business value by modernizing applications, transforming operations, and building intelligent solutions around real industry needs.
           </motion.p>
 
           <motion.div
@@ -484,76 +286,76 @@ function CapabilitiesPreview() {
                         : "md:w-[28%] w-0 md:opacity-100 opacity-0 hidden md:block z-0"
                       }
                     `}
-                    >
+                  >
                     <div className="relative pb-7">
-                    <Link
-                      to="/capabilities/$slug"
-                      params={{ slug: c.slug }}
-                      onClick={(e) => {
-                        if (!isCenter) {
-                          e.preventDefault();
-                          goTo(capIdx, position === 0 ? -1 : 1);
-                          pauseAutoPlay();
-                        }
-                      }}
-                      className={`
+                      <Link
+                        to="/capabilities/$slug"
+                        params={{ slug: c.slug }}
+                        onClick={(e) => {
+                          if (!isCenter) {
+                            e.preventDefault();
+                            goTo(capIdx, position === 0 ? -1 : 1);
+                            pauseAutoPlay();
+                          }
+                        }}
+                        className={`
                         group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-card shadow-card transition-all duration-500
                         ${isCenter
-                          ? "border-primary/30 p-8 md:p-10 shadow-glow-cyan"
-                          : "border-border p-6 md:p-8 hover:border-primary/20 cursor-pointer"
-                        }
+                            ? "border-primary/30 p-8 md:p-10 shadow-glow-cyan"
+                            : "border-border p-6 md:p-8 hover:border-primary/20 cursor-pointer"
+                          }
                       `}
-                    >
-                      {/* Glow effects */}
-                      <div className={`
+                      >
+                        {/* Glow effects */}
+                        <div className={`
                         absolute -right-20 -top-20 h-48 w-48 rounded-full bg-cyan-violet blur-3xl transition-opacity duration-500
                         ${isCenter ? "opacity-30" : "opacity-0 group-hover:opacity-20"}
                       `} />
-                      <div className={`
+                        <div className={`
                         absolute -left-16 -bottom-16 h-40 w-40 rounded-full bg-violet-teal blur-3xl transition-opacity duration-500
                         ${isCenter ? "opacity-20" : "opacity-0"}
                       `} />
 
-                      <div className="relative flex h-full flex-col">
-                        <span className="font-display text-xs font-semibold tracking-widest text-gradient">
-                          0{capIdx + 1}
-                        </span>
-                        <h3 className={`
+                        <div className="relative flex h-full flex-col">
+                          <span className="font-display text-xs font-semibold tracking-widest text-gradient">
+                            0{capIdx + 1}
+                          </span>
+                          <h3 className={`
                           mt-4 font-semibold text-foreground transition-all duration-300
                           ${isCenter ? "text-xl md:text-2xl" : "text-lg md:text-xl"}
                         `}>
-                          {c.title}
-                        </h3>
-                        <p className={`
+                            {c.title}
+                          </h3>
+                          <p className={`
                           mt-3 flex-1 leading-relaxed text-muted-foreground transition-all duration-300
                           ${isCenter ? "text-sm md:text-base" : "text-xs md:text-sm"}
                         `}>
-                          {c.tagline}
-                        </p>
-                        <div className={`
+                            {c.tagline}
+                          </p>
+                          <div className={`
                           mt-6 inline-flex items-center gap-1.5 font-medium text-primary transition-all duration-300
                           ${isCenter
-                            ? "text-sm opacity-100 translate-y-0"
-                            : "text-xs opacity-60 translate-y-1"
-                          }
+                              ? "text-sm opacity-100 translate-y-0"
+                              : "text-xs opacity-60 translate-y-1"
+                            }
                           group-hover:translate-x-1
                         `}>
-                          Learn more <ArrowRight className="h-4 w-4" />
+                            Learn more <ArrowRight className="h-4 w-4" />
+                          </div>
                         </div>
-                      </div>
-                    </Link>
-                    {/* Icon circle — half inside, half outside */}
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
-                      <div className={`
+                      </Link>
+                      {/* Icon circle — half inside, half outside */}
+                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
+                        <div className={`
                         grid place-items-center rounded-full bg-accent-gradient text-primary-foreground transition-all duration-500 border-4 border-background
                         ${isCenter
-                          ? "h-14 w-14 shadow-glow-cyan"
-                          : "h-11 w-11 shadow-card opacity-90"
-                        }
+                            ? "h-14 w-14 shadow-glow-cyan"
+                            : "h-11 w-11 shadow-card opacity-90"
+                          }
                       `}>
-                        <Icon className={`transition-all duration-300 ${isCenter ? "h-6 w-6" : "h-4.5 w-4.5"}`} />
+                          <Icon className={`transition-all duration-300 ${isCenter ? "h-6 w-6" : "h-4.5 w-4.5"}`} />
+                        </div>
                       </div>
-                    </div>
                     </div>
                   </motion.div>
                 );
@@ -1071,20 +873,150 @@ function CTA() {
   );
 }
 
+const FEATURED_CARDS = [
+  {
+    id: "mendix",
+    tag: "Low-Code Platform",
+    title: "Accelerating Enterprise Application Delivery with Mendix",
+    body: "Mendix helps organizations move from business idea to scalable application faster through closer collaboration between business and technology teams. Explore how it supports modernization while balancing speed, architecture, integration, security, and long-term maintainability.",
+    position: "left" as const,
+  },
+  {
+    id: "appian",
+    tag: "Enterprise AI & Automation",
+    title: "Enterprise AI with Appian",
+    body: "Appian is bringing AI agents, intelligent document processing, process intelligence, and AI-assisted development into governed enterprise workflows. Explore how Tech Tammina uses Appian's evolving AI capabilities to build intelligent applications, modernize complex operations, and deliver secure, scalable outcomes for mission-critical work.",
+    position: "center" as const,
+  },
+  {
+    id: "doc-ai",
+    tag: "Document Intelligence",
+    title: "Enterprise Document Intelligence",
+    body: "Business documents contain the information that drives critical decisions. Discover how organizations can transform policies, contracts, certificates, submissions, invoices, and other unstructured content into trusted business data through extraction, validation, comparison, and workflow integration.",
+    position: "right" as const,
+  },
+];
+
+function FeaturedInsightsSection() {
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
+
+  // Default active card is Appian if no card is hovered
+  const activeId = hoveredId || "appian";
+
+  return (
+    <section className="relative border-t border-border bg-background py-24 overflow-hidden">
+      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[450px] w-[800px] rounded-full bg-cyan-violet opacity-[0.06] blur-[120px]" />
+
+      <div className="mx-auto max-w-7xl px-6">
+        <SectionHeading
+          eyebrow="Featured Insights"
+          title={<>Modern Perspectives on <span className="text-gradient">Enterprise AI & Platforms</span></>}
+          intro="Explore practical perspectives on enterprise AI, intelligent automation, low-code platforms, document intelligence, and the technologies reshaping modern operations."
+        />
+
+        <div
+          className="mt-16 flex flex-col lg:flex-row items-stretch lg:items-center justify-center gap-6 lg:gap-8 min-h-[520px]"
+          onMouseLeave={() => setHoveredId(null)}
+        >
+          {FEATURED_CARDS.map((card) => {
+            const isActive = card.id === activeId;
+
+            return (
+              <motion.div
+                key={card.id}
+                layout
+                onMouseEnter={() => setHoveredId(card.id)}
+                transition={{
+                  layout: { type: "spring", stiffness: 280, damping: 30, mass: 0.85 },
+                  opacity: { duration: 0.3 }
+                }}
+                className={`
+                  w-full flex flex-col cursor-pointer transition-all duration-500 ease-out
+                  ${isActive
+                    ? "lg:w-[38%] z-10 lg:-translate-y-2"
+                    : "lg:w-[30%] z-0 lg:translate-y-0 opacity-85 hover:opacity-100"
+                  }
+                `}
+              >
+                <motion.div
+                  layout
+                  className={`
+                    group relative flex flex-col h-full overflow-hidden rounded-3xl border bg-card transition-all duration-500 ease-out shadow-card
+                    ${isActive
+                      ? "border-primary/40 shadow-glow-cyan ring-1 ring-primary/25 bg-card/95"
+                      : "border-border hover:border-primary/30 hover:shadow-card"
+                    }
+                  `}
+                >
+                  {/* Image Placeholder */}
+                  <div className="relative w-full aspect-[16/10] overflow-hidden bg-muted/40 border-b border-border/60 shrink-0">
+                    <img
+                      src="/placeholder.svg"
+                      alt={card.title}
+                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent opacity-60" />
+
+                    {/* Badge */}
+                    <div className="absolute top-4 left-4 z-10">
+                      <span className={`
+                        inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-xs font-semibold backdrop-blur-md border transition-all duration-500 ease-out
+                        ${isActive
+                          ? "bg-accent-gradient text-primary-foreground border-white/20 shadow-glow"
+                          : "bg-surface/80 text-foreground border-border/80"
+                        }
+                      `}>
+                        {isActive && <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />}
+                        {card.tag}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Card Body */}
+                  <div className="flex flex-1 flex-col p-7 md:p-8 transition-all duration-500 ease-out">
+                    <h3 className={`
+                      font-semibold text-foreground leading-snug transition-all duration-500 ease-out
+                      ${isActive ? "text-xl md:text-2xl text-gradient" : "text-lg md:text-xl"}
+                    `}>
+                      {card.title}
+                    </h3>
+                    <p className={`
+                      mt-3 flex-1 leading-relaxed text-muted-foreground transition-all duration-500 ease-out
+                      ${isActive ? "text-sm md:text-base opacity-100" : "text-xs md:text-sm opacity-80"}
+                    `}>
+                      {card.body}
+                    </p>
+
+                    <div className="mt-6 pt-4 border-t border-border/40 flex items-center justify-between">
+                      <span className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-500 ease-out ${isActive ? "text-primary translate-x-1" : "text-muted-foreground group-hover:text-primary"}`}>
+                        Explore Insight <ArrowRight className="h-4 w-4" />
+                      </span>
+                      <span className={`
+                        grid place-items-center rounded-full transition-all duration-500 ease-out
+                        ${isActive
+                          ? "h-9 w-9 bg-accent-gradient text-primary-foreground shadow-glow scale-110"
+                          : "h-8 w-8 border border-border bg-surface text-muted-foreground group-hover:border-primary/40 group-hover:text-primary"
+                        }
+                      `}>
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function HomePage() {
   return (
     <>
       <Hero />
-      <FeaturedInsights />
-      <section className="relative border-t border-border bg-background py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <SectionHeading
-            eyebrow="The Problem"
-            title={<>Mission-critical work needs more than <span className="text-gradient">isolated technology</span></>}
-            intro="Complex operations rarely fail because an organization lacks another tool. They slow down when work is fragmented across systems, documents, approvals, and teams. Tech Tammina brings these moving parts together — modernizing processes, building connected applications, improving quality, and supporting operations after launch."
-          />
-        </div>
-      </section>
+      <FeaturedInsightsSection />
       <CapabilitiesPreview />
       <IndustriesPreview />
       <SolutionsPreview />
@@ -1094,5 +1026,3 @@ function HomePage() {
     </>
   );
 }
-
-export { Sparkles };

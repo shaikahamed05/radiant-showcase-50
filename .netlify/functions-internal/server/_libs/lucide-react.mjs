@@ -321,19 +321,6 @@ var Calendar = createLucideIcon("calendar", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var ChartLine = createLucideIcon("chart-line", [["path", {
-	d: "M3 3v16a2 2 0 0 0 2 2h16",
-	key: "c24i48"
-}], ["path", {
-	d: "m19 9-5 5-4-4-3 3",
-	key: "2osh9i"
-}]]);
-/**
-* @license lucide-react v1.24.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
 var Check = createLucideIcon("check", [["path", {
 	d: "M20 6 9 17l-5-5",
 	key: "1gmf2c"
@@ -344,9 +331,29 @@ var Check = createLucideIcon("check", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var ChevronLeft = createLucideIcon("chevron-left", [["path", {
+	d: "m15 18-6-6 6-6",
+	key: "1wnfg3"
+}]]);
+/**
+* @license lucide-react v1.24.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var ChevronDown = createLucideIcon("chevron-down", [["path", {
 	d: "m6 9 6 6 6-6",
 	key: "qrunsl"
+}]]);
+/**
+* @license lucide-react v1.24.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var ChevronRight = createLucideIcon("chevron-right", [["path", {
+	d: "m9 18 6-6-6-6",
+	key: "mthhwq"
 }]]);
 /**
 * @license lucide-react v1.24.0 - ISC
@@ -936,4 +943,4 @@ var Zap = createLucideIcon("zap", [["path", {
 	key: "1xq2db"
 }]]);
 //#endregion
-export { Briefcase as A, Clock as C, Check as D, ChevronDown as E, ArrowRight as F, Activity as I, Boxes as M, BookOpen as N, ChartLine as O, Award as P, Cpu as S, CircleCheckBig as T, LayoutGrid as _, UserCheck as a, ExternalLink as b, ShieldAlert as c, Newspaper as d, Network as f, LifeBuoy as g, Mail as h, Users as i, Brain as j, Calendar as k, Repeat as l, MapPin as m, X as n, Sparkles as o, Menu as p, Workflow as r, ShieldCheck as s, Zap as t, Phone as u, Heart as v, CirclePlay as w, Earth as x, FileText as y };
+export { Calendar as A, Clock as C, ChevronDown as D, ChevronRight as E, Award as F, ArrowRight as I, Activity as L, Brain as M, Boxes as N, ChevronLeft as O, BookOpen as P, Cpu as S, CircleCheckBig as T, LayoutGrid as _, UserCheck as a, ExternalLink as b, ShieldAlert as c, Newspaper as d, Network as f, LifeBuoy as g, Mail as h, Users as i, Briefcase as j, Check as k, Repeat as l, MapPin as m, X as n, Sparkles as o, Menu as p, Workflow as r, ShieldCheck as s, Zap as t, Phone as u, Heart as v, CirclePlay as w, Earth as x, FileText as y };
