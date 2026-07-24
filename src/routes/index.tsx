@@ -1047,9 +1047,8 @@ function Why() {
               return (
                 <div
                   key={pillar.label}
-                  className={`flex flex-col items-center justify-center text-center p-3 ${
-                    idx > 0 ? "md:pl-6" : ""
-                  }`}
+                  className={`flex flex-col items-center justify-center text-center p-3 ${idx > 0 ? "md:pl-6" : ""
+                    }`}
                 >
                   <div className="grid h-11 w-11 place-items-center rounded-2xl bg-accent-gradient text-primary-foreground shadow-glow mb-3">
                     <PillarIcon className="h-5.5 w-5.5" />
@@ -1155,7 +1154,7 @@ const FEATURED_CARDS = [
     title: "Accelerating Enterprise Application Delivery with Mendix",
     body: "Mendix helps organizations move from business idea to scalable application faster through closer collaboration between business and technology teams. Explore how it supports modernization while balancing speed, architecture, integration, security, and long-term maintainability.",
     position: "left" as const,
-    image: "/images/mendix.jpg",
+    image: "/images/mendix.png",
   },
   {
     id: "appian",
@@ -1163,7 +1162,7 @@ const FEATURED_CARDS = [
     title: "Enterprise AI with Appian",
     body: "Appian is bringing AI agents, intelligent document processing, process intelligence, and AI-assisted development into governed enterprise workflows. Explore how Tech Tammina uses Appian's evolving AI capabilities to build intelligent applications, modernize complex operations, and deliver secure, scalable outcomes for mission-critical work.",
     position: "center" as const,
-    image: "/images/appian.jpg",
+    image: "/images/appian.png",
   },
   {
     id: "doc-ai",
