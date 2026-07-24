@@ -1,7 +1,7 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { A as notFound, f as lazyRouteComponent, p as createFileRoute } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageHero } from "./section-heading-BdIj2xOd.mjs";
-import { k as Check } from "../_libs/lucide-react.mjs";
+import { A as Check } from "../_libs/lucide-react.mjs";
 import { t as CAPABILITIES } from "./site-data-C1WZvCci.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/capabilities._slug-BM-SGc7x.js
 var import_jsx_runtime = require_jsx_runtime();

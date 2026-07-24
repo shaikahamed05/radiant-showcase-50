@@ -563,6 +563,28 @@ var FileText = createLucideIcon("file-text", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Globe = createLucideIcon("globe", [
+	["circle", {
+		cx: "12",
+		cy: "12",
+		r: "10",
+		key: "1mglay"
+	}],
+	["path", {
+		d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20",
+		key: "13o1zl"
+	}],
+	["path", {
+		d: "M2 12h20",
+		key: "9i4pu4"
+	}]
+]);
+/**
+* @license lucide-react v1.24.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Heart = createLucideIcon("heart", [["path", {
 	d: "M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5",
 	key: "mvr1a0"
@@ -956,4 +978,4 @@ var Zap = createLucideIcon("zap", [["path", {
 	key: "1xq2db"
 }]]);
 //#endregion
-export { ChartLine as A, Clock as C, ChevronDown as D, ChevronRight as E, BookOpen as F, Award as I, ArrowRight as L, Briefcase as M, Brain as N, ChevronLeft as O, Boxes as P, Activity as R, Cpu as S, CircleCheckBig as T, LayoutGrid as _, UserCheck as a, ExternalLink as b, ShieldAlert as c, Newspaper as d, Network as f, LifeBuoy as g, Mail as h, Users as i, Calendar as j, Check as k, Repeat as l, MapPin as m, X as n, Sparkles as o, Menu as p, Workflow as r, ShieldCheck as s, Zap as t, Phone as u, Heart as v, CirclePlay as w, Earth as x, FileText as y };
+export { Check as A, Cpu as C, ChevronRight as D, CircleCheckBig as E, Boxes as F, BookOpen as I, Award as L, Calendar as M, Briefcase as N, ChevronDown as O, Brain as P, ArrowRight as R, Earth as S, CirclePlay as T, LayoutGrid as _, UserCheck as a, FileText as b, ShieldAlert as c, Newspaper as d, Network as f, LifeBuoy as g, Mail as h, Users as i, ChartLine as j, ChevronLeft as k, Repeat as l, MapPin as m, X as n, Sparkles as o, Menu as p, Workflow as r, ShieldCheck as s, Zap as t, Phone as u, Heart as v, Clock as w, ExternalLink as x, Globe as y, Activity as z };

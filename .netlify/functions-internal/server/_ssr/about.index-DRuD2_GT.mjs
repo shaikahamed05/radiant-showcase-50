@@ -1,7 +1,7 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as SectionHeading, t as PageHero } from "./section-heading-BdIj2xOd.mjs";
-import { I as Award, L as ArrowRight, R as Activity, a as UserCheck, i as Users, j as Calendar, m as MapPin, v as Heart } from "../_libs/lucide-react.mjs";
+import { L as Award, M as Calendar, R as ArrowRight, a as UserCheck, i as Users, m as MapPin, v as Heart, z as Activity } from "../_libs/lucide-react.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/about.index-DRuD2_GT.js
 var import_jsx_runtime = require_jsx_runtime();
 var BELIEFS = [

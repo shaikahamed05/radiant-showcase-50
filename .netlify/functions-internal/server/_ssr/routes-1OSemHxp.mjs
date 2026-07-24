@@ -3,9 +3,9 @@ import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tan
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { i as AnimatePresence, n as useScroll, r as motion, t as useTransform } from "../_libs/framer-motion.mjs";
 import { i as stagger, n as SectionHeading, r as fadeUp } from "./section-heading-BdIj2xOd.mjs";
-import { A as ChartLine, E as ChevronRight, L as ArrowRight, M as Briefcase, N as Brain, O as ChevronLeft, P as Boxes, S as Cpu, _ as LayoutGrid, f as Network, g as LifeBuoy, l as Repeat, r as Workflow, s as ShieldCheck, t as Zap } from "../_libs/lucide-react.mjs";
+import { C as Cpu, D as ChevronRight, F as Boxes, L as Award, N as Briefcase, P as Brain, R as ArrowRight, _ as LayoutGrid, f as Network, g as LifeBuoy, i as Users, j as ChartLine, k as ChevronLeft, l as Repeat, r as Workflow, s as ShieldCheck, t as Zap, w as Clock, y as Globe } from "../_libs/lucide-react.mjs";
 import { n as INDUSTRIES, r as SOLUTIONS, t as CAPABILITIES } from "./site-data-C1WZvCci.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DjPLny9q.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-1OSemHxp.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 /**
@@ -725,7 +725,7 @@ function CapabilitiesPreview() {
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "h-5 w-5 text-foreground" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "flex items-center justify-center gap-4 md:gap-6 py-8 cursor-grab active:cursor-grabbing select-none",
+						className: "flex items-center justify-center gap-4 md:gap-6 py-8 min-h-[360px] md:min-h-[380px] cursor-grab active:cursor-grabbing select-none",
 						onPointerDown: (e) => {
 							dragStartX.current = e.clientX;
 						},
@@ -774,7 +774,7 @@ function CapabilitiesPreview() {
                       ${isCenter ? "md:w-[38%] w-[70%] z-10" : "md:w-[28%] w-0 md:opacity-100 opacity-0 hidden md:block z-0"}
                     `,
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "relative pb-7",
+										className: "relative pb-7 h-full flex flex-col justify-center",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 											to: "/capabilities/$slug",
 											params: { slug: c.slug },
@@ -786,9 +786,9 @@ function CapabilitiesPreview() {
 												}
 											},
 											className: `
-                        group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-card shadow-card transition-all duration-500
-                        ${isCenter ? "border-primary/30 p-8 md:p-10 shadow-glow-cyan" : "border-border p-6 md:p-8 hover:border-primary/20 cursor-pointer"}
-                      `,
+                          group relative flex h-[280px] md:h-[300px] flex-col justify-between overflow-hidden rounded-2xl border bg-card shadow-card transition-all duration-500 p-7 md:p-8
+                          ${isCenter ? "border-primary/30 shadow-glow-cyan" : "border-border hover:border-primary/20 cursor-pointer"}
+                        `,
 											children: [
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: `
                         absolute -right-20 -top-20 h-48 w-48 rounded-full bg-cyan-violet blur-3xl transition-opacity duration-500
@@ -1261,109 +1261,6 @@ function SolutionsPreview() {
 		]
 	});
 }
-function Ecosystem() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		className: "relative bg-background py-24",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto max-w-7xl px-6",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeading, {
-				eyebrow: "Enterprise Fit",
-				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Built for Your ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "text-gradient",
-					children: "Enterprise Ecosystem"
-				})] }),
-				intro: "Your technology should work together, not in isolation. Tech Tammina connects your existing applications, data, cloud, workflows, and enterprise platforms to create a unified ecosystem built for modernization and growth.\r\n",
-				wide: true
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
-				initial: {
-					opacity: 0,
-					y: 16
-				},
-				whileInView: {
-					opacity: 1,
-					y: 0
-				},
-				viewport: {
-					once: true,
-					amount: .2
-				},
-				transition: {
-					duration: .6,
-					ease: "easeOut"
-				},
-				className: "mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3",
-				children: ENTERPRISE_BLOCKS.map((block, i) => {
-					const Icon = block.icon;
-					return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
-						initial: {
-							opacity: 0,
-							y: 14
-						},
-						whileInView: {
-							opacity: 1,
-							y: 0
-						},
-						viewport: { once: true },
-						transition: {
-							delay: i * .06,
-							duration: .45
-						},
-						whileHover: {
-							y: -5,
-							scale: 1.01
-						},
-						className: "group relative overflow-hidden rounded-[1.35rem] border border-border/70 bg-card p-6 shadow-sm",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(82,122,255,0.16),_transparent_50%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "relative",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center justify-between",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "grid h-11 w-11 place-items-center rounded-2xl bg-accent-gradient text-primary-foreground shadow-glow",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "h-5 w-5" })
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "rounded-full border border-primary/15 bg-primary/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-primary",
-										children: "Connected"
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									className: "mt-5 font-display text-lg font-semibold text-foreground",
-									children: block.label
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "mt-2 text-sm leading-relaxed text-muted-foreground",
-									children: block.label === "ERP" ? "Fits into core finance, supply chain, and operational planning environments." : block.label === "CRM" ? "Supports customer-facing workflows and relationship-driven processes." : block.label === "ECM" ? "Works with document repositories, records, and knowledge-heavy operations." : block.label === "Identity" ? "Integrates securely with user directories and access management platforms." : block.label === "Cloud" ? "Deploys cleanly across modern cloud estates and hybrid infrastructure." : block.label === "Data" ? "Connects with analytics, reporting, and enterprise data sources." : block.label === "BPM" ? "Aligns with workflow orchestration and process automation layers." : block.label === "AI/ML" ? "Supports intelligent automation, prediction, and decision support." : "Exposes reusable APIs for seamless integration across business applications."
-								})
-							]
-						})]
-					}, block.label);
-				})
-			})]
-		})
-	});
-}
-var WHY = [
-	{
-		icon: LayoutGrid,
-		title: "Business and Technology Together",
-		body: "Operational knowledge informs architecture, workflows, and delivery decisions."
-	},
-	{
-		icon: Brain,
-		title: "Practical AI",
-		body: "AI is embedded where it improves reviews, decisions, knowledge access, or execution."
-	},
-	{
-		icon: ShieldCheck,
-		title: "Enterprise Delivery",
-		body: "Solutions are designed for governance, integration, scale, and long-term support."
-	},
-	{
-		icon: Repeat,
-		title: "From Build to Operate",
-		body: "Transformation, engineering, quality, managed services, and operations work as one delivery story."
-	}
-];
 var ENTERPRISE_BLOCKS = [
 	{
 		label: "ERP",
@@ -1402,47 +1299,388 @@ var ENTERPRISE_BLOCKS = [
 		icon: Zap
 	}
 ];
-function Why() {
+var ECO_TOTAL = ENTERPRISE_BLOCKS.length;
+var ECO_AUTO_PLAY = 3500;
+function Ecosystem() {
+	const [centerIndex, setCenterIndex] = (0, import_react.useState)(0);
+	const [isPaused, setIsPaused] = (0, import_react.useState)(false);
+	const [direction, setDirection] = (0, import_react.useState)(1);
+	const timerRef = (0, import_react.useRef)(null);
+	const dragStartX = (0, import_react.useRef)(0);
+	const goTo = (0, import_react.useCallback)((idx, dir) => {
+		const wrapped = (idx % ECO_TOTAL + ECO_TOTAL) % ECO_TOTAL;
+		setDirection(dir ?? (wrapped > centerIndex ? 1 : -1));
+		setCenterIndex(wrapped);
+	}, [centerIndex]);
+	const goNext = (0, import_react.useCallback)(() => {
+		setDirection(1);
+		setCenterIndex((prev) => (prev + 1) % ECO_TOTAL);
+	}, []);
+	const goPrev = (0, import_react.useCallback)(() => {
+		setDirection(-1);
+		setCenterIndex((prev) => (prev - 1 + ECO_TOTAL) % ECO_TOTAL);
+	}, []);
+	(0, import_react.useEffect)(() => {
+		if (isPaused) return;
+		timerRef.current = setTimeout(goNext, ECO_AUTO_PLAY);
+		return () => {
+			if (timerRef.current) clearTimeout(timerRef.current);
+		};
+	}, [
+		centerIndex,
+		isPaused,
+		goNext
+	]);
+	const pauseAutoPlay = (0, import_react.useCallback)(() => {
+		setIsPaused(true);
+		if (timerRef.current) clearTimeout(timerRef.current);
+		const resumeTimer = setTimeout(() => setIsPaused(false), 6e3);
+		return () => clearTimeout(resumeTimer);
+	}, []);
+	const visibleIndices = [
+		(centerIndex - 1 + ECO_TOTAL) % ECO_TOTAL,
+		centerIndex,
+		(centerIndex + 1) % ECO_TOTAL
+	];
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		className: "relative bg-section py-24",
+		className: "relative bg-background py-24 overflow-hidden",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-7xl px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeading, {
-				eyebrow: "Why Tech Tammina",
-				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Operational depth. Engineering rigor. ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				eyebrow: "Enterprise Fit",
+				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Built for Your ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "text-gradient",
-					children: "AI where it counts."
-				})] })
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
-				variants: stagger,
-				initial: "hidden",
-				whileInView: "show",
-				viewport: {
-					once: true,
-					amount: .2
-				},
-				className: "mt-14 grid gap-6 md:grid-cols-2",
-				children: WHY.map((w) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
-					variants: fadeUp,
-					transition: { duration: .6 },
-					whileHover: { y: -4 },
-					className: "gradient-border relative overflow-hidden rounded-2xl bg-card p-8",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-start gap-5",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-accent-gradient text-primary-foreground shadow-glow",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(w.icon, { className: "h-5 w-5" })
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "text-lg font-semibold text-foreground",
-							children: w.title
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-2 text-sm leading-relaxed text-muted-foreground",
-							children: w.body
-						})] })]
+					children: "Enterprise Ecosystem"
+				})] }),
+				intro: "Your technology should work together, not in isolation. Tech Tammina connects your existing applications, data, cloud, workflows, and enterprise platforms to create a unified ecosystem built for modernization and growth.",
+				wide: true
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "relative mt-14",
+				onMouseEnter: () => setIsPaused(true),
+				onMouseLeave: () => setIsPaused(false),
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+						onClick: () => {
+							goPrev();
+							pauseAutoPlay();
+						},
+						className: "absolute left-0 top-1/2 -translate-y-1/2 z-20 hidden md:grid h-12 w-12 place-items-center rounded-full border border-border bg-card/80 shadow-card backdrop-blur-sm transition-all hover:border-primary/40 hover:shadow-glow-cyan hover:scale-110 -translate-x-1/2",
+						"aria-label": "Previous ecosystem block",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronLeft, { className: "h-5 w-5 text-foreground" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+						onClick: () => {
+							goNext();
+							pauseAutoPlay();
+						},
+						className: "absolute right-0 top-1/2 -translate-y-1/2 z-20 hidden md:grid h-12 w-12 place-items-center rounded-full border border-border bg-card/80 shadow-card backdrop-blur-sm transition-all hover:border-primary/40 hover:shadow-glow-cyan hover:scale-110 translate-x-1/2",
+						"aria-label": "Next ecosystem block",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "h-5 w-5 text-foreground" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex items-center justify-center gap-4 md:gap-6 py-8 min-h-[320px] md:min-h-[340px] cursor-grab active:cursor-grabbing select-none",
+						onPointerDown: (e) => {
+							dragStartX.current = e.clientX;
+						},
+						onPointerUp: (e) => {
+							const diff = e.clientX - dragStartX.current;
+							if (Math.abs(diff) > 50) {
+								if (diff < 0) goNext();
+								else goPrev();
+								pauseAutoPlay();
+							}
+						},
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AnimatePresence, {
+							mode: "popLayout",
+							custom: direction,
+							children: visibleIndices.map((ecoIdx, position) => {
+								const block = ENTERPRISE_BLOCKS[ecoIdx];
+								const Icon = block.icon;
+								const isCenter = position === 1;
+								const description = block.label === "ERP" ? "Fits into core finance, supply chain, and operational planning environments." : block.label === "CRM" ? "Supports customer-facing workflows and relationship-driven processes." : block.label === "ECM" ? "Works with document repositories, records, and knowledge-heavy operations." : block.label === "Identity" ? "Integrates securely with user directories and access management platforms." : block.label === "Cloud" ? "Deploys cleanly across modern cloud estates and hybrid infrastructure." : block.label === "Data" ? "Connects with analytics, reporting, and enterprise data sources." : block.label === "BPM" ? "Aligns with workflow orchestration and process automation layers." : block.label === "AI/ML" ? "Supports intelligent automation, prediction, and decision support." : "Exposes reusable APIs for seamless integration across business applications.";
+								return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+									custom: direction,
+									initial: {
+										opacity: 0,
+										scale: .8,
+										x: direction > 0 ? 200 : -200
+									},
+									animate: {
+										opacity: isCenter ? 1 : .7,
+										scale: isCenter ? 1 : .88,
+										x: 0,
+										y: isCenter ? -8 : 0,
+										filter: isCenter ? "blur(0px)" : "blur(1px)"
+									},
+									exit: {
+										opacity: 0,
+										scale: .8,
+										x: direction > 0 ? -200 : 200
+									},
+									transition: {
+										type: "spring",
+										stiffness: 300,
+										damping: 30,
+										mass: .8
+									},
+									className: `
+                      w-full transition-shadow duration-500
+                      ${isCenter ? "md:w-[38%] w-[75%] z-10" : "md:w-[28%] w-0 md:opacity-100 opacity-0 hidden md:block z-0"}
+                    `,
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "relative pb-7 h-full flex flex-col justify-center",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											onClick: () => {
+												if (!isCenter) {
+													goTo(ecoIdx, position === 0 ? -1 : 1);
+													pauseAutoPlay();
+												}
+											},
+											className: `
+                          group relative flex h-[240px] md:h-[260px] flex-col justify-between overflow-hidden rounded-2xl border bg-card shadow-card transition-all duration-500 p-7 md:p-8
+                          ${isCenter ? "border-primary/30 shadow-glow-cyan" : "border-border hover:border-primary/20 cursor-pointer"}
+                        `,
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: `
+                          absolute -right-20 -top-20 h-48 w-48 rounded-full bg-cyan-violet blur-3xl transition-opacity duration-500
+                          ${isCenter ? "opacity-30" : "opacity-0 group-hover:opacity-20"}
+                        ` }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "relative flex h-full flex-col",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "flex items-center justify-between",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+															className: "font-display text-xs font-semibold tracking-widest text-gradient",
+															children: ["0", ecoIdx + 1]
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+															className: "rounded-full border border-primary/15 bg-primary/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-primary",
+															children: "Connected"
+														})]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+														className: `
+                            mt-4 font-display font-semibold text-foreground transition-all duration-300
+                            ${isCenter ? "text-xl md:text-2xl" : "text-lg md:text-xl"}
+                          `,
+														children: block.label
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+														className: `
+                            mt-3 flex-1 leading-relaxed text-muted-foreground transition-all duration-300
+                            ${isCenter ? "text-sm md:text-base" : "text-xs md:text-sm"}
+                          `,
+														children: description
+													})
+												]
+											})]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "absolute bottom-0 left-1/2 -translate-x-1/2 z-10",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: `
+                          grid place-items-center rounded-full bg-accent-gradient text-primary-foreground transition-all duration-500 border-4 border-background
+                          ${isCenter ? "h-14 w-14 shadow-glow-cyan" : "h-11 w-11 shadow-card opacity-90"}
+                        `,
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: `transition-all duration-300 ${isCenter ? "h-6 w-6" : "h-4.5 w-4.5"}` })
+											})
+										})]
+									})
+								}, `home-eco-${block.label}-${ecoIdx}`);
+							})
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex items-center justify-center gap-2 mt-6",
+						children: ENTERPRISE_BLOCKS.map((block, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							onClick: () => {
+								goTo(i);
+								pauseAutoPlay();
+							},
+							className: `
+                  relative h-2.5 rounded-full transition-all duration-500
+                  ${i === centerIndex ? "w-8 bg-accent-gradient shadow-glow-cyan" : "w-2.5 bg-border hover:bg-primary/40"}
+                `,
+							"aria-label": `Go to ${block.label}`,
+							children: i === centerIndex && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+								layoutId: "home-active-eco-dot",
+								className: "absolute inset-0 rounded-full bg-accent-gradient",
+								transition: {
+									type: "spring",
+									stiffness: 400,
+									damping: 30
+								}
+							})
+						}, `home-eco-dot-${block.label}`))
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mt-4 mx-auto max-w-xs h-0.5 rounded-full bg-border/50 overflow-hidden",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+							className: "h-full rounded-full bg-accent-gradient",
+							initial: { width: "0%" },
+							animate: { width: isPaused ? `${(centerIndex + 1) / ECO_TOTAL * 100}%` : "100%" },
+							transition: isPaused ? { duration: .3 } : {
+								duration: ECO_AUTO_PLAY / 1e3,
+								ease: "linear"
+							}
+						}, `home-eco-progress-${centerIndex}-${isPaused}`)
 					})
-				}, w.title))
+				]
 			})]
 		})
+	});
+}
+var CREDIBILITY_PILLARS = [
+	{
+		value: "21+ Years",
+		label: "of Technology & Operational Experience",
+		icon: Award
+	},
+	{
+		value: "700+",
+		label: "Global Professionals & Delivery Organization",
+		icon: Users
+	},
+	{
+		value: "Appian & Low-Code",
+		label: "Enterprise Platform Expertise",
+		icon: Cpu
+	},
+	{
+		value: "BFSI Domain",
+		label: "Specialists, Life Science & Education",
+		icon: Briefcase
+	},
+	{
+		value: "Global Delivery",
+		label: "Full Lifecycle Capability & Operations",
+		icon: Globe
+	}
+];
+var WHY_CARDS = [
+	{
+		icon: Brain,
+		title: "AI with Purpose",
+		body: "We focus AI investment on real business work - reducing effort, improving speed, supporting decisions, and strengthening consistency rather than pursuing technology for its own sake."
+	},
+	{
+		icon: Briefcase,
+		title: "Industry-Driven Solutions",
+		body: "Our teams understand the documents, decisions, roles, exceptions, service expectations, and compliance requirements behind operational workflows."
+	},
+	{
+		icon: Cpu,
+		title: "Enterprise-Scale Delivery",
+		body: "We combine platform expertise, modern engineering, integration, cloud, DevOps, data, and quality disciplines to deliver secure and maintainable solutions."
+	},
+	{
+		icon: Users,
+		title: "Flexible Engagement Models",
+		body: "Organizations can engage us for advisory, projects, dedicated teams, managed services, quality engineering, or business operations."
+	},
+	{
+		icon: LayoutGrid,
+		title: "Built Around Your Business",
+		body: "We design around the operating environment, people, systems, controls, and outcomes of each organization rather than forcing every problem into one platform."
+	},
+	{
+		icon: Clock,
+		title: "Long-Term Partnership",
+		body: "We support the full lifecycle from discovery and implementation through production support, operations, enhancement, and continuous improvement."
+	}
+];
+function Why() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		className: "relative bg-section py-24 overflow-hidden border-t border-border/80",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute -top-40 right-1/4 h-[500px] w-[500px] rounded-full bg-cyan-violet opacity-[0.05] blur-[140px]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "mx-auto max-w-7xl px-6",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeading, {
+					eyebrow: "Why Tech Tammina",
+					title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Enterprise Experience. ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-gradient",
+						children: "Practical Execution."
+					})] }),
+					intro: "Tech Tammina brings together more than 21 years of technology and operational experience, a global delivery organization, deep BFSI, Life Science & Educational knowledge, and capabilities across enterprise platforms, software engineering, quality, cloud, and managed operations.",
+					wide: true
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+					initial: {
+						opacity: 0,
+						y: 20
+					},
+					whileInView: {
+						opacity: 1,
+						y: 0
+					},
+					viewport: {
+						once: true,
+						amount: .3
+					},
+					transition: { duration: .6 },
+					className: "mt-12 overflow-hidden rounded-3xl border border-primary/30 bg-card/95 p-6 md:p-8 shadow-xl shadow-black/15 backdrop-blur-md relative",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-r from-primary/10 via-accent-cyan/15 to-primary/10 opacity-60" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "relative grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-5 md:divide-x md:divide-border/60",
+						children: CREDIBILITY_PILLARS.map((pillar, idx) => {
+							const PillarIcon = pillar.icon;
+							return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: `flex flex-col items-center justify-center text-center p-3 ${idx > 0 ? "md:pl-6" : ""}`,
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "grid h-11 w-11 place-items-center rounded-2xl bg-accent-gradient text-primary-foreground shadow-glow mb-3",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PillarIcon, { className: "h-5.5 w-5.5" })
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "font-display text-lg md:text-xl font-bold text-foreground text-gradient",
+										children: pillar.value
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "mt-1 text-xs font-medium leading-tight text-muted-foreground",
+										children: pillar.label
+									})
+								]
+							}, pillar.label);
+						})
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+					variants: stagger,
+					initial: "hidden",
+					whileInView: "show",
+					viewport: {
+						once: true,
+						amount: .15
+					},
+					className: "mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3",
+					children: WHY_CARDS.map((w, i) => {
+						const Icon = w.icon;
+						return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+							variants: fadeUp,
+							transition: {
+								duration: .5,
+								delay: i * .08
+							},
+							whileHover: {
+								y: -6,
+								scale: 1.01
+							},
+							className: "group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-border/80 bg-card/95 p-7 md:p-8 shadow-xl shadow-black/15 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-glow-cyan hover:shadow-cyan-500/20",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-x-0 top-0 h-1 bg-accent-gradient opacity-60 transition-opacity duration-300 group-hover:opacity-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "mb-6 grid h-12 w-12 place-items-center rounded-2xl bg-accent-gradient text-primary-foreground shadow-glow transition-transform duration-300 group-hover:scale-110",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "h-6 w-6" })
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "font-display font-semibold text-xl text-foreground group-hover:text-primary transition-colors duration-300",
+									children: w.title
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-sm leading-relaxed text-muted-foreground",
+									children: w.body
+								})
+							] })]
+						}, w.title);
+					})
+				})
+			]
+		})]
 	});
 }
 function CTA() {

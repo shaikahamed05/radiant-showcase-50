@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { t as PageHero } from "./section-heading-BdIj2xOd.mjs";
-import { b as ExternalLink, c as ShieldAlert } from "../_libs/lucide-react.mjs";
+import { c as ShieldAlert, x as ExternalLink } from "../_libs/lucide-react.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/support-7vYMpMmb.js
 var import_jsx_runtime = require_jsx_runtime();
 function SupportPage() {

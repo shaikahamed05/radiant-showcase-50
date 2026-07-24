@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { r as motion } from "../_libs/framer-motion.mjs";
 import { t as PageHero } from "./section-heading-BdIj2xOd.mjs";
-import { L as ArrowRight } from "../_libs/lucide-react.mjs";
+import { R as ArrowRight } from "../_libs/lucide-react.mjs";
 import { t as Route } from "./contact.index-C10N2MGO.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/contact.index-CYGKc4iL.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
