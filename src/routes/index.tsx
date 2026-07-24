@@ -880,6 +880,7 @@ const FEATURED_CARDS = [
     title: "Accelerating Enterprise Application Delivery with Mendix",
     body: "Mendix helps organizations move from business idea to scalable application faster through closer collaboration between business and technology teams. Explore how it supports modernization while balancing speed, architecture, integration, security, and long-term maintainability.",
     position: "left" as const,
+    image: "/images/mendix.jpg",
   },
   {
     id: "appian",
@@ -887,6 +888,7 @@ const FEATURED_CARDS = [
     title: "Enterprise AI with Appian",
     body: "Appian is bringing AI agents, intelligent document processing, process intelligence, and AI-assisted development into governed enterprise workflows. Explore how Tech Tammina uses Appian's evolving AI capabilities to build intelligent applications, modernize complex operations, and deliver secure, scalable outcomes for mission-critical work.",
     position: "center" as const,
+    image: "/images/appian.jpg",
   },
   {
     id: "doc-ai",
@@ -894,6 +896,7 @@ const FEATURED_CARDS = [
     title: "Enterprise Document Intelligence",
     body: "Business documents contain the information that drives critical decisions. Discover how organizations can transform policies, contracts, certificates, submissions, invoices, and other unstructured content into trusted business data through extraction, validation, comparison, and workflow integration.",
     position: "right" as const,
+    image: "/images/aws.jpg",
   },
 ];
 
@@ -948,10 +951,10 @@ function FeaturedInsightsSection() {
                     }
                   `}
                 >
-                  {/* Image Placeholder */}
+                  {/* Image Header */}
                   <div className="relative w-full aspect-[16/10] overflow-hidden bg-muted/40 border-b border-border/60 shrink-0">
                     <img
-                      src="/placeholder.svg"
+                      src={card.image}
                       alt={card.title}
                       className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     />

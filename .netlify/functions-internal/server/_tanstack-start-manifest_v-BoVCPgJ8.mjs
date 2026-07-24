@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-DKQBVmtJ.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-BoVCPgJ8.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/__root.tsx",
@@ -14,7 +14,7 @@ var tsrStartManifest = () => ({ routes: {
 			"/support"
 		],
 		preloads: [
-			"/assets/index-D11RJ4Zu.js",
+			"/assets/index-BikqUQHS.js",
 			"/assets/jsx-runtime-D8nDyRPw.js",
 			"/assets/link-CecseEhz.js",
 			"/assets/useStore-DiLaXCh-.js",
@@ -25,14 +25,14 @@ var tsrStartManifest = () => ({ routes: {
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-D11RJ4Zu.js"
+			src: "/assets/index-BikqUQHS.js"
 		} }]
 	},
 	"/": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/routes-CCTAJ2SG.js",
+			"/assets/routes-CBM6l1-_.js",
 			"/assets/repeat-CFqDUgIG.js",
 			"/assets/briefcase-Cteoe2z_.js",
 			"/assets/workflow-D_hbUSZq.js",
@@ -53,18 +53,18 @@ var tsrStartManifest = () => ({ routes: {
 			"/about/partnerships/microsoft",
 			"/about/partnerships/"
 		],
-		preloads: ["/assets/about-Cwnp1VQG.js"]
+		preloads: ["/assets/about-CLWu3RXC.js"]
 	},
 	"/capabilities": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/capabilities.tsx",
 		children: ["/capabilities/$slug", "/capabilities/"],
-		preloads: ["/assets/capabilities-Cwnp1VQG.js"]
+		preloads: ["/assets/capabilities-CLWu3RXC.js"]
 	},
 	"/careers": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/careers.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/careers-Bdl8lQAT.js",
+			"/assets/careers-rAQ3Y5vd.js",
 			"/assets/award-BWJLfGAG.js",
 			"/assets/briefcase-Cteoe2z_.js",
 			"/assets/heart-DQrd7Gnu.js",
@@ -79,18 +79,18 @@ var tsrStartManifest = () => ({ routes: {
 			"/contact/request-demo",
 			"/contact/"
 		],
-		preloads: ["/assets/contact-Cwnp1VQG.js"]
+		preloads: ["/assets/contact-CLWu3RXC.js"]
 	},
 	"/industries": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/industries.tsx",
 		children: ["/industries/$slug", "/industries/"],
-		preloads: ["/assets/industries-Cwnp1VQG.js"]
+		preloads: ["/assets/industries-CLWu3RXC.js"]
 	},
 	"/resources": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/resources.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/resources-BQ04z8bz.js",
+			"/assets/resources-8jvV8L4C.js",
 			"/assets/calendar-CCcrYZnw.js",
 			"/assets/sparkles-9AR-UGSc.js"
 		]
@@ -98,7 +98,7 @@ var tsrStartManifest = () => ({ routes: {
 	"/solutions": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/solutions.tsx",
 		children: ["/solutions/$slug", "/solutions/"],
-		preloads: ["/assets/solutions-Cwnp1VQG.js"]
+		preloads: ["/assets/solutions-CLWu3RXC.js"]
 	},
 	"/support": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/support.tsx",
@@ -109,7 +109,7 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/about.global-presence.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/about.global-presence-zIOT429p.js",
+			"/assets/about.global-presence-C01cW3nu.js",
 			"/assets/earth-Bk3nnQMg.js",
 			"/assets/map-pin-DJtr4cPD.js",
 			"/assets/shield-check-Dnzb9X6O.js"
@@ -118,13 +118,13 @@ var tsrStartManifest = () => ({ routes: {
 	"/about/leadership": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/about.leadership.tsx",
 		children: void 0,
-		preloads: ["/assets/about.leadership-Y3i4TaLu.js", "/assets/award-BWJLfGAG.js"]
+		preloads: ["/assets/about.leadership-CO1E6qcz.js", "/assets/award-BWJLfGAG.js"]
 	},
 	"/about/why-tech-tammina": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/about.why-tech-tammina.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/about.why-tech-tammina-Cmc3W7cI.js",
+			"/assets/about.why-tech-tammina-DxkNeimM.js",
 			"/assets/activity-BU83BHNe.js",
 			"/assets/award-BWJLfGAG.js",
 			"/assets/repeat-CFqDUgIG.js",
@@ -135,7 +135,7 @@ var tsrStartManifest = () => ({ routes: {
 	"/capabilities/$slug": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/capabilities.$slug.tsx",
 		children: void 0,
-		preloads: ["/assets/capabilities._slug-Cet66CR2.js"]
+		preloads: ["/assets/capabilities._slug-DmBR722u.js"]
 	},
 	"/contact/locations": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/contact.locations.tsx",
@@ -149,28 +149,28 @@ var tsrStartManifest = () => ({ routes: {
 	"/contact/partnerships": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/contact.partnerships.tsx",
 		children: void 0,
-		preloads: ["/assets/contact.partnerships-CH3LEv6u.js", "/assets/circle-check-big-Cogm6NfQ.js"]
+		preloads: ["/assets/contact.partnerships-FR2ZHhH5.js", "/assets/circle-check-big-Cogm6NfQ.js"]
 	},
 	"/contact/request-demo": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/contact.request-demo.tsx",
 		children: void 0,
-		preloads: ["/assets/contact.request-demo-BCv_az8X.js", "/assets/circle-check-big-Cogm6NfQ.js"]
+		preloads: ["/assets/contact.request-demo-tPPOaEI6.js", "/assets/circle-check-big-Cogm6NfQ.js"]
 	},
 	"/industries/$slug": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/industries.$slug.tsx",
 		children: void 0,
-		preloads: ["/assets/industries._slug-TGhMy35i.js"]
+		preloads: ["/assets/industries._slug-C5pHJyAN.js"]
 	},
 	"/solutions/$slug": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/solutions.$slug.tsx",
 		children: void 0,
-		preloads: ["/assets/solutions._slug-BOSsrp8h.js"]
+		preloads: ["/assets/solutions._slug-CklUwpWx.js"]
 	},
 	"/about/": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/about.index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/about.index-YmiA8j_6.js",
+			"/assets/about.index-Bu0OTjH4.js",
 			"/assets/activity-BU83BHNe.js",
 			"/assets/award-BWJLfGAG.js",
 			"/assets/calendar-CCcrYZnw.js",
@@ -182,7 +182,7 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/capabilities.index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/capabilities.index-DoBKIV5f.js",
+			"/assets/capabilities.index-Ccg3YZm0.js",
 			"/assets/briefcase-Cteoe2z_.js",
 			"/assets/workflow-D_hbUSZq.js",
 			"/assets/shield-check-Dnzb9X6O.js"
@@ -191,23 +191,23 @@ var tsrStartManifest = () => ({ routes: {
 	"/contact/": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/contact.index.tsx",
 		children: void 0,
-		preloads: ["/assets/contact.index-C4tVodhr.js"]
+		preloads: ["/assets/contact.index-C8WL3bmx.js"]
 	},
 	"/industries/": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/industries.index.tsx",
 		children: void 0,
-		preloads: ["/assets/industries.index-BelU3z4J.js"]
+		preloads: ["/assets/industries.index-DxtA5sYi.js"]
 	},
 	"/solutions/": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/solutions.index.tsx",
 		children: void 0,
-		preloads: ["/assets/solutions.index-BmYTdCIO.js"]
+		preloads: ["/assets/solutions.index-D94Pgcq9.js"]
 	},
 	"/about/partnerships/appian": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/about.partnerships.appian.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/about.partnerships.appian-8i2XN2Jg.js",
+			"/assets/about.partnerships.appian-cCMTfa9J.js",
 			"/assets/award-BWJLfGAG.js",
 			"/assets/sparkles-9AR-UGSc.js"
 		]
@@ -215,27 +215,27 @@ var tsrStartManifest = () => ({ routes: {
 	"/about/partnerships/aws": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/about.partnerships.aws.tsx",
 		children: void 0,
-		preloads: ["/assets/about.partnerships.aws-BV4t_XYm.js", "/assets/award-BWJLfGAG.js"]
+		preloads: ["/assets/about.partnerships.aws-B_SToZZj.js", "/assets/award-BWJLfGAG.js"]
 	},
 	"/about/partnerships/camunda": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/about.partnerships.camunda.tsx",
 		children: void 0,
-		preloads: ["/assets/about.partnerships.camunda-BX_gtxfB.js", "/assets/award-BWJLfGAG.js"]
+		preloads: ["/assets/about.partnerships.camunda-DVqczGpU.js", "/assets/award-BWJLfGAG.js"]
 	},
 	"/about/partnerships/mendix": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/about.partnerships.mendix.tsx",
 		children: void 0,
-		preloads: ["/assets/about.partnerships.mendix-Dcl1v5Eo.js", "/assets/award-BWJLfGAG.js"]
+		preloads: ["/assets/about.partnerships.mendix-D5vT87wp.js", "/assets/award-BWJLfGAG.js"]
 	},
 	"/about/partnerships/microsoft": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/about.partnerships.microsoft.tsx",
 		children: void 0,
-		preloads: ["/assets/about.partnerships.microsoft-0SbMbAN1.js", "/assets/award-BWJLfGAG.js"]
+		preloads: ["/assets/about.partnerships.microsoft-CtCjVRqY.js", "/assets/award-BWJLfGAG.js"]
 	},
 	"/about/partnerships/": {
 		filePath: "C:/Users/Ahmed/Desktop/demo-interface/radiant-showcase-50/src/routes/about.partnerships.index.tsx",
 		children: void 0,
-		preloads: ["/assets/about.partnerships.index-CLHMebhE.js", "/assets/sparkles-9AR-UGSc.js"]
+		preloads: ["/assets/about.partnerships.index-_7Yu6zJE.js", "/assets/sparkles-9AR-UGSc.js"]
 	}
 } });
 //#endregion

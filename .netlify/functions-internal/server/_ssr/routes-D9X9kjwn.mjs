@@ -5,7 +5,7 @@ import { i as AnimatePresence, n as useScroll, r as motion, t as useTransform } 
 import { i as stagger, n as SectionHeading, r as fadeUp } from "./section-heading-BdIj2xOd.mjs";
 import { E as ChevronRight, I as ArrowRight, M as Brain, N as Boxes, O as ChevronLeft, S as Cpu, _ as LayoutGrid, f as Network, g as LifeBuoy, j as Briefcase, l as Repeat, r as Workflow, s as ShieldCheck, t as Zap } from "../_libs/lucide-react.mjs";
 import { n as INDUSTRIES, r as SOLUTIONS, t as CAPABILITIES } from "./site-data-C1WZvCci.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-Bht1VKzr.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-D9X9kjwn.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 /**
@@ -1501,21 +1501,24 @@ var FEATURED_CARDS = [
 		tag: "Low-Code Platform",
 		title: "Accelerating Enterprise Application Delivery with Mendix",
 		body: "Mendix helps organizations move from business idea to scalable application faster through closer collaboration between business and technology teams. Explore how it supports modernization while balancing speed, architecture, integration, security, and long-term maintainability.",
-		position: "left"
+		position: "left",
+		image: "/images/mendix.svg"
 	},
 	{
 		id: "appian",
 		tag: "Enterprise AI & Automation",
 		title: "Enterprise AI with Appian",
 		body: "Appian is bringing AI agents, intelligent document processing, process intelligence, and AI-assisted development into governed enterprise workflows. Explore how Tech Tammina uses Appian's evolving AI capabilities to build intelligent applications, modernize complex operations, and deliver secure, scalable outcomes for mission-critical work.",
-		position: "center"
+		position: "center",
+		image: "/images/appian.svg"
 	},
 	{
 		id: "doc-ai",
 		tag: "Document Intelligence",
 		title: "Enterprise Document Intelligence",
 		body: "Business documents contain the information that drives critical decisions. Discover how organizations can transform policies, contracts, certificates, submissions, invoices, and other unstructured content into trusted business data through extraction, validation, comparison, and workflow integration.",
-		position: "right"
+		position: "right",
+		image: "/images/aws.svg"
 	}
 ];
 function FeaturedInsightsSection() {
@@ -1532,48 +1535,47 @@ function FeaturedInsightsSection() {
 					children: "Enterprise AI & Platforms"
 				})] }),
 				intro: "Explore practical perspectives on enterprise AI, intelligent automation, low-code platforms, document intelligence, and the technologies reshaping modern operations."
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
-				variants: stagger,
-				initial: "hidden",
-				whileInView: "show",
-				viewport: {
-					once: true,
-					amount: .15
-				},
-				className: "mt-16 flex flex-col lg:flex-row items-stretch lg:items-center justify-center gap-6 lg:gap-8",
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "mt-16 flex flex-col lg:flex-row items-stretch lg:items-center justify-center gap-6 lg:gap-8 min-h-[520px]",
 				onMouseLeave: () => setHoveredId(null),
 				children: FEATURED_CARDS.map((card) => {
 					const isActive = card.id === activeId;
 					return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
-						variants: fadeUp,
-						transition: {
-							duration: .5,
-							ease: "easeOut"
-						},
+						layout: true,
 						onMouseEnter: () => setHoveredId(card.id),
+						transition: {
+							layout: {
+								type: "spring",
+								stiffness: 280,
+								damping: 30,
+								mass: .85
+							},
+							opacity: { duration: .3 }
+						},
 						className: `
-                  w-full transition-all duration-500 flex flex-col cursor-pointer
-                  ${isActive ? "lg:w-[38%] z-10 lg:-translate-y-2 lg:scale-[1.02]" : "lg:w-[31%] z-0 lg:scale-[0.96] opacity-90 hover:opacity-100"}
+                  w-full flex flex-col cursor-pointer transition-all duration-500 ease-out
+                  ${isActive ? "lg:w-[38%] z-10 lg:-translate-y-2" : "lg:w-[30%] z-0 lg:translate-y-0 opacity-85 hover:opacity-100"}
                 `,
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+							layout: true,
 							className: `
-                  group relative flex flex-col h-full overflow-hidden rounded-3xl border bg-card transition-all duration-500 shadow-card
-                  ${isActive ? "border-primary/40 shadow-glow-cyan ring-1 ring-primary/20 bg-card/90" : "border-border hover:border-primary/30 hover:shadow-card"}
-                `,
+                    group relative flex flex-col h-full overflow-hidden rounded-3xl border bg-card transition-all duration-500 ease-out shadow-card
+                    ${isActive ? "border-primary/40 shadow-glow-cyan ring-1 ring-primary/25 bg-card/95" : "border-border hover:border-primary/30 hover:shadow-card"}
+                  `,
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "relative w-full aspect-[16/10] overflow-hidden bg-muted/40 border-b border-border/60",
+								className: "relative w-full aspect-[16/10] overflow-hidden bg-muted/40 border-b border-border/60 shrink-0",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-										src: "/placeholder.svg",
+										src: card.image,
 										alt: card.title,
-										className: "h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+										className: "h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent opacity-60" }),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "absolute top-4 left-4",
+										className: "absolute top-4 left-4 z-10",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 											className: `
-                        inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold backdrop-blur-md border transition-all duration-300
+                        inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-xs font-semibold backdrop-blur-md border transition-all duration-500 ease-out
                         ${isActive ? "bg-accent-gradient text-primary-foreground border-white/20 shadow-glow" : "bg-surface/80 text-foreground border-border/80"}
                       `,
 											children: [isActive && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-1.5 w-1.5 rounded-full bg-white animate-pulse" }), card.tag]
@@ -1581,30 +1583,30 @@ function FeaturedInsightsSection() {
 									})
 								]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: `flex flex-1 flex-col transition-all duration-500 ${isActive ? "p-8 md:p-9" : "p-6 md:p-7"}`,
+								className: "flex flex-1 flex-col p-7 md:p-8 transition-all duration-500 ease-out",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 										className: `
-                      font-semibold text-foreground leading-snug transition-all duration-300 group-hover:text-primary
+                      font-semibold text-foreground leading-snug transition-all duration-500 ease-out
                       ${isActive ? "text-xl md:text-2xl text-gradient" : "text-lg md:text-xl"}
                     `,
 										children: card.title
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 										className: `
-                      mt-4 flex-1 leading-relaxed text-muted-foreground transition-all duration-300
-                      ${isActive ? "text-sm md:text-base text-muted-foreground/90" : "text-xs md:text-sm text-muted-foreground/75"}
+                      mt-3 flex-1 leading-relaxed text-muted-foreground transition-all duration-500 ease-out
+                      ${isActive ? "text-sm md:text-base opacity-100" : "text-xs md:text-sm opacity-80"}
                     `,
 										children: card.body
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "mt-8 pt-4 border-t border-border/40 flex items-center justify-between",
+										className: "mt-6 pt-4 border-t border-border/40 flex items-center justify-between",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: `inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-300 ${isActive ? "text-primary translate-x-1" : "text-muted-foreground group-hover:text-primary"}`,
+											className: `inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-500 ease-out ${isActive ? "text-primary translate-x-1" : "text-muted-foreground group-hover:text-primary"}`,
 											children: ["Explore Insight ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 											className: `
-                        grid place-items-center rounded-full transition-all duration-500
+                        grid place-items-center rounded-full transition-all duration-500 ease-out
                         ${isActive ? "h-9 w-9 bg-accent-gradient text-primary-foreground shadow-glow scale-110" : "h-8 w-8 border border-border bg-surface text-muted-foreground group-hover:border-primary/40 group-hover:text-primary"}
                       `,
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 transition-transform group-hover:translate-x-0.5" })
